@@ -121,118 +121,7 @@ Callback = <function> - The function of the button.
 ]]
 
 Tab:AddButton({
-	Name = "Infinite Yiled!",
-	Callback = function()loadstring(game:HttpGet("https://raw.githubusercontent.com/Infinite-Store/Infinite-Store/main/main.lua"))()
-      		
-  	end    
-})
-
---[[
-Name = <string> - The name of the button.
-Callback = <function> - The function of the button.
-]]
-
-Tab:AddButton({
-	Name = "صمله صنع شاتاي!",
-	Callback = function() loadstring(game:HttpGet("https://pastebin.com/raw/8Ksr7kq5"))()
-      		
-  	end    
-})
-
---[[
-Name = <string> - The name of the button.
-Callback = <function> - The function of the button.
-]]
-
-Tab:AddButton({
-	Name = "TP Tool!",
-	Callback = function()loadstring(game:HttpGet("https://scriptblox.com/raw/Brookhaven-RP-Mikeexc-Tptool-V1-10960"))()
-      		
-  	end    
-})
-
---[[
-Name = <string> - The name of the button.
-Callback = <function> - The function of the button.
-]]
-
-Tab:AddButton({
-	Name = "1x1x1x1 سكربت!",
-	Callback = function()loadstring(game:HttpGet("https://rawscripts.net/raw/Universal-Script-1x1x1x1-blue-gui-ANOTHER-VERSION-OF-1X1X1X1-GUI-PLS-NO-HATE-14099"))()
-      		
-  	end    
-})
-
---[[
-Name = <string> - The name of the button.
-Callback = <function> - The function of the button.
-]]
-
-Tab:AddButton({
-	Name = "Rips hub!",
-	Callback = function()loadstring(game:HttpGet("https://raw.githubusercontent.com/CasperFlyModz/discord.gg-rips/main/FPSBooster.lua"))()
-      		
-  	end    
-})
-
---[[
-Name = <string> - The name of the button.
-Callback = <function> - The function of the button.
-]]
-
-Tab:AddButton({
-	Name = "رقصات!",
-	Callback = function()loadstring(game:HttpGet("https://scriptblox.com/raw/Brookhaven-RP-all-emotes-6849"))()
-      		
-  	end    
-})
-
---[[
-Name = <string> - The name of the button.
-Callback = <function> - The function of the button.
-]]
-
-Tab:AddButton({
-	Name = "سكربت طيران من صنع شاتاي!",
-	Callback = function()loadstring(game:HttpGet("https://pastebin.com/raw/MzU5rJ7S"))()
-
-  	end    
-})
-
---[[
-Name = <string> - The name of the button.
-Callback = <function> - The function of the button.
-]]
-
-Tab:AddButton({
-	Name = "ARAB SCR!",
-	Callback = function()
-loadstring(game:HttpGet("https://raw.githubusercontent.com/ARAB-SCR/ARAB-SCR/main/AR"))()
-
-      		
-  	end    
-})
-
---[[
-Name = <string> - The name of the button.
-Callback = <function> - The function of the button.
-]]
-
-local Tab = Window:MakeTab({
-	Name = "Blox fort",
-	Icon = "rbxassetid://4483345998",
-	PremiumOnly = false
-})
-
---[[
-Name = <string> - The name of the tab.
-Icon = <string> - The icon of the tab.
-PremiumOnly = <bool> - Makes the tab accessible to Sirus Premium users only.
-]]
-
-local Section = Tab:AddSection({
-	Name = "السكربت من صنع سلندر شاتاي كلان PS5"
-})
+	Name = "Infinit})
 
 Tab:AddButton({
 	Name = "Redzhub!",
@@ -602,7 +491,7 @@ PremiumOnly = <bool> - Makes the tab accessible to Sirus Premium users only.
 ]]
 
 local Section = Tab:AddSection({
-	Name = "السكربت من صنع سلندر شاتاي كلانPS5"
+	Name = "السكربت من صنع روبيرتو شاتاي MR1"
 })
 
 
@@ -717,48 +606,6 @@ Tab:AddButton({
 })
 
 --[[
-Name = <string> - The name of the button.
-Callback = <function> - The function of the button.
-]] 
-
-Tab:AddButton({
-	Name = "Baldebal10!",
-	Callback = function()loadstring(game:HttpGet("https://raw.githubusercontent.com/LOLking123456/eggs/main/MM2"))()
-      		
-  	end    
-})
-
---[[
-Name = <string> - The name of the button.
-Callback = <function> - The function of the button.
-]] 
-
-Tab:AddButton({
-	Name = "Baldebal11!",
-	Callback = function()
-loadstring(game:HttpGet("https://raw.githubusercontent.com/Soxpcoxod/Tt/main/Kigogi"))()
-      		
-  	end    
-})
-
---[[
-Name = <string> - The name of the button.
-Callback = <function> - The function of the button.
-]] 
-
-Tab:AddButton({
-	Name = "Baldebal12!",
-	Callback = function()loadstring(game:HttpGet("https://raw.githubusercontent.com/Joystickplays/psychic-octo-invention/main/yarhm.lua", false))()
-      		
-  	end    
-})
-
---[[
-Name = <string> - The name of the button.
-Callback = <function> - The function of the button.
-]] 
-
-Tab:AddButton({
 	Name = "Baldebal13!",
 	Callback = function()loadstring(game:HttpGet("https://raw.githubusercontent.com/VR7ss/VR7/main/MM2"))()
 
@@ -784,86 +631,4 @@ PremiumOnly = <bool> - Makes the tab accessible to Sirus Premium users only.
 ]]
 
 local Section = Tab:AddSection({
-	Name = "السكربت من صنع سلندر شاتاي كلانPS5"
-})
-
-Tab:AddButton({
-	Name = "Freehub!",
-	Callback = function()loadstring(game:HttpGet("https://raw.githubusercontent.com/FreeeScripts/FREEHub/main/Loader", true))()
-
-      		
-  	end    
-})
-
---[[
-Name = <string> - The name of the button.
-Callback = <function> - The function of the button.
-]] 
-
-Tab:AddButton({
-	Name = "YTPLhub!",
-	Callback = function()loadstring(game:HttpGet('https://gitfront.io/r/ReQiuYTPL/wFUydaK74uGx/hub/raw/ReQiuYTPLHub.lua'))()
-      		
-  	end    
-})
-
---[[
-Name = <string> - The name of the button.
-Callback = <function> - The function of the button.
-]] 
-
-Tab:AddButton({
-	Name = "ادوبت مي!",
-	Callback = function()loadstring(game:HttpGet("https://raw.githubusercontent.com/Dan..."))();
-      		
-  	end    
-})
-
---[[
-Name = <string> - The name of the button.
-Callback = <function> - The function of the button.
-]] 
-
-Tab:AddButton({
-	Name = "مره قوي!",
-	Callback = function()loadstring(game:HttpGet("https://raw.githubusercontent.com/Ultra-Scripts/AdoptmeScript/main/AdoptmeScript/1XED629-adopt-me.lua"))()
-
-      		
-  	end    
-})
-
---[[
-Name = <string> - The name of the button.
-Callback = <function> - The function of the button.
-]] 
-
-Tab:AddButton({
-	Name = "قديم!",
-	Callback = function()loadstring(game:HttpGet("https://pastebin.com/raw/wx7J90FD"))();
-
-      		
-  	end    
-})
-
---[[
-Name = <string> - The name of the button.
-Callback = <function> - The function of the button.
-]]
-
-Tab:AddButton({
-	Name = "اسطوري!",
-	Callback = function()loadstring(game:HttpGet('https://raw.githubusercontent.com/Penguin285/AdoptMe/main/tradeScam'))()
- 
-      		
-  	end    
-})
-
---[[
-Name = <string> - The name of the button.
-Callback = <function> - The function of the button.
-]] 
-
-Tab:AddButton({
-	Name = "Dope pet!",
-	Callback = function()
-loadstring(game:HttpGet("https:/
+	Name = "السكربت من صنع روبيرتو شاتايMR1"
