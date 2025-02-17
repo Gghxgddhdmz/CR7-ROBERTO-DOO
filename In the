@@ -1,0 +1,428 @@
+-- Made BY Mr.Alegator
+ 
+local screenGui = Instance.new("ScreenGui")
+screenGui.Parent = game.Players.LocalPlayer:WaitForChild("PlayerGui")
+ 
+local frame = Instance.new("Frame")
+frame.Size = UDim2.new(0, 200, 0, 100)
+frame.Position = UDim2.new(0.5, -100, 0.5, -50)
+frame.BackgroundColor3 = Color3.new(1, 1, 1)
+frame.Parent = screenGui
+ 
+local title = Instance.new("TextLabel")
+title.Size = UDim2.new(1, 0, 0, 20)
+title.Position = UDim2.new(0, 0, 0, -20)
+title.Text = " Key System"
+title.TextColor3 = Color3.new(1, 1, 1)
+title.BackgroundColor3 = Color3.new(0, 0, 0)
+title.Parent = frame
+ 
+local dragging
+local dragInput
+local dragStart
+local startPos
+ 
+local function update(input)
+    local delta = input.Position - dragStart
+    frame.Position = UDim2.new(startPos.X.Scale, startPos.X.Offset + delta.X, startPos.Y.Scale, startPos.Y.Offset + delta.Y)
+end
+ 
+title.InputBegan:Connect(function(input)
+    if input.UserInputType == Enum.UserInputType.MouseButton1 or input.UserInputType == Enum.UserInputType.Touch then
+        dragging = true
+        dragStart = input.Position
+        startPos = frame.Position
+ 
+        input.Changed:Connect(function()
+            if input.UserInputState == Enum.UserInputState.End then
+                dragging = false
+            end
+        end)
+    end
+end)
+ 
+title.InputChanged:Connect(function(input)
+    if input.UserInputType == Enum.UserInputType.MouseMovement or input.UserInputType == Enum.UserInputType.Touch then
+        dragInput = input
+    end
+end)
+ 
+title.InputEnded:Connect(function(input)
+    if input.UserInputType == Enum.UserInputType.MouseButton1 or input.UserInputType == Enum.UserInputType.Touch then
+        dragging = false
+        dragInput = nil
+    end
+end)
+ 
+game:GetService("UserInputService").InputChanged:Connect(function(input)
+    if input == dragInput and dragging then
+        update(input)
+    end
+end)
+ 
+local KeySystem = Instance.new("TextBox")
+KeySystem.Size = UDim2.new(1, 0, 0.5, 0)
+KeySystem.Position = UDim2.new(0, 0, 0, 0)
+KeySystem.Text = "Enter the Key"
+KeySystem.TextColor3 = Color3.new(0, 0, 0)
+KeySystem.BackgroundTransparency = 0.5
+KeySystem.BackgroundColor3 = Color3.new(1, 1, 1)
+KeySystem.TextWrapped = true
+KeySystem.Parent = frame
+ 
+local SubmitButton = Instance.new("TextButton")
+SubmitButton.Size = UDim2.new(0.5, 0, 0.5, 0)
+SubmitButton.Position = UDim2.new(0, 0, 0.5, 0)
+SubmitButton.Text = "Submit"
+SubmitButton.Parent = frame
+ 
+local CloseButton = Instance.new("TextButton")
+CloseButton.Size = UDim2.new(0, 20, 0, 20)
+CloseButton.Position = UDim2.new(1, -20, 0, 0)
+CloseButton.Text = "X"
+CloseButton.TextColor3 = Color3.new(1, 1, 1)
+CloseButton.BackgroundColor3 = Color3.new(1, 0, 0)
+CloseButton.Parent = frame
+ 
+CloseButton.MouseButton1Click:Connect(function()
+    screenGui:Destroy()
+end)
+ 
+local GetKeyButton = Instance.new("TextButton")
+GetKeyButton.Size = UDim2.new(0.5, 0, 0.5, 0)
+GetKeyButton.Position = UDim2.new(0.5, 0, 0.5, 0)
+GetKeyButton.Text = "Get Key"
+GetKeyButton.Parent = frame
+--------------------------------------------------------------------------
+SubmitButton.MouseButton1Click:Connect(function()
+    local KeySystem = KeySystem.Text
+    if KeySystem == "ROBERTO81" then   
+screenGui:Destroy()
+
+
+
+ ResetOnSpawn = false
+ 
+ 
+local PabloLib = loadstring(game:HttpGet("https://raw.githubusercontent.com/BatuKvi123/PabloLibV3/main/PabloLibV3"))()
+local window = PabloLib:Create(
+"ROBERTo PART 3 تجربه", -- Name here.
+"Enabled", -- If you want draggable set here to "Enabled" if you dont want set to "Disabled".
+"p" -- You can put any keybind here to open close.
+)
+
+
+local tab1 = window:CreateTab("Credits")
+
+
+tab1:CreateInfo("Maked By ROBERTP")
+
+
+local tab1 = window:CreateTab(" ADMIN ROBERTO")
+
+tab1:CreateButton("Infinite Yield", function()
+loadstring(game:HttpGet('https://raw.githubusercontent.com/EdgeIY/infiniteyield/master/source'))()
+end)
+
+
+tab1:CreateButton("Nameless Admin", function()
+loadstring(game:HttpGet("https://raw.githubusercontent.com/FilteringEnabled/NamelessAdmin/main/Source"))()
+end)
+
+
+tab1:CreateButton("Reviz Admin", function()
+loadstring(game:HttpGet(('https://pastebin.com/raw/pyzjWNhk'),true))()
+end)
+
+
+tab1:CreateButton("Admin Spy", function()
+loadstring(game:HttpGet("https://raw.githubusercontent.com/MichaelScripter/MiniScript/main/Spy%20gui.lua"))()
+end)
+
+
+tab1:CreateButton("Fates Admin", function()
+loadstring(game:HttpGet("https://raw.githubusercontent.com/fatesc/fates-admin/main/main.lua"))();
+end)
+
+
+tab1:CreateButton("Cmd-X", function()
+loadstring(game:HttpGet("https://raw.githubusercontent.com/CMD-X/CMD-X/master/Source",true))()
+end)
+
+
+local tab1 = window:CreateTab("Player")
+
+
+tab1:CreateButton("Keyboard", function()
+loadstring(game:HttpGet("https://raw.githubusercontent.com/advxzivhsjjdhxhsidifvsh/mobkeyboard/main/main.txt", true))()
+end)
+
+
+tab1:CreateButton("Esp", function()
+loadstring(game:HttpGet(('https://raw.githubusercontent.com/cool83birdcarfly02six/UNIVERSALESPLTX/main/README.md'),true))()
+end)
+
+
+tab1:CreateButton("Climb Walls", function()
+loadstring(game:HttpGet('https://raw.githubusercontent.com/GhostPlayer352/Test4/main/Climb%20Walls'))()
+end)
+
+
+tab1:CreateButton("Auto Fling Player ig", function()
+loadstring(game:HttpGet('https://raw.githubusercontent.com/GhostPlayer352/Test4/main/Auto%20Fling%20Player'))()
+end)
+
+
+tab1:CreateButton("Portal", function()
+loadstring(game:HttpGet('https://raw.githubusercontent.com/GhostPlayer352/Test4/main/Portal'))()
+end)
+
+
+tab1:CreateButton("Fly", function()
+loadstring(game:HttpGet('https://pastebin.com/raw/YSL3xKYU'))()
+end)
+
+
+tab1:CreateButton("Noclip", function()
+loadstring(game:HttpGet("https://pastebin.com/raw/pKV2Ys4E"))();
+end)
+
+
+tab1:CreateButton("Shiftlock", function()
+loadstring(game:HttpGet("https://scriptblox.com/raw/Baseplate-Universal-Script-Permanent-Shift-Lock-6924"))()
+end)
+
+
+tab1:CreateButton("RTX Shader", function()
+loadstring(game:HttpGet(('https://pastefy.app/xXkUxA0P/raw'),true))()
+end)
+
+
+tab1:CreateButton("Tool Giver", function()
+loadstring(game:HttpGet("https://pastebin.com/raw/Ctqjmtkv", true))()
+end)
+
+
+tab1:CreateButton("Fe Punch [OUCHIES]", function()
+loadstring(game:HttpGet(('https://raw.githubusercontent.com/0Ben1/fe/main/obf_rf6iQURzu1fqrytcnLBAvW34C9N55kS9g9G3CKz086rC47M6632sEd4ZZYB0AYgV.lua.txt'),true))()
+end)
+
+
+tab1:CreateButton("TP To Player", function()
+loadstring(game:HttpGet("https://pastebin.com/raw/GMd65YS9"))()
+end)
+
+tab1:CreateButton("FE ILLUSION", function()
+loadstring(game:HttpGet("https://raw.githubusercontent.com/0Ben1/fe/main/obf_11l7Y131YqJjZ31QmV5L8pI23V02b3191sEg26E75472Wl78Vi8870jRv5txZyL1.lua.txt"))()
+end)
+
+
+tab1:CreateButton("FE Anti Fall", function()
+loadstring(game:HttpGet("https://raw.githubusercontent.com/zephyr10101/AntiFall/main/Script"))()
+end)
+
+
+tab1:CreateButton("Show Fps", function()
+loadstring(game:HttpGet("https://raw.githubusercontent.com/Sempiller/sdluniversal/main/fpsviewer.lua"))()
+end)
+
+
+tab1:CreateButton("Hitbox", function()
+loadstring(game:HttpGet("https://scriptblox.com/raw/Universal-Script-Update-script-hitbox-9326"))()
+end)
+
+
+tab1:CreateButton("Spectator", function()
+loadstring(game:HttpGet('https://pastebin.com/raw/wyvdb7gr'))()
+end)
+
+
+tab1:CreateButton("Walk On Wall", function()
+loadstring(game:HttpGet("https://pastebin.com/raw/zXk4Rq2r"))()
+end)
+
+
+tab1:CreateButton("Walkspeed Control or smth", function()
+loadstring(game:HttpGet"https://pastebin.com/raw/n0cJhW7M")()
+end)
+
+
+tab1:CreateButton("Fly V2", function()
+loadstring(game:HttpGet(('https://pastebin.com/raw/YvKv4AuY'),true))();
+end)
+
+
+tab1:CreateButton("Button", function()
+print("Hello World")
+end)
+
+
+tab1:CreateButton("Rewind", function()
+loadstring(game:HttpGet("https://pastebin.com/raw/cgWLwdN9", true))()
+end)
+
+
+tab1:CreateButton("Freeze", function()
+loadstring(game:HttpGet('https://raw.githubusercontent.com/creepstu/fuzzy-octo-giggle/main/Source'))()
+end)
+
+
+local tab1 = window:CreateTab("Universial Scripts")
+
+
+tab1:CreateButton("Game Hub v6", function()
+loadstring(game:HttpGet("https://raw.githubusercontent.com/GamerScripter/Game-Hub/main/loader"))()
+end)
+
+
+tab1:CreateButton("GigaChad Hub V4", function()
+loadstring(game:HttpGet('https://raw.githubusercontent.com/OWJBWKQLAISH/GigaChad-Hub/main/Gigachad%20Hub%20V4'))()
+end)
+
+
+tab1:CreateButton("Juanko Hub", function()
+loadstring(game:HttpGet("https://pastebin.com/raw/d5BS5qiX"))()
+end)
+
+
+local tab1 = window:CreateTab("Fe Scripts")
+
+
+tab1:CreateButton("Fe Lag", function()
+loadstring(game:HttpGet('https://pastebin.com/raw/VM3b0Thg'))()
+end)
+
+
+tab1:CreateButton("Fe Anti Fall [Same Script]", function()
+loadstring(game:HttpGet("https://raw.githubusercontent.com/zephyr10101/AntiFall/main/Script"))()
+end)
+
+
+tab1:CreateButton("Fe Give Laser Gun", function()
+loadstring(game:HttpGet(('https://raw.githubusercontent.com/dqvh/dqvh/main/98FIGBB')))()
+end)
+
+
+tab1:CreateButton("Fe Anti Fling", function()
+loadstring(game:HttpGet('https://pastebin.com/raw/hKfDWcJw'))();
+end)
+
+
+tab1:CreateButton("Fe Anti Afk", function()
+wait(0.5)local ba=Instance.new("ScreenGui")
+local ca=Instance.new("TextLabel")local da=Instance.new("Frame")
+local _b=Instance.new("TextLabel")local ab=Instance.new("TextLabel")ba.Parent=game.CoreGui
+ba.ZIndexBehavior=Enum.ZIndexBehavior.Sibling;ca.Parent=ba;ca.Active=true
+ca.BackgroundColor3=Color3.new(0.176471,0.176471,0.176471)ca.Draggable=true
+ca.Position=UDim2.new(0.698610067,0,0.098096624,0)ca.Size=UDim2.new(0,370,0,52)
+ca.Font=Enum.Font.SourceSansSemibold;ca.Text="Anti AFK Script"ca.TextColor3=Color3.new(0,1,1)
+ca.TextSize=22;da.Parent=ca
+da.BackgroundColor3=Color3.new(0.196078,0.196078,0.196078)da.Position=UDim2.new(0,0,1.0192306,0)
+da.Size=UDim2.new(0,370,0,107)_b.Parent=da
+_b.BackgroundColor3=Color3.new(0.176471,0.176471,0.176471)_b.Position=UDim2.new(0,0,0.800455689,0)
+_b.Size=UDim2.new(0,370,0,21)_b.Font=Enum.Font.Arial;_b.Text="made by ur mom "
+_b.TextColor3=Color3.new(0,1,1)_b.TextSize=20;ab.Parent=da
+ab.BackgroundColor3=Color3.new(0.176471,0.176471,0.176471)ab.Position=UDim2.new(0,0,0.158377,0)
+ab.Size=UDim2.new(0,370,0,44)ab.Font=Enum.Font.ArialBold;ab.Text="Status: Active"
+ab.TextColor3=Color3.new(0,1,1)ab.TextSize=20;local bb=game:service'VirtualUser'
+game:service'Players'.LocalPlayer.Idled:connect(function()
+bb:CaptureController()bb:ClickButton2(Vector2.new())
+ab.Text="Roblox tried to kick u but i kicked him instead"wait(2)ab.Text="Status : Active"end)
+end)
+
+
+local tab1 = window:CreateTab("Hubs")
+
+
+tab1:CreateButton("G Hub", function()
+loadstring(game:HttpGet("https://raw.githubusercontent.com/gclich/GHUBV14XZ/main/Ghub_Main_Loader.txt"))()
+end)
+
+
+tab1:CreateButton("Deluxe Hub", function()
+loadstring(game:HttpGet(('https://pastebin.com/raw/dApTQQ51'),true))()
+end)
+
+
+tab1:CreateButton("Sky Hub", function()
+loadstring(game:HttpGet("https://raw.githubusercontent.com/yofriendfromschool1/Sky-Hub/main/SkyHub.txt"))()
+end)
+
+
+tab1:CreateButton("Slient Exploit", function()
+loadstring(game:HttpGet('https://raw.githubusercontent.com/SilentExpl/Loader-Source-/main/SilentExploit.md'))()
+end)
+
+
+tab1:CreateButton("Moon Hub", function()
+loadstring(game:HttpGet("https://raw.githubusercontent.com/IlikeyocutgHAH/MoonUI-v13-102-SCRIPTS/main/MoonUI%20v13!"))()
+end)
+
+
+tab1:CreateButton("Ghost Hub", function()
+loadstring(game:HttpGet('https://raw.githubusercontent.com/GhostPlayer352/Test4/main/GhostHub'))()
+end)
+
+
+tab1:CreateButton("Ez Hub", function()
+loadstring(game:HttpGet(('https://raw.githubusercontent.com/debug420/Ez-Industries-Launcher-Data/master/Launcher.lua'),true))()
+end)
+
+
+tab1:CreateButton("Blizzard Hub", function()
+loadstring(game:HttpGet("https://raw.githubusercontent.com/uaahjajajqoqiqkqhwhwhw/Blizzard-Hub-Official/main/Blizzard%20Hub%20V2.lua", true))()
+end)
+
+
+tab1:CreateButton("Sxrge Hub", function()
+loadstring(game:HttpGet("https://raw.githubusercontent.com/sxrge3k/sxrge_ssh_hub/main/sxrge_script_hub"))()
+end)
+
+
+tab1:CreateButton("Fathom Hub", function()
+loadstring(game:HttpGet("https://pastebin.com/raw/RNWgaqCE", true))()
+end)
+
+
+local tab1 = window:CreateTab("Player Tab 1")
+
+
+tab1:CreateButton(" Fling All", function()
+loadstring(game:HttpGet("https://pastefy.app/qYmHKHcS/raw"))()
+end)
+
+
+tab1:CreateButton("Highlight", function()
+loadstring(game:HttpGet("https://pastebin.com/raw/W8S8zQns"))()
+end)
+
+
+tab1:CreateButton("Esp 2", function()
+loadstring(game:HttpGet("https://raw.githubusercontent.com/CriShoux/OwlHub/master/OwlHub.txt"))();
+end)
+
+
+tab1:CreateButton("Rewind v2", function()
+loadstring(game:HttpGet("https://pastebin.com/raw/cgWLwdN9", true))()
+end)
+
+
+tab1:CreateButton("Tp To Place", function()
+loadstring(game:HttpGet(('https://raw.githubusercontent.com/0Ben1/fe/main/Tp%20Place%20GUI'),true))()
+end)
+
+
+local tab1 = window:CreateTab("IMPORTANT")
+
+
+tab1:CreateLabel("The Key System Is Not mine So Credits Who made it")
+
+
+tab1:CreateLabel("Cya I Might Do v1 Version :]")
+  
+  end
+end)
+ 
+GetKeyButton.MouseButton1Click:Connect(function()
+ setclipboard("Key: ROBERTO81 حبيبي هذا المفتاح حطه لحاله") 
+end) 
