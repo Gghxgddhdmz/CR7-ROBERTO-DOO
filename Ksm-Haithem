@@ -317,7 +317,7 @@ local Section = Tab:AddSection({
 local Section = Tab:AddSection({
 	Name = "Roblox botrasba" 
 
-}) 
+})
 
 local Section = Tab:AddSection({
 	Name = "دائماً وابداً هيثم فىرخ" 
@@ -325,3 +325,5 @@ local Section = Tab:AddSection({
 }) 
 
 OrionLib:Init()
+
+ColorPicker:Set(Color3.fromRGB(94,018,83))
