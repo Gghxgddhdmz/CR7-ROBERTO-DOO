@@ -293,6 +293,29 @@ loadstring(game:HttpGet('https://raw.githubusercontent.com/FilteringEnabled/Name
   	end    
 })
 
+})
+
+Tab:AddButton({
+	Name = "1",
+	Callback = function()
+loadstring(game:HttpGet("https://raw.githubusercontent.com/REDzHUB/REDzHUB/main/REDzHUB"))()
+  	end    
+})
+
+Tab:AddButton({
+	Name = "2",
+	Callback = function()
+
+  	end    
+})
+
+Tab:AddButton({
+	Name = "3",
+	Callback = function()
+loadstring(game:HttpGet("https://rawscripts.net/raw/Universal-Script-rochips-universal-18294"))()
+  	end    
+})
+
 local Tab = Window:MakeTab({
 	Name = "اخر شيء",
 	Icon = "rbxassetid://4483345998",
