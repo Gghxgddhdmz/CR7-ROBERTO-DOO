@@ -1,52 +1,71 @@
---[[
-	WARNING: Heads up! This script has not been verified by ScriptBlox. Use at your own risk!
-]]
---[[
-Credits goes to REDz.
-And you can find more here! [This is v5 version]
-https://github.com/REDzHUB/RedzLibV5
-And maybe some things may not work correctly (doesn't to me)
-]]--
+--Lib
+local Lib = loadstring(game:HttpGet("https://raw.githubusercontent.com/Hosvile/Refinement/main/InfinitiveUI",true))()
 
-local redzlib = loadstring(game:HttpGet("https://raw.githubusercontent.com/REDzHUB/RedzLibV5/main/Source.Lua"))()
+--Create Window
+--Lib:CreateWindow(roberto part 3,DefTab,WinSize,function)
+local Win = Lib:CreateWindow("ah",1,nil,nil)
 
-local Window = redzlib:MakeWindow({
-  Title = "Test",
-  SubTitle = "hello",
-  SaveFolder = "Redz Config"
-})
+for i = 1, 16 do
 
---Tabs
+--Create Tab
+local Tab,name = Win:CreateTab("Tab "..tostring(i),function() warn(i) end)
 
-local Tab1 = Window:MakeTab({"Tab 1", "cool"})
+Tab:CreateButton("Infinite yield",function()
+	loadstring(game:HttpGet("https://raw.githubusercontent.com/EdgeIY/infiniteyield/master/source",true))()
+	end)
 
---Buttons
+Tab:CreateButton("Console",function()
+	game:GetService("StarterGui"):SetCore("DevConsoleVisible",true)
+	end)
 
-Tab1:AddButton({"Print", function()
-print("Hello World!")
-end})
+for i = 1, i do
 
-local Toggle1 = Tab1:AddToggle({
-  Name = "Speed",
-  Description = "Idk",
-  Default = false
-})
 
-Tab1:AddSlider({
-  Name = "Speed",
-  Min = 1,
-  Max = 100,
-  Increase = 1,
-  Default = 16,
-  Callback = function(Value)
-  game.Players.LocalPlayer.Character.Humanoid.WalkSpeed = Value
-  end
-})
+--Returns UI
+--Tab:CreateButton(name,function)
+	
+Tab:CreateButton("Button "..i,function()
+	print(i,name)
+	end)
 
-local Toggle1 = Tab1:AddToggle({
-  Name = "Speed",
-  Description = "Idk",
-  Default = false
-})
 
+--Returns bool,UI
+--Tab:CreateToggle(name,default,function)
+	
+Tab:CreateToggle("Toggle "..i,false,function(t)
+	print(i,name,t)
+	end)
+
+
+--Returns value,UI
+--Tab:CreateSlider(name,min,max,default,function)
+
+local max = math.random(500,5000)
+Tab:CreateSlider("Slider "..i,50,max,max/math.random(2,6),function(v)
+	print(i,name,v)
+	end)
+
+
+--Returns two userdata,UI
+--Tab:CreateDropdown(name,{table,string},visible,function)
+
+Tab:CreateDropdown("Dropdown "..i, {{
+	"Named", {}},"hello","he","ah","eh","yw"
+},false,function(c,f)
+	print(i,name,c,f)
+	end)
+
+
+--Returns TextBox for FocusLost or Stretchability
+local Textbox = Tab:CreateTextbox("TextBox "..i,"FFlag")
+
+Textbox:GetPropertyChangedSignal("Text"):Connect(function()
+	local self = Textbox
+	print(self.Text)
+	end)
+
+
+end
+end
+Tab:CreateButton("سكربتي بارت 2",function()
 loadstring(game:HttpGet("https://rawscripts.net/raw/Universal-Script-ROBERTO-PART-2-29764"))()
