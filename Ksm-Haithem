@@ -381,3 +381,5 @@ Callback = <function> - The function of the button.
 })
 
 ColorPicker:Set(Color3.fromRGB(89,155,0))
+
+OrionLib:Init()
