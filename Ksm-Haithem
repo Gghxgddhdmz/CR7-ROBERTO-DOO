@@ -347,6 +347,37 @@ local Section = Tab:AddSection({
 
 }) 
 
-OrionLib:Init()
+local Tab = Window:MakeTab({
+	Name = "⛹️‍♂️BladeBallسكربتات⛹️‍♂️",
+	Icon = "rbxassetid://4483345998",
+	PremiumOnly = false
+})
 
-ColorPicker:Set(Color3.fromRGB(94,018,83))
+--[[
+Name = <string> - The name of the tab.
+Icon = <string> - The icon of the tab.
+PremiumOnly = <bool> - Makes the tab accessible to Sirus Premium users only.
+]]local Section = Tab:AddSection({
+	Name = "⛹️‍♂️BladeBallسكربتات⛹️‍♂️"
+})
+
+--[[
+Name = <string> - The name of the section.
+]]Tab:AddButton({
+	Name = "⛹️‍♂️(1) BladeBallسكربت⛹️‍♂️",
+	Callback = function()
+      		print("button pressed")loadstring(game:HttpGet("https://raw.githubusercontent.com/3345-c-a-t-s-u-s/-beta-/main/AutoParry.lua"))()
+  	end    
+})
+
+--[[
+Name = <string> - The name of the button.
+Callback = <function> - The function of the button.
+]]Tab:AddButton({
+	Name = "⛹️‍♂️(2) BladeBallسكربت⛹️‍♂️",
+	Callback = function()
+      		print("button pressed")loadstring(game:HttpGet("https://scriptblox.com/raw/Blade-Ball-Valkyrie-Hub-Rage-8974"))()
+  	end    
+})
+
+ColorPicker:Set(Color3.fromRGB(89,155,0))
