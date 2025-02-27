@@ -1,0 +1,74 @@
+-- 🚀 سكربت جاكسون و توباك و بات بارت 2 | يشمل: Auto Key Press | Anti AFK | Anti Lag | طيران | عداد FPS
+
+local vu = game:GetService("VirtualUser")
+local RunService = game:GetService("RunService")
+local UserInputService = game:GetService("UserInputService")
+local player = game.Players.LocalPlayer
+local char = player.Character or player.CharacterAdded:Wait()
+local humanoid = char:FindFirstChildWhichIsA("Humanoid")
+local flying = false
+
+-- 🔹 Auto Key Press (الضغط التلقائي على زر معين)
+local autoKeyEnabled = true  -- تغييرها إلى false لإيقاف التشغيل
+local keyToPress = Enum.KeyCode.E  -- تغيير الزر إذا كنت تريد غيره
+
+spawn(function()
+    while autoKeyEnabled do
+        game:GetService("VirtualInputManager"):SendKeyEvent(true, keyToPress, false, game)
+        wait(0.1) -- يمكن تغيير المدة بين الضغطات
+    end
+end)
+
+-- 🔹 Anti AFK (منع الطرد بسبب الخمول)
+game:GetService("Players").LocalPlayer.Idled:Connect(function()
+    vu:CaptureController()
+    vu:ClickButton2(Vector2.new())
+    print("🚀 Anti AFK مفعل - سكربت جاكسون و توباك و بات بارت 2")
+end)
+
+-- 🔹 Anti Lag (تخفيف التأخير وتحسين الأداء)
+game:GetService("Lighting").GlobalShadows = false
+game:GetService("Lighting").FogEnd = 9e9
+for _, v in pairs(game.Workspace:GetDescendants()) do
+    if v:IsA("BasePart") then
+        v.Material = Enum.Material.SmoothPlastic
+        v.Reflectance = 0
+    end
+end
+game:GetService("StarterGui"):SetCoreGuiEnabled(Enum.CoreGuiType.All, false)
+game:GetService("RunService"):Set3dRenderingEnabled(false)
+
+-- 🔹 عداد FPS باسم جاكسون و توباك و بات
+local FPSLabel = Instance.new("TextLabel")
+FPSLabel.Parent = game.Players.LocalPlayer:WaitForChild("PlayerGui"):FindFirstChildWhichIsA("ScreenGui") or Instance.new("ScreenGui", game.Players.LocalPlayer:WaitForChild("PlayerGui"))
+FPSLabel.Size = UDim2.new(0, 200, 0, 50)
+FPSLabel.Position = UDim2.new(0.85, 0, 0.05, 0)
+FPSLabel.BackgroundTransparency = 1
+FPSLabel.TextColor3 = Color3.fromRGB(255, 255, 255)
+FPSLabel.TextScaled = true
+FPSLabel.Text = "FPS: ... | صنع بواسطة جاكسون و توباك و بات"
+
+RunService.RenderStepped:Connect(function(deltaTime)
+    FPSLabel.Text = "FPS: " .. math.floor(1 / deltaTime) .. " | صنع بواسطة جاكسون و توباك و بات"
+end)
+
+-- 🔹 تفعيل/إيقاف الطيران بالضغط على "F"
+function toggleFly()
+    if flying then
+        humanoid.PlatformStand = false
+        flying = false
+        print("✈️ تم إيقاف الطيران - سكربت جاكسون و توباك و بات بارت 2")
+    else
+        humanoid.PlatformStand = true
+        flying = true
+        print("✈️ الطيران مفعل - سكربت جاكسون و توباك و بات بارت 2")
+    end
+end
+
+UserInputService.InputBegan:Connect(function(input, processed)
+    if not processed and input.KeyCode == Enum.KeyCode.F then
+        toggleFly()
+    end
+end)
+
+print("✅ تم تشغيل **سكربت جاكسون و توباك و بات بارت 2** بالكامل! | Auto Key ✅ | Anti AFK ✅ | Anti Lag ✅ | عداد FPS ✅ | طيران ✅")
