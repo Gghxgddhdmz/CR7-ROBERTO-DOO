@@ -49,7 +49,7 @@ MakeWindow({
   }
 })
 MinimizeButton({
-  Image = "rbxassetid://8974872819",
+  Image = "rbxassetid://12842237077",
   Size = {50, 50},
   Color = Color3.fromRGB(10, 10, 10),
   Corner = true,
@@ -60,7 +60,7 @@ MinimizeButton({
 local Main = MakeTab({Name = "البدايه"})
 local Image = AddImageLabel(Main, {
   Name = "",
-  Image = "rbxassetid://17516212984"
+  Image = "rbxassetid://12842237077"
 })
 AddButton(Main, {
   Name = "انسخ حسابي تيك ",
@@ -503,11 +503,11 @@ game:GetService("ReplicatedStorage").RE:FindFirstChild("1Avata1rOrigina1l"):Fire
 local Main = MakeTab({Name = "الاسماء name"})
 
 AddButton(Main, {
-  Name = "يـٍُِـوهٌٍَُٓـان",
+  Name = "ⱤØ฿ɆⱤ₮Ø",
   Callback = function()
     local args = {
     [1] = "RolePlayName",
-    [2] = "يـٍُِـوهٌٍَُٓـان"
+    [2] = "ⱤØ฿ɆⱤ₮Ø"
 }
 
 game:GetService("ReplicatedStorage").RE:FindFirstChild("1RPNam1eTex1t"):FireServer(unpack(args))
@@ -842,3 +842,5 @@ AddTextBox(Main, {
 game.Players.LocalPlayer.Character.Humanoid.JumpPower = value    
   end
 })
+
+local Main = MakeTab({Name = "اشياء name"})
