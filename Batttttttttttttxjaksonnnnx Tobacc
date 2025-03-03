@@ -1,1 +1,844 @@
-([[This file was protected with MoonSec V3]]):gsub('.+', (function(a) _tIkvAVmrDVI_ = a; end)); return(function(h,...)local l;local o;local r;local f;local t;local c;local e=24915;local n=0;local d={};while n<614 do n=n+1;while n<0x1f1 and e%0xb8e<0x5c7 do n=n+1 e=(e*736)%21077 local a=n+e if(e%0x429e)<=0x214f then e=(e-0xd5)%0x34c while n<0x71 and e%0x2488<0x1244 do n=n+1 e=(e*638)%48933 local t=n+e if(e%0x20ba)<0x105d then e=(e+0x14)%0x9d5d local e=43491 if not d[e]then d[e]=0x1 f=string;end elseif e%2~=0 then e=(e+0x2e3)%0x4337 local e=34224 if not d[e]then d[e]=0x1 o={};end else e=(e+0x46)%0x4499 n=n+1 local e=63199 if not d[e]then d[e]=0x1 l=getfenv and getfenv();end end end elseif e%2~=0 then e=(e*0xfd)%0x5798 while n<0xcf and e%0x43da<0x21ed do n=n+1 e=(e-189)%20128 local a=n+e if(e%0x1c7a)>0xe3d then e=(e-0x32c)%0x7b1d local e=47625 if not d[e]then d[e]=0x1 t=function(t)local e=0x01 local function d(n)e=e+n return t:sub(e-n,e-0x01)end while true do local n=d(0x01)if(n=="\5")then break end local e=f.byte(d(0x01))local e=d(e)if n=="\2"then e=o.ALqXoMSG(e)elseif n=="\3"then e=e~="\0"elseif n=="\6"then l[e]=function(n,e)return h(8,nil,h,e,n)end elseif n=="\4"then e=l[e]elseif n=="\0"then e=l[e][d(f.byte(d(0x01)))];end local n=d(0x08)o[n]=e end end end elseif e%2~=0 then e=(e*0x205)%0x48b local e=18803 if not d[e]then d[e]=0x1 r="\4\8\116\111\110\117\109\98\101\114\65\76\113\88\111\77\83\71\0\6\115\116\114\105\110\103\4\99\104\97\114\97\116\68\90\75\111\86\110\0\6\115\116\114\105\110\103\3\115\117\98\103\72\120\111\119\106\112\88\0\6\115\116\114\105\110\103\4\98\121\116\101\106\108\85\76\73\76\107\77\0\5\116\97\98\108\101\6\99\111\110\99\97\116\90\86\77\111\70\119\114\81\0\5\116\97\98\108\101\6\105\110\115\101\114\116\72\103\99\79\90\68\86\102\5";end else e=(e+0x4c)%0x94cb n=n+1 local e=34416 if not d[e]then d[e]=0x1 c=tonumber;end end end else e=(e-0xd0)%0xb5fc n=n+1 while n<0x67 and e%0x332c<0x1996 do n=n+1 e=(e-557)%19819 local t=n+e if(e%0x1830)>=0xc18 then e=(e+0x1fe)%0xa319 local e=71842 if not d[e]then d[e]=0x1 end elseif e%2~=0 then e=(e*0x17d)%0x8bc0 local e=31704 if not d[e]then d[e]=0x1 l=(not l)and _ENV or l;end else e=(e+0x2c0)%0x43e3 n=n+1 local e=85060 if not d[e]then d[e]=0x1 end end end end end e=(e*303)%5603 end t(r);local n={};for e=0x0,0xff do local d=o.atDZKoVn(e);n[e]=d;n[d]=e;end local function a(e)return n[e];end local s=(function(h,t)local r,d=0x01,0x10 local n={{},{},{}}local l=-0x01 local e=0x01 local f=h while true do n[0x03][o.gHxowjpX(t,e,(function()e=r+e return e-0x01 end)())]=(function()l=l+0x01 return l end)()if l==(0x0f)then l=""d=0x000 break end end local l=#t while e<l+0x01 do n[0x02][d]=o.gHxowjpX(t,e,(function()e=r+e return e-0x01 end)())d=d+0x01 if d%0x02==0x00 then d=0x00 o.HgcOZDVf(n[0x01],(a((((n[0x03][n[0x02][0x00]]or 0x00)*0x10)+(n[0x03][n[0x02][0x01]]or 0x00)+f)%0x100)));f=h+f;end end return o.ZVMoFwrQ(n[0x01])end);t(s(206,"^Rn},dp>_#P(&3QW},p#&#W&}cpd#dQdA>d>_WPR3,nRppnnd}(,LQ,P_RP6WdWP,Pd&,_>#3(n}>n(_3}Spn_d(P3pQPRZR},pd3&W(n,p_#Q&#WWRpW_n(#}&,QW}(_>&QQ_*>,#p3(p_n(pR(,3>WP(npdd_d#>3>2Q,QpQ}Q>n3R/,}dp_(_QpRQ,Q>W(>WQ{WWPn3#n(QWp,,#_PW3W<WdP#n&n_,(>RQ,W>&&(ipdnp#(>(WQ3d*iQ,nPn3}z#}>#Q(&QdnR,#P_(RQ_&PW3dW#n&#n#,}_3#3&&XN}Q>,d,_>Q3n=,3(nQRR>,pp_&A&d=R3QR}>}P(3>Y3}(PRQnQ_n_ppP>&>hQ&&WWpd#_&nk(d&>(&RW,Rl}#_&dp_#Q(n},&(PW_Rp}Rd#(}Q&RnQTR}>dPP3>dYdR_((3qQR&d&_RpP#3WQ}BpRP_Q#R_de#}&dWx}}W,n#_#(_Q&nRd>(Q3#w#d__3P(WdWWQnRd>#PP3Q}Q,W(pQPQ_,}pQ_Wp&#Wm=}>pd&&WQnQdn#QP_WW}&Wpn#_(&nQ3}3pn(_3XnWd&>R(Q_Z(}R>,p>3&_Q3,t_R(/Q,Wd,#LP}WP=3pD#}_pd(}Q&RQd3#n&}W,=PW_n(_&(WWn}(#&##3#Rn}pd3#(_n(dRd,>>W&HRp}R>(#,&_5WR#5&}WP,3_X(d>#&3}Q&RR,W#>3&#p&(n&p}#n&}Wn}>>,(d&QW&}3_&#}_,(dRP>P(Q&(R,d>pR__&WPP3(}Q__Q%i&n(d(Pp&&Q(3T/Rpd3,WQ}ppn>#(_WPK&Wpn>_3W,}n,dp_PP3&RfnWR&,3(,WdnQ>p(d&dQ3,,>n,n>d3p-(}QP3(QQ(n,p}>W&QN}&&WQp)#jW>R(,3>#P3WWnRd_n,dp(#QP,}_7((W>RP}R_PPR>&PQRx,R(,Q,RPR3_}P_(,j_3,Hpp###wPn(pd>(3PLe}3p(n&p=&mWNnpd(#_3_RWppp,PRWpn_Q_R&>(P&QER}_P#,3WW&,,da(nQ_P,3p}(pP&WRd}&,WPp3,tRnRW&nQ_W&pOQpR>rPnQRn/d#_(d,_dQ3,Rpd&p&dt>,__}(#>PP&03,1#0QR*(do>(P_(Ry}3nL,p(##3(nQ>,#>&Q3dR,p&nPd&&DQWp,>R(33Qn#}3_3PR_n(}R&d>#d&QR}d,_d_#(#P_3P}W>n(,QPnR>}Pl&WQ>nRD*}n#(&_nW,W#(P#WH}}p}_>d__PQQnR_pPp&dW>d,_PP&WR(5Qn,p>,&WWdnWd>PdQno(RpX_}P#Q&Q}#pWPdP_1&cQd3Ppp}"));t(s(152,"w(!;uW%+6<?N#yBq%6y%?N(u+?y<u%?+?#+uByuyN6(<+!yW;6?u(#+u##quWy;&6Nq(%u##;u?PyqW6yy(;?<(,Z<+Wu6N!((+BB#u6?N(u%u#!;#??!+!76B%;##;!<(qBWq%W;W<(Z#%;yCu!6H(!%dB+u+6?qW(k+#uy?<!u6E6WWuNu(y<6q6WB#<!<%BB?;B?q(;;u?u+;#yuu?W2W+#y(u#?(.?+#yyu!N+D<Wq#?uq?%X#!u<e%u#+;;<#-!%(#B!q?uBuuyB!(#<qBWW!+CyyNu=<+!BuuWuB!W6%qbu<N;!;6+BB;;<?;(+Nq?uu%u#B?W=%+i#<;;?;B!W!#Cu.?W!(W#y?Buuy!*6?B<W%#uqN%(BN;#<<(++!y6q#%%;N<W{u%W#Nuu<<qWu#N6!u?+h<W?+6BuNW((6#B6ByN%!u6qq+%!?(!y%?y+uW#+(?6g<y"));local e=(-o.UEciIJex+(function()local t,e=o.XbgTwJhH,o.GdxabRSs;(function(n,e,d,l)d(n(l,e,e,n and d),n(n,e,e,n),e(d,d,d,d),d(e,e,e and n,n))end)(function(n,d,l,f)if t>o.vcZlpimR then return f end t=t+o.GdxabRSs e=(e*o.KezbO_Qh)%o.zwuUchvd if(e%o.PLRPOUjI)>=o.RtYWUntr then e=(e-o.OXrWsIEv)%o.fRISIvMR return l(n(n,n,d,n),d(f,l,d and d,d),n(f,n,l,d),l(n,l and l,f,n))else return f end return n end,function(n,d,l,f)if t>o.gOgEBDPT then return l end t=t+o.GdxabRSs e=(e*o.fcgdTzMW)%o.gvJXdsav if(e%o.GfSghRIj)<=o.lxdMCkrf then return f else return n(d(f,l,l,d and l),d(f,l,l,d),n(n and l,f,n,l and f),f(d and n,n,f,d))end return f(n(n and n,l,n,l and n),f(d,d,l,f and n),d(n,d,d,l),f(l,d and n,d and d,n))end,function(d,f,l,n)if t>o.xGOOnJXK then return n end t=t+o.GdxabRSs e=(e+o.FURXiibs)%o.nWUruayQ if(e%o.dCxzFohW)<o.hhfXrJoz then return f(d(n,l and l,n,f),l(n,f and l,d,n),l(d and l,l,d and d,d),n(f,n,n,d))else return d end return l end,function(l,d,f,n)if t>o.OBfLytWr then return n end t=t+o.GdxabRSs e=(e*o.PCdsprQs)%o.MTTadcbF if(e%o.KzESZLAM)<=o.FjSkRTiA then e=(e-o.SfkREQgz)%o.EP_FBQnC return f(l(d,n,n,d),f(n and n,f,n,f),l(d,n,n,d)and n(f,d,l,n),n(d,d and l,n,f))else return l end return l end)return e;end)())local le=(getfenv)or(function()return _ENV end);local a=o.BJPheyLb or o.gfCBqSjL;local g=o.GdxabRSs;local r=o.btOfwODY;local l=o.JpjWUnbO;local t=o.phnhMZjJ;local function de(p,...)local u=s(e,"_ZNKG2%BUv9W8)n^Z89nU228K2Z^nZWUU^Wv9NUUZnN%nW)2W2UN29KnS8nUWU%)%)KB ^^A8{v%EWnUWBUn%2U2UZ2)K2^v))9vUN^%Bn9NBv2:+vv929882W=G=9U)^^UnKBK8n^n99KvvNZGB8vK8Z)^GBvNWNU9v)2U2UKN9KZ)9NBW%%Z%GC9ZKvG83BN%^^2Z)9ZZN9NNUvBN%8^)22WUNNvKf)%)^%E)G%Gn92vnUU^v%K8GGn)K98vBEBBZ)N2)2)KB88vWNUZ2UN2WG2W%NuUZZvKW^G,%8ZNZWvn8vGWW^v28UGKKWG%Z8nnB%BU%v2G)N%W^8W8Nn%Z)8)G)UW2UZy^-BnKW^%W<Gv2228B^9B2%)BZGnZ99U9WvBBGpGv)Nnnn%}vK!nv)22GW^v^vv^9B22v)v9BW22^vvNNKnK22UU>KvNGUGZ8vnnvnv8GNGW8^GP)v%9N9Bn2GN9!Z)U^GUU%)KGiWnNqnmK88Wi2n29KKf^n2vWUG%UGKs))nWBNW3W)B9nU29nvUBfG)Z)^N)9vnUNGnNBvvBIGvN8^2889KW)WvUvBZKBZJ^U8-9GG9GGZW^K8vKnZUn98ZvU8GU9U%%Z^)9GUZ2&NB^nZ)NZ^>WWv^BBGUZ9U^%)KWZNnvZG^8n%Wv%U2GN8R%nG2ZK8^))G9W8U8Nvn%WNGZn^n)%9n2G2!NUON)ZvWUK2WN8OU8o8Z%%^n)W99UZ2UB^B22RZ)^^8W9UBnnU2UNny2)8WKU9BZ)nBU2GNG^W)N^vn8WU9B%9GnN%U8%9KU<^n%KZ#K)N9vU222.)O9nnGnNU^9)Z9U8UW9vv%vK^WGvG%rKBpnKWN2t2)nW%Bv2WZWZ4)vW)NN^9)NWZBn22N82%GnZN^9)KvWB^NWKI^W%WG)ZBnn82n^nhWvv>%8KB^%nvW2vnB%GNZKUv%UK268nKqK^^)UWGU9N^NvwN)KWBNNlU8n92B89%U^B2ZWZn^U8NBWU*GW^n^n8U9fUZ2ZNBv8BBGUZ^^%ZFZKnB8ZvWKK)vWZU228KKGWG)NGvZB^K)ZGnWT^fU)^W2BZ29N^0N8)82v9%UGGZG^B9KvW%)GGZ8^89%W0UB288NvU%^G%Z)^G8W9NBv2NKZ^n)298)BW^9vB8NNN2^v)K9)G2nW8BvB%nG22^%NKU,^))WNv9^^)W9WUN2vBW%82B^U^W8Bv^ZK^NW^v%%)v%v{%aZ8t2nv8GUn2^KU98Uv2UN^k%N9Z2^^8B9WBvGUN9v%%8GKZ9^Z8Uv^W^U)N%^^)N9vUdv8v8B9GvW2v2%ZKUt^KNN8^B889n%v28NUZB)9WnN2CU)Z9UB^v)vNBUZ^ZB^88Kv8B8GvZ)gZ)nWGZvn^8%v)BGGWNN%NZI9vUW22N8bKNZZ)^B8ZvBBvKBNK^K8)9^Un%Z8B9vBKG9NZG9KGZGnZWvv)22G)Z2^B8nv9Bzn28ZvZ%UK^B82^KK=U8Gvg%N^v)N92B82KBn%%2yNKUU%NKG#WnNNv4N)698Uvnn8vv9BZGU%^2BK^uvnv8%NW G)B9nU28KvGBBG%W9)N%%K)ZGKZZNn899%BG8NK^98K^%BZ/oWG9^KK28ZG2NnZUUvCZ%K)nKnWv)vvG^GBn^K)88BBB9N!Nv99)%UUU2XWKKWBNUWUKn9)K8n2nWBZvUK^G%n8^2B%n9B9&o%^^n92982N29#KKNZZ)nW2U899v^U2KWNGoUnK9)Bn2B8W9vBBGnN2G^K%Z8n%W)v)G)2NZ)U)%WKvZ.nBZ2?G)n9nU)%ZNvrN)WG^NB^W)N9v8v89%^y%)8WKU9%ZKUn^22^)v%%^GNZv^<Zn^^)n8,N2^^)Z9UB^8vv)%22NN5UW%vKBtnn2 8^^8WW9B)%Z:)ZN))G)N2^v)=9Bn8W99K{2n%WZUU2^U)%nG)N^)U)UWN292%Nn*U)BG8GU^U8^9%)ZW8vGB2^vZ%^;89v9N829ZWzGUU9^UU28KUSM)2W)U22WnnZ8n28BvNNZN2Zn^28WUBBgG2)vn%v9G,NXn88Kv9WGWBvZ2WZGZvnG9%9NBbK89^U228KK)9%vBWU^9UKnGBZn^2889KB9PvKG8n98B92ZNUGNKncn^%W8v2B)G2Nvvw%WK8ZKn90BiB)%UWUW2U8)9%Bv2MNB2ZKnN%nU28K%uU)^W%^)829GUG288Nv^%nG2Z8K2NWZG))v^UB%^GU9)U82vKFTBKNZ9RG)BU)BGGvNW^W)ZG%NU^N8v9w)%8N%n%BGvnW)B829ZG9KK^)n9%GGZZjnBWnnZ)299UN%2KZE)))GnNG^W)N9vUz2BZnGG)n8vU9%ZKU2ZGBN/^^)NWGUU%2K2jN8vWnUG%UGGZUni8UvNBNKnNWUn%>KBannWW8vK%9GKNGn^8%v)8BWqv?2)ZW58^Bv99N%UGUN2U9%KK%q)nGKN^K)NWGZUUU2nK2z8nKW9WZqn9UUB2GNW,NNlZ2^WWZv9Bn2vNK^G8)GZZ9n)8GvW)v99U)28)hWUB82KN92BGZNZ^9)Nv2BBNWNBq,)8WN%NG)KZ^W)U9)vZ^%8)9GBW%GNvEk)B9nvo28KK(9nZWUU^%%GKKvnW8NvvUZGBZ^^2889KBn29NU^^)%WnUG28KNZWKBWBUn%2GZZKn98ZWU9vG%Z)^G8W9NB)2aKvg))29nUK%1KZtU)^W%9%%GKWZNnW8Mvv%n%2N%^K899ZBUG^NB^))GW8UN2WKp}U)nW2U8%KGNZZnWW^vB%)GGZW^N8n9PBWGnN2^8)K99vK9^N^TW))WvUW%NKvZEn8Wnv2%8GUZ9^N8UWZB)G)NG^W)G9vUC2BGJa8)8WGU9%GKUH^n%W)9J%WGNZv^N8Bv^B22aKY^9)Z9UB^2%NnxG)WJZUv%PKBV^n2W8vK%9GBZUn^8%vnBGGWNN^v)T9B%nvGNnhU)9WZUU92U%%!Zn)WvG%)G>ZBnnKN^)nBWNNK^)8^9%B)W9vBBZGUNNUvvvK2l8nK)9Q)UUZB8W8%G9BKNW%v^Uv^9BN)2G^9#NWGWY%%2nO%2GnKUnvZKBG18Zn)v^v8NNG98nK^8^228G2K^8*NUU9^2%2)5KX8U)0ZvZZBU%Z2W88K%vBZZ9GvNN^2889K8nW%9RBK)%9)UG2WK8lvn4WBUn9GK8ZGn98ZvU%^G%N^yN8W9GBv2NNB^n)2Wnv229KGeUnNW%U)%G2WN2nv8KvBBZG2Nl^K)99^BU2KN%^n)G9WUN2vG%yBnZW2Un%KK8ZZ^98Zv%BZGGNL^N8v9DBB2ZN2^n)K98UZ28N^Z%^9WGU8%NK^ZCnvWnv2WWGKZ9^Z8vv^B%G)N2^^)N9vUI2vKBJ2)8WK^n)Sv^B%2NNN)9)BWWZW^Z8BvnB2vNN2MZ)Z9UB^9ZvNB)ZnNZn)82KvZNn2W8vK9^9^U)288%v)BGGWN^^v)?9BUGB9N8mG)9WGUU%5K%C)nGW^vW%vGAZB^Z82v)BKGnN9^U8^9%Uv2GN8qN^vnBUB%{K208nKW)vZB9v%Z%^j8Gv^BNGvNkZBE292B^2KN)&Z)W9^9%vGKG;nnNW8v3%vKnZW^K8Kv8BZ2NZ^^B8)9BBW2%KN,Q)B9nU^28KG-9n28ZU^%%K)NInW8KvvUNvnZn^B889GB92ZNU^^ZK9)U%2WKKVvnZWBUnWGK8ZKn98NvU%^G%Z^^98W9NBv2NN8^n)298^K88v9B%2KWUvH%GKWZN2BN2qnBwv9Z8^K89UnZUE8ZKWB2G8W8K8B9GBo^n^%)N9n29n9%)vUZBG2^)^GB%nv8)vBN%)U)22%UNKNKQ)B)nUB)G%KgnZZWB8YGZ%)Z^Z89N89GnW^G^)2GG)KB8UN.UN^)%))UKU8A)UZZZvB4%v2K8GKnv^Zv9nBB%Z)NG89)NUNUaNvB%2^X%nNWNUv%=U)BKGUKy&N)8BKZ9^W8%v)BGUnUn%NKKZN8q899,BBGvZ^W9%ZGBr)nGWW)289WxUW%KKBLZW%WvU^%8GZZ2nv8wvEBG)vW;UB2nGN&8nKW9vZvZK^Z%n)8GvWBNGvGMsn8n92B82KN9jB)U9^U)2)KGeWnGWvvZ%BKnNvn88Kv9BZGUZ^^%n)WvBW2NNvFy)BWKU2%nG8*9nKWUvK%%K)ZG W8BvvBNGBN{^28n9KB9UGNU4Z)%9nUG2WKNHv^NWBUn%2K8ZKnW8Z99UvG%Z)^G889NBv2FKv:K)29)UK2)KZ*U)^W%vG%GKWZNnW8pvU%nG2Kv^K899ZBvG^N%^))GWZUN2vKsJvnKW2U8%K99UK2ZN).9%^9%ZW^N8vUNZK)%ZGWG%N892vdNoUUW^)U8K#KW8Knv%vv%K8G28GK98v%^BU^9N2)W)G28UZKZN^)2)n%N)KWBUZZ(8NW^G:%8Z8Z98Z8UBZWnG)^U^W9Z99NW2B/vk%U8WGKU9vKvW^NnW)%%%8^NZv8*8B%)B%^B%W^WUZ^YB^N%N))K)WUG)Z%XwBenWGW8%8%9ZK%EGv^DNev8BKG9CKvG2Bv2K2nKGW)9UYUv7WK%n8n2%)vNGNG3n%n^BKnGBG^BNN9Z8^UBBnzfBK2BNZWR%N2^niz8W8W9%Z%UZZ2nn)vUvWGZG98W^B9v9%N82G)UGv)v2^8n2)/%+8vNWv%L%Br)Z%vBeWvWNZvqZ^8%8)BKBWNGBZ<49B9n2G28 8u9WKe+nvUn%2K8ZGn88nvU%^G%%)%#N8Z%)^W^vv%WNUN<nG8Uv2xU)^W%U)BBKWZNnv8R9N%nG2Z8^K899ZBU22GW^))G9WU)2vKZ}B)nW2v&%8K9ZZnU89v%%nGGZW^)8v9ABBG^N2^8)K)9UN2UN^y%nKWGU^%NKvZnnBWnv2%8GKZ9^Z8U9)B%G)NG^W)N9vU}%vK^!2)8WKUW%ZKUL^^U8UvG%8GNZW^;8BvnB2%vNK^9)Z99B^2BN)RUnGWNUv%jGvfnn%W8vKB2GZZUn^8Bv)BGGW2N^9)r9BBn2WN8gU)9WZU)2^K%u)n2WWvN%vGFKKnn82v8BKG9NZ^UnZ98B)2GNW*K)vW0UBBT2N08nGW9vG%UK^Z%n)8)vWBNGvNN^B8^92B89NN9uZ)UWiU%2)KGqWUUWvvM%BKn2Kn88Kv9BNGUZ^^%)^WNBW2NNvZ9)B9nU2%nGc+9nZWU)Z%%K)ZGZZ)GvvB5GBNG^28)9KWN2ZN8eU)%9)UG%ZKNj9nTWB))%2K8ZKnW8ZvU%^2UBG^G8W9N922zNB^n^2n)UK29KZ(U)^nGU)B%GHZNnW8V9v%nG2Z8^K)Z9ZBUG^NU^))%9WvG%9KOYU)nnZU8%KK9KZnnW^vB%)G2ZWNP8vWNUWGnNU^8^N99UZ2UN^ZN))W2UW%2KvZNnB)-n8%8G2Z9Z)8Uv^B%%)%8^W)G9vUN2B2832nnW%U9%2KUZGn%W)vG%W2YZv^N8B9NB2GnNK38n)9UUN2%2vyG)WWN9v%WKBZZn2W^vKBvGZKU^K8%9JBGGnNNZ8)X8BUn22K*&K))WZ8G2^K8KNnGW^vNUNG&ZUnn82v8BB2KNZ^U8^W^B)22NW!%nNW/UB2n2ZJ8nGW9WZv^K^Z9n)8BvWB9GvGjGW8n9vB82BN9KG)U9^v82)KU!WnGWvvN%B2nZ^n88Uv9B2GUNW^%)^))BW2vNvz9)B9nU228GB>9n%WUv%%%K^ZGnW)2vvB%GBZn^2889KB9%ZNUu%)%9nUG2WKNZWn^WBv%%22nZKn98ZWUBNG%N2^G)K9NvB2kGBZ+)2WGUK%NKZ48)^8UnG%GGGZNZ)8lvB%nGW%N^K)G9ZBUG^NB^))%9WUNBBKc/B)nW8U8%KK9ZZH%W^v%%)G8ZW^N8v9hv9GnNn^8)299UN2UGZZ2))W)UWUnKvZRnB)nv8%8G8Z9^98U8)B%2^KZ^W))9vU^2BNn72)88^U9%9KUZ9n%W^vGUWG^Zv^v8B9BB2%^NKZ9)89UUU2%K%RGn8WN9v%9KBZBn282vKUBGZZnK28%9UBGGnNN^9)?9UBn22G9QK)9WZUU2^K%&)nGXnvNBNG4NNnn8%v8U22UNZ1Z8^)NB)2GNWNN^KW;v;2nKn:8ZZW99K%nK^NZn)0BvWBNGvND^^8n9nB82nN9bK)U)^vv2)K)}WDUWvvB%B2 Nnn888v9v)GUZ^^%n)9nBW2WNvfv)B)8U2%n%dV9n8WU)N%%K)ZGnW)nvvBvGBNv^28n9K992WNUoU)%n9UGv2KNZWnWWBvB%2BWZKn98Z99B)G%NB^G^B9NBv2SGBZK)2W%UK%GKZKU)^)%9Z%GG2ZN^K8cWW%nG2K)^K)G9ZUKG^N%^))G9^UN%NKCTB)n8jU8%BG2ZZnUW^nG%)G2ZWZN)K9+U2GnKN^8TG99vKULN^Z%))^GUW%NKvZF^%Wn9K%82KZ9^K8U92UZG)KN^WN?9vUZ2BNnb2n#W8U9%ZKU2)n%WnvGB)vvZv^n8B8qB2G8NKZ9LZ9UU)2%KWaG^WWN9v%KKBZ8n289vKB^GZNU^)8%99BG%WNN3B)g)Bv%22Kv;KnwWZ9K2^K82WnG8GvN9)GIZUnn8Bv8BB2KNZ^U8^n9B)22NWZGKlW+vx2n%Z.8nKW9WZUBK^Z^n)8)vW9uGvKN^W8nWSB8%BN9fZ)U9^U^2)K)uWn)WvvN%B2nN%n888v9B9GUK%^%)^9WBW2)NvNN)B9nU2B8K%F9n8WUv9%%B%ZGcW)^vvBWGBNv^2n29KB9v9NUEW)%9)UG2WKNlvH%WBvB%2GUZKnW8Z99B8G%N%^G^B9NBv2kGBZU)2W2UK%KKZK%)^8U9K%GG%ZNQU85vB%nG2NU^K)K9ZUKG^NU^)^GWvUN%NK4Z:)nW%U8%KGUZZ^KW^v%%)GGZW^N^W9RU<GnKP^8)G99vKUnN^Q^))W%UW%NKvKa^lWnvn%8G8Z9NB8UWZUvG)Nn^W))9vUO2BNnZ^)8W8U9%KKUZZn%8^99%WG8ZvZ88BvnB2%8Kv^9)W9UUv2%K8wG^WWWUv%9KBZUn2)^vKU9GWZU^v8%9BBGUNNNYWnG9BU922%Z*K)9WZUU%RK%ZBnG8BvN%WGHKB^9829%BK2GNZXG8^WUvU2GKBsNoUWtUB2nK2ZZnK8GvZBGK^ZUn)89v^BN2KN:BZ8n9%B82GN9{2nZ9^U%2)9n0WnKWv9NWnKnZ^n882v9BZGUK^K%8)9nBW28NvK%)B8!9h28KnD9ZbWUU^%%G^N2nW8nvvv8GBZn^2n89nB92)NUhW)%W8UGBWK9,vn8WBv9%22^ZKu9)KvUBWG%Nv^GlN9NUW%KNBy8)2nZUK29KZjU^vW%vv%GGvZNnv8-vBUZG2N%^K899ZB9G^K%Z9)GWGUNUGKwZZ)n8BnG%KGGZZ^ZW^v%%)%GZn^N)K9hUZGn2W^8n28%UZ%KN^NZ))WGUWBGK8Z ^KWnW9%8GKZ9sK)Wv^UKG)K^^W)N9vvN%vNnZK)8)GU9%ZKUR^iKW)vn%W2:Zv^N8B9nvNG8N8^9(^9UUv2%K^28)WW8Uv%vKBxnn2)89n%9GWZU^v8%)KBG2)KG^v)W9BWv22N8rKn88)UU%WK%NUnGWWvNBWGUZB^W8299BKG9NZx9)W9%UW2GG%5N)vWwUBBUK2Z%nK8UvZ%9K^N%E98G9GBN2%NM1Z8n)28)2KKK!ZZ)9^892)G%ZNnN8KvqB^KnZ2n8nKW3BZ2NZ^bh8)88BW%GN^L5nN9nWB28KKh9^K8NU^BNK)G%nW8NvvUN2)ZnAN88)2B92ZNU^^n29)Un2WK^}vnNWBvnUNK8Z8n9))vUBvG%G)R28W9WBvvZNBZZ)2)8UB29K9lUTUW%W9%G2WN)nv89vB%^G2GK^Kn9WGBU2vN%tB)G8UUN2^B%0Bn9W2U)%KKWZZnvW^v%UWGGZW^N)N9aBBGnN2Nn)KWGUZ%GN^-B))W9)Z%NGKZXnWWnv%%8G2Z9^Zn%v^B%G)N9^W)N9vU?B2Nny2)8WUU9%ZKUNZH%W)vn%W2NZv^f8BWnvZG8N)^9)K9Uv22%G)ZK)WW8Uv%9KBNWn2Wn9{%9G)ZU^Z8%v)BGGW21^v)99BU922N)iKn88WUU%vK%KBnGWWvNBWG^ZB^v82v^BKG9NZ^U))9%UB2GN)tN)9WRUBB2K2}8nKWWvZ%UK^Z%");local n=o.XbgTwJhH;o.lpGXuCqp(function()n=n+o.GdxabRSs end)local function e(d,e)if e then return n end;n=d+n;end local d,n,s=h(o.XbgTwJhH,h,e,u,o.jlULILkM);local function f()local d,n=o.jlULILkM(u,e(o.GdxabRSs,o.phnhMZjJ),e(o.jvWHXXZG,o.ELboMChd)+o.JpjWUnbO);e(o.JpjWUnbO);return(n*o.sRMTaKhk)+d;end;local b=true;local b=o.XbgTwJhH local function k()local l=n();local e=n();local t=o.GdxabRSs;local l=(d(e,o.GdxabRSs,o.eWWQSsch)*(o.JpjWUnbO^o.YdmwhMtY))+l;local n=d(e,o.rptEylFh,o.p_gKxlws);local e=((-o.GdxabRSs)^d(e,o.YdmwhMtY));if(n==o.XbgTwJhH)then if(l==b)then return e*o.XbgTwJhH;else n=o.GdxabRSs;t=o.XbgTwJhH;end;elseif(n==o.BPezFQtt)then return(l==o.XbgTwJhH)and(e*(o.GdxabRSs/o.XbgTwJhH))or(e*(o.XbgTwJhH/o.XbgTwJhH));end;return o.nqiFZFOK(e,n-o.xPiTjDtx)*(t+(l/(o.JpjWUnbO^o.eynOtpkY)));end;local _=n;local function j(n)local d;if(not n)then n=_();if(n==o.XbgTwJhH)then return'';end;end;d=o.gHxowjpX(u,e(o.GdxabRSs,o.phnhMZjJ),e(o.jvWHXXZG,o.ELboMChd)+n-o.GdxabRSs);e(n)local e=""for n=(o.GdxabRSs+b),#d do e=e..o.gHxowjpX(d,n,n)end return e;end;local b=#o.tLMzLgEJ(c('\49.\48'))~=o.GdxabRSs local e=n;local function de(...)return{...},o.aUDHLgaJ('#',...)end local function ne()local e={};local a={};local u={};local c={u,a,nil,e};local e=n()local h={}for l=o.GdxabRSs,e do local d=s();local n;if(d==o.XbgTwJhH)then n=(s()~=#{});elseif(d==o.GdxabRSs)then local e=k();if b and o.rHrXwoJM(o.tLMzLgEJ(e),'.(\48+)$')then e=o.ImBGMgRP(e);end n=e;elseif(d==o.JpjWUnbO)then n=j();end;h[l]=n;end;for e=o.GdxabRSs,n()do a[e-(#{o.GdxabRSs})]=ne();end;for c=o.GdxabRSs,n()do local e=s();if(d(e,o.GdxabRSs,o.GdxabRSs)==o.XbgTwJhH)then local a=d(e,o.JpjWUnbO,o.phnhMZjJ);local s=d(e,o.btOfwODY,o.ELboMChd);local e={f(),f(),nil,nil};if(a==o.XbgTwJhH)then e[t]=f();e[r]=f();elseif(a==#{o.GdxabRSs})then e[t]=n();elseif(a==p[o.JpjWUnbO])then e[t]=n()-(o.JpjWUnbO^o.LmJJWdkk)elseif(a==p[o.phnhMZjJ])then e[t]=n()-(o.JpjWUnbO^o.LmJJWdkk)e[r]=f();end;if(d(s,o.GdxabRSs,o.GdxabRSs)==o.GdxabRSs)then e[l]=h[e[l]]end if(d(s,o.JpjWUnbO,o.JpjWUnbO)==o.GdxabRSs)then e[t]=h[e[t]]end if(d(s,o.phnhMZjJ,o.phnhMZjJ)==o.GdxabRSs)then e[r]=h[e[r]]end u[c]=e;end end;c[o.phnhMZjJ]=s();return c;end;local function ee(d,e,n)local l=e;local l=n;return c(o.rHrXwoJM(o.rHrXwoJM(({o.lpGXuCqp(d)})[o.JpjWUnbO],e),n))end local function k(m,u,s)local function ne(...)local f,p,j,ne,b,n,c,ee,y,z,_,d;local e=o.XbgTwJhH;while-o.GdxabRSs<e do if e>o.JpjWUnbO then if e>=o.jvWHXXZG then if e~=o.JpjWUnbO then repeat if o.ELboMChd>e then d=h(o.YKzGWfos);break;end;e=-o.JpjWUnbO;until true;else e=-o.JpjWUnbO;end else if e~=o.btOfwODY then ee={};y={...};else z=o.aUDHLgaJ('#',...)-o.GdxabRSs;_={};end end else if e>=o.GdxabRSs then if e~=o.JpjWUnbO then j=h(o.ELboMChd,o.PogzsnEe,o.phnhMZjJ,o.CdxinCPv,m);b=de ne=o.XbgTwJhH;else n=-o.tOiXqSqS;c=-o.GdxabRSs;end else f=h(o.ELboMChd,o.AMTgvuGE,o.GdxabRSs,o.FJOojgMU,m);p=h(o.ELboMChd,o.iWqMbsqc,o.JpjWUnbO,o.hVCCnrbu,m);end end e=e+o.GdxabRSs;end;for e=o.XbgTwJhH,z do if(e>=j)then ee[e-j]=y[e+o.GdxabRSs];else d[e]=y[e+o.GdxabRSs];end;end;local e=z-j+o.GdxabRSs local e;local h;local function j(...)while true do end end while true do if n<-o.YMUKgriB then n=n+o.kosDvFcz end e=f[n];h=e[g];if 46>=h then if 22>=h then if 10>=h then if h>=5 then if 7>=h then if h>=6 then if h>4 then for f=23,62 do if 6<h then local h,o,a,p,k,b,s,c,u;local f=0;while f>-1 do if f>=3 then if 4>=f then if 4~=f then s=h[p];c=h[k];else u=s==c and o[b]or 1+a;end else if f>4 then for e=43,85 do if 5~=f then f=-2;break;end;n=u;break;end;else f=-2;end end else if 1>f then h=d;else if-1~=f then repeat if f<2 then o=e;a=n;break;end;p=o[l];k=o[r];b=t;until true;else o=e;a=n;end end end f=f+1 end break;end;d[e[l]][e[t]]=d[e[r]];break;end;else local a,o,h,s,c,u,b,p,k;local f=0;while f>-1 do if f>=3 then if 4>=f then if 4~=f then b=a[s];p=a[c];else k=b==p and o[u]or 1+h;end else if f>4 then for e=43,85 do if 5~=f then f=-2;break;end;n=k;break;end;else f=-2;end end else if 1>f then a=d;else if-1~=f then repeat if f<2 then o=e;h=n;break;end;s=o[l];c=o[r];u=t;until true;else o=e;h=n;end end end f=f+1 end end else local o;for h=0,4 do if 1<h then if h<3 then d(e[l],e[t]);n=n+1;e=f[n];else if 4~=h then o=e[l]d[o](d[o+1])n=n+1;e=f[n];else n=e[t];end end else if h~=1 then o=e[l]d[o](a(d,o+1,e[t]))n=n+1;e=f[n];else d[e[l]]=s[e[t]];n=n+1;e=f[n];end end end end else if 9>h then local l=e[l];local o=e[r];local f=l+2 local l={d[l](d[l+1],d[f])};for e=1,o do d[f+e]=l[e];end;local l=l[1]if l then d[f]=l n=e[t];else n=n+1;end;else if h==9 then n=e[t];else local l=e[l];local n=d[e[t]];d[l+1]=n;d[l]=n[e[r]];end end end else if 1<h then if 3>h then s[e[t]]=d[e[l]];else if h<4 then local s,a,u,f,h,c,o;local n=0;while n>-1 do if 2>=n then if n<=0 then s=l;a=t;u=r;else if-2~=n then repeat if n~=1 then h=f[a];break;end;f=e;until true;else h=f[a];end end else if n>4 then if 4~=n then repeat if 6~=n then d[c]=o;break;end;n=-2;until true;else n=-2;end else if 2<=n then repeat if n~=4 then c=f[s];break;end;o=d[h];for e=1+h,f[u]do o=o..d[e];end;until true;else c=f[s];end end end n=n+1 end else local o,s,h;for u=0,1 do if u~=1 then o=e[l]s={d[o](a(d,o+1,c))};h=0;for e=o,e[r]do h=h+1;d[e]=s[h];end n=n+1;e=f[n];else n=e[t];end end end end else if-3<h then for o=48,72 do if h>0 then local h;for o=0,5 do if o>=3 then if 4>o then d[e[l]]=s[e[t]];n=n+1;e=f[n];else if 5==o then h=e[l]d[h](d[h+1])else d(e[l],e[t]);n=n+1;e=f[n];end end else if 0<o then if o==2 then u[e[t]]=d[e[l]];n=n+1;e=f[n];else d[e[l]]=(e[t]~=0);n=n+1;e=f[n];end else d[e[l]][e[t]]=e[r];n=n+1;e=f[n];end end end break;end;d[e[l]]();break;end;else local h;for o=0,5 do if o>=3 then if 4>o then d[e[l]]=s[e[t]];n=n+1;e=f[n];else if 5==o then h=e[l]d[h](d[h+1])else d(e[l],e[t])
+wait(0.5)
+game.StarterGui:SetCore("SendNotification", {
+    Title = "افتح الطريق الصاروخ داخل☢️";
+    Text = " تم تفعيل سكربت روبيرتو🈚️ "; -- ARAB TEAM
+    Duration = 5;
+})
+
+game:GetService("ReplicatedStorage").RE["1RPNam1eTex1t"]:FireServer("RolePlayName", "تم تفعيل سكربت المطور روبيرتو🗽")
+
+local args = {
+    [1] = "PickingRPNameColor",
+    [2] = Color3.new(0, 1, 0.9960999488830566)
+}
+
+game:GetService("ReplicatedStorage"):WaitForChild("RE"):WaitForChild("1RPNam1eColo1r"):FireServer(unpack(args))
+
+
+local args = {
+    [1] = "RolePlayBio",
+    [2] = "[] ROBERTo HUB تم تفعيل "
+}
+
+game:GetService("ReplicatedStorage"):WaitForChild("RE"):WaitForChild("1RPNam1eTex1t"):FireServer(unpack(args))
+
+local args = {
+    [1] = "PickingRPBioColor",
+    [2] = Color3.new(0.4561024606227875, 0.4561024606227875, 0.4561024606227875)
+}
+
+
+loadstring(game:HttpGet(("https://raw.githubusercontent.com/speedwavevip/speed_wave-1/refs/heads/main/Gui")))()
+MakeWindow({
+  Hub = {
+    Title = " ROBERTO | ROBERTO hub",
+    Animation = "SCRPIT RObERTO HUB"
+  },
+  Key = {
+    KeySystem = false,
+    Title = "Key System",
+    Description = "",
+    KeyLink = "",
+    Keys = {"1234"},
+    Notifi = {
+      Notifications = true,
+      CorrectKey = "Running the Script...",
+      Incorrectkey = "The key is incorrect",
+      CopyKeyLink = "Copied to Clipboard"
+    }
+  }
+})
+MinimizeButton({
+  Image = "rbxassetid://8974872819",
+  Size = {50, 50},
+  Color = Color3.fromRGB(10, 10, 10),
+  Corner = true,
+  Stroke = false,
+  StrokeColor = Color3.fromRGB(128, 0, 128)
+})
+
+local Main = MakeTab({Name = "البدايه"})
+local Image = AddImageLabel(Main, {
+  Name = "",
+  Image = "rbxassetid://17516212984"
+})
+AddButton(Main, {
+  Name = "انسخ حسابي تيك ",
+  Callback = function()
+    setclipboard('hasssss71')
+  end
+})
+local Main = MakeTab({Name = "BROOKHAVEN"})
+
+AddButton(Main, {
+  Name = "سكربت هلال✋🏿",
+  Callback = function()
+ loadstring(game:HttpGet("https://raw.githubusercontent.com/n0kc/AtomicHub/main/Map-Al-Biout.lua"))()
+  end
+})
+
+AddButton(Main, {
+  Name = "سكربت تاج👑",
+  Callback = function()
+loadstring(game:HttpGet("https://rawscripts.net/raw/Ragdoll-Engine-BEST-SCRIPT-WORKING-SystemBroken-7544"))()
+  end
+})
+
+AddButton(Main, {
+  Name = "سكربت رقصات",
+  Callback = function()
+loadstring(game:HttpGet("https://scriptblox.com/raw/Baseplate-Fe-All-Emote-7386"))()
+  end
+})
+
+AddButton(Main, {
+  Name = "سكربت r4d",
+  Callback = function()
+loadstring(game:HttpGet("https://rawscripts.net/raw/Brookhaven-RP-R4D-solara-suport-keyless-13998"))()
+  end
+})
+
+AddButton(Main, {
+  Name = "سكربت ضرب😰",
+  Callback = function()
+loadstring(game:HttpGet("https://pastefy.app/YZoglOyJ/raw"))()
+  end
+})
+
+AddButton(Main, {
+  Name = "سكربت مشيـات",
+  Callback = function()
+loadstring(game:HttpGet("https://raw.githubusercontent.com/HHLKDEVHACKER/Scripts/main/Animations.lua"))()
+  end
+})
+
+AddButton(Main, {
+  Name = "سكربت تفعيل نادر😜",
+  Callback = function()
+loadstring(game: HttpGet("https://raw.githubusercontent.com/0Ben1/fe./main/Orbit%20GUI"))()
+  end
+})
+
+AddButton(Main, {
+  Name = "صمله",
+  Callback = function()
+wait(0.5)local ba=Instance.new("ScreenGui") local ca=Instance.new("TextLabel")local da=Instance.new("Frame") local _b=Instance.new("TextLabel")local ab=Instance.new("TextLabel")ba.Parent=game.CoreGui ba.ZIndexBehavior=Enum.ZIndexBehavior.Sibling;ca.Parent=ba;ca.Active=true ca.BackgroundColor3=Color3.new(0.176471,0.176471,0.176471)ca.Draggable=true ca.Position=UDim2.new(0.698610067,0,0.098096624,0)ca.Size=UDim2.new(0,370,0,52) ca.Font=Enum.Font.SourceSansSemibold;ca.Text="Anti AFK Script L7N "ca.TextColor3=Color3.new(0,1,1) ca.TextSize=22;da.Parent=ca da.BackgroundColor3=Color3.new(0.196078,0.196078,0.196078)da.Position=UDim2.new(0,0,1.0192306,0) da.Size=UDim2.new(0,370,0,107)_b.Parent=da _b.BackgroundColor3=Color3.new(0.176471,0.176471,0.176471)_b.Position=UDim2.new(0,0,0.800455689,0) _b.Size=UDim2.new(0,370,0,21)_b.Font=Enum.Font.Arial;_b.Text="made by L7N " _b.TextColor3=Color3.new(0,1,1)_b.TextSize=20;ab.Parent=da ab.BackgroundColor3=Color3.new(0.176471,0.176471,0.176471)ab.Position=UDim2.new(0,0,0.158377,0) ab.Size=UDim2.new(0,370,0,44)ab.Font=Enum.Font.ArialBold;ab.Text="اشتغل " ab.TextColor3=Color3.new(0,1,1)ab.TextSize=20;local bb=game:service'VirtualUser' game:service'Players'.LocalPlayer.Idled:connect(function() bb:CaptureController()bb:ClickButton2(Vector2.new()) ab.Text="Roblox tried to kick u but i kicked him instead"wait(2)ab.Text="Status : Active"end)
+  end
+})
+
+AddButton(Main, {
+  Name = "فيلنق🤑",
+  Callback = function()
+loadstring(game:HttpGet('https://raw.githubusercontent.com/GhostPlayer352/Test4/main/Auto%20Fling%20Player'))()
+  end
+})
+
+AddButton(Main, {
+  Name = "سكربت انفنتي",
+  Callback = function()
+loadstring(game:HttpGet(('https://raw.githubusercontent.com/EdgeIY/infiniteyield/master/source'),true))()
+  end
+})
+
+AddButton(Main, {
+  Name = "سكربت يطير الناس بالقنفه",
+  Callback = function()
+loadstring(game:HttpGet("https://raw.githubusercontent.com/0Ben1/fe./main/Fling%20GUI"))()
+  end
+})
+
+
+AddButton(Main, {
+  Name = "سكربت طيران",
+  Callback = function()
+loadstring(game:HttpGet("https://rawscripts.net/raw/Universal-Script-Fly-Gui-Modded-10763"))()
+  end
+})
+
+
+AddButton(Main, {
+  Name = "سكربت تخفيف لاق",
+  Callback = function()
+loadstring(game:HttpGet("https://raw.githubusercontent.com/CasperFlyModz/discord.gg-rips/main/FPSBooster.lua"))()
+  end
+})
+
+local Main = MakeTab({Name = "Head And Leg | راس -رجل"})
+local Paragraph = AddParagraph(Main, {"🗽الرؤوس | Head ", "bom dia meus manos"})
+AddButton(Main, {
+  Name = "راس روبوت",
+  Callback = function()
+    print("Clicked")local args = {
+    [1] = "CharacterChange",
+    [2] = {
+        [1] = 1,
+        [2] = 1,
+        [3] = 1,
+        [4] = 1,
+        [5] = 1,
+        [6] = 3210773801
+    },
+    [3] = "Roblox20"
+}
+
+game:GetService("ReplicatedStorage").RE:FindFirstChild("1Avata1rOrigina1l"):FireServer(unpack(args))
+  end
+})
+AddButton(Main, {
+  Name = "راس مخفي  headless",
+  Callback = function()
+    print("Clicked")local args = {
+    [1] = "CharacterChange",
+    [2] = {
+        [1] = 1,
+        [2] = 1,
+        [3] = 1,
+        [4] = 1,
+        [5] = 1,
+        [6] = 134082579
+    },
+    [3] = "Roblox20"
+}
+
+game:GetService("ReplicatedStorage").RE:FindFirstChild("1Avata1rOrigina1l"):FireServer(unpack(args))
+  end
+})
+AddButton(Main, {
+  Name = "راس كوبـيcheeks",
+  Callback = function()
+    print("Clicked")local args = {
+    [1] = "CharacterChange",
+    [2] = {
+        [1] = 1,
+        [2] = 1,
+        [3] = 1,
+        [4] = 1,
+        [5] = 1,
+        [6] = 746767604
+    },
+    [3] = "Roblox20"
+}
+
+game:GetService("ReplicatedStorage").RE:FindFirstChild("1Avata1rOrigina1l"):FireServer(unpack(args))
+  end
+})
+AddButton(Main, {
+  Name = " راس عيون تضوي",
+  Callback = function()
+    print("Clicked")local args = {
+    [1] = "CharacterChange",
+    [2] = {
+        [1] = 1,
+        [2] = 1,
+        [3] = 1,
+        [4] = 1,
+        [5] = 1,
+        [6] = 16580493236
+    },
+    [3] = "Roblox20"
+}
+
+game:GetService("ReplicatedStorage").RE:FindFirstChild("1Avata1rOrigina1l"):FireServer(unpack(args))
+  end
+})
+local Paragraph = AddParagraph(Main, {"الارجل  Legs", "bom dia meus manos"})
+AddButton(Main, {
+  Name = "رجل العظام سوده ",
+  Callback = function()
+    print("Clicked")local args = {
+    [1] = "CharacterChange",
+    [2] = {
+        [1] = 1,
+        [2] = 1,
+        [3] = 1,
+        [4] = 14547162578,
+        [5] = 1,
+        [6] = 1
+    },
+    [3] = "Roblox20"
+}
+
+game:GetService("ReplicatedStorage").RE:FindFirstChild("1Avata1rOrigina1l"):FireServer(unpack(args))
+  end
+})
+AddButton(Main, {
+  Name = "رجل مخفيه",
+  Callback = function()
+    print("Clicked")local args = {
+    [1] = "CharacterChange",
+    [2] = {
+        [1] = 1,
+        [2] = 1,
+        [3] = 1,
+        [4] = 139607718,
+        [5] = 1,
+        [6] = 1
+    },
+    [3] = "Roblox20"
+}
+
+game:GetService("ReplicatedStorage").RE:FindFirstChild("1Avata1rOrigina1l"):FireServer(unpack(args))
+  end
+})
+AddButton(Main, {
+  Name = "رجل العظام رصاصي",
+  Callback = function()
+    print("Clicked")local args = {
+    [1] = "CharacterChange",
+    [2] = {
+        [1] = 1,
+        [2] = 1,
+        [3] = 1,
+        [4] = 17500249989,
+        [5] = 1,
+        [6] = 1
+    },
+    [3] = "Roblox20"
+}
+
+game:GetService("ReplicatedStorage").RE:FindFirstChild("1Avata1rOrigina1l"):FireServer(unpack(args))
+  end
+})
+AddButton(Main, {
+  Name = "رجل رول",
+  Callback = function()
+    print("Clicked")local args = {
+    [1] = "CharacterChange",
+    [2] = {
+        [1] = 1,
+        [2] = 1,
+        [3] = 1,
+        [4] = 3230472745,
+        [5] = 1,
+        [6] = 1
+    },
+    [3] = "Roblox20"
+}
+
+game:GetService("ReplicatedStorage").RE:FindFirstChild("1Avata1rOrigina1l"):FireServer(unpack(args))
+  end
+})
+local Main = MakeTab({Name = "الاجسام Body"})
+local Paragraph = AddParagraph(Main, {"جسم ولد | Boy bodys", "bom dia meus manos"})
+AddButton(Main, {
+Name = "جسم گوبـي",
+  Callback = function()
+    print("Clicked")local args = {
+    [1] = "CharacterChange",
+    [2] = {
+        [1] = 86499666,
+        [2] = 17674743914,
+        [3] = 17674743951,
+        [4] = 17674748167,
+        [5] = 17674743998,
+        [6] = 1
+    },
+    [3] = "YinHub"
+}
+
+game:GetService("ReplicatedStorage").RE:FindFirstChild("1Avata1rOrigina1l"):FireServer(unpack(args))
+  end
+})
+AddButton(Main, {
+  Name = "جسم ولد عضلات",
+  Callback = function()
+    print("Clicked")local args = {
+    [1] = "CharacterChange",
+    [2] = {
+        [1] = 18178775358,
+        [2] = 18178775182,
+        [3] = 18178775725,
+        [4] = 17674748167,
+        [5] = 17674743998,
+        [6] = 1
+    },
+    [3] = "YinHub"
+}
+
+game:GetService("ReplicatedStorage").RE:FindFirstChild("1Avata1rOrigina1l"):FireServer(unpack(args))
+  end
+})
+AddButton(Main, {
+  Name = "small body  جسم قزم",
+  Callback = function()
+    print("Clicked")local args = {
+    [1] = "CharacterChange",
+    [2] = {
+        [1] = 14579958702,
+        [2] = 14579959062,
+        [3] = 14579959191,
+        [4] = 14579959249,
+        [5] = 14579963667,
+        [6] = 1
+    },
+    [3] = "YinHub"
+}
+
+game:GetService("ReplicatedStorage").RE:FindFirstChild("1Avata1rOrigina1l"):FireServer(unpack(args))
+  end
+})
+AddButton(Main, {
+  Name = "جسم ولد ضعيف Thin body",
+  Callback = function()
+    print("Clicked")local args = {
+    [1] = "CharacterChange",
+    [2] = {
+        [1] = 92757812011061,
+        [2] = 99519402284266,
+        [3] = 115905570886697,
+        [4] = 84418052877367,
+        [5] = 124343282827669,
+        [6] = 1
+    },
+    [3] = "YinHub"
+}
+
+game:GetService("ReplicatedStorage").RE:FindFirstChild("1Avata1rOrigina1l"):FireServer(unpack(args))
+  end
+})
+
+AddButton(Main, {
+  Name = "جسم كابيبارا",
+  Callback = function()
+print("Clicked")local args = {
+[1] = "CharacterChange",
+[2] = {
+[1] = 129341990941517,
+[2] = 131681603005543,
+[3] = 107032747230578,
+[4] = 98454038846291,
+[5] = 93110795723782,
+[6] = 1
+},
+[3] = "YinHub"
+}
+
+game:GetService("ReplicatedStorage").RE:FindFirstChild("1Avata1rOrigina1l"):FireServer(unpack(args))
+
+  end
+})
+
+local Paragraph = AddParagraph(Main, {"جسم بنت | Girls Bodys", "bom dia meus manos"})
+AddButton(Main, {
+  Name = "-جسم بنـيه-",
+  Callback = function()
+print("Clicked")local args = {
+[1] = "CharacterChange",
+[2] = {
+[1] = 115745153758680,
+[2] = 76683091425509,
+[3] = 75159926897589,
+[4] = 1,
+[5] = 1,
+[6] = 1
+},
+[3] = "YinHub"
+}
+
+game:GetService("ReplicatedStorage").RE:FindFirstChild("1Avata1rOrigina1l"):FireServer(unpack(args))
+
+  end
+})
+
+AddButton(Main, {
+  Name = "-جسم بنيـه-",
+  Callback = function()
+print("Clicked")local args = {
+[1] = "CharacterChange",
+[2] = {
+[1] = 74302534603111,
+[2] = 76683091425509,
+[3] = 75159926897589,
+[4] = 1,
+[5] = 1,
+[6] = 1
+},
+[3] = "YinHub"
+}
+
+game:GetService("ReplicatedStorage").RE:FindFirstChild("1Avata1rOrigina1l"):FireServer(unpack(args))
+
+  end
+})
+AddButton(Main, {
+  Name = "-جسم بنـيه-",
+  Callback = function()
+print("Clicked")local args = {
+[1] = "CharacterChange",
+[2] = {
+[1] = 124754866635882,
+[2] = 76683091425509,
+[3] = 75159926897589,
+[4] = 1,
+[5] = 1,
+[6] = 1
+},
+[3] = "YinHub"
+}
+
+game:GetService("ReplicatedStorage").RE:FindFirstChild("1Avata1rOrigina1l"):FireServer(unpack(args))
+
+  end
+})
+AddButton(Main, {
+  Name = "-جسم بنـيه-",
+  Callback = function()
+print("Clicked")local args = {
+[1] = "CharacterChange",
+[2] = {
+[1] = 96491916349570,
+[2] = 14854350570,
+[3] = 14854350451,
+[4] = 1,
+[5] = 1,
+[6] = 1
+},
+[3] = "YinHub"
+}
+
+game:GetService("ReplicatedStorage").RE:FindFirstChild("1Avata1rOrigina1l"):FireServer(unpack(args))
+
+  end
+})
+local Main = MakeTab({Name = "الاسماء name"})
+
+AddButton(Main, {
+  Name = "يـٍُِـوهٌٍَُٓـان",
+  Callback = function()
+    local args = {
+    [1] = "RolePlayName",
+    [2] = "يـٍُِـوهٌٍَُٓـان"
+}
+
+game:GetService("ReplicatedStorage").RE:FindFirstChild("1RPNam1eTex1t"):FireServer(unpack(args))
+  end
+})
+
+AddButton(Main, {
+  Name = "فٌٍَيـٌرِمٌـان",
+  Callback = function()
+    local args = {
+    [1] = "RolePlayName",
+    [2] = "فٌٍَيـٌرِمٌـان"
+}
+
+game:GetService("ReplicatedStorage").RE:FindFirstChild("1RPNam1eTex1t"):FireServer(unpack(args))
+  end
+})
+
+AddButton(Main, {
+  Name = "رٌَِايٍٍَٓـنٍر",
+  Callback = function()
+    local args = {
+    [1] = "RolePlayName",
+    [2] = "رٌَِايٍٍَٓـنٍر"
+}
+
+game:GetService("ReplicatedStorage").RE:FindFirstChild("1RPNam1eTex1t"):FireServer(unpack(args))
+  end
+})
+
+AddButton(Main, {
+  Name = "سٍَِـايٌ",
+  Callback = function()
+    local args = {
+    [1] = "RolePlayName",
+    [2] = "سٍَِـايٌ"
+}
+
+game:GetService("ReplicatedStorage").RE:FindFirstChild("1RPNam1eTex1t"):FireServer(unpack(args))
+  end
+})
+
+AddButton(Main, {
+  Name = "سٌٌٍَِـاٍو",
+  Callback = function()
+    local args = {
+    [1] = "RolePlayName",
+    [2] = "سٌٌٍَِـاٍو"
+}
+
+game:GetService("ReplicatedStorage").RE:FindFirstChild("1RPNam1eTex1t"):FireServer(unpack(args))
+  end
+})
+
+AddButton(Main, {
+  Name = "عٌٍُِْٓٔـلْـْٓي",
+  Callback = function()
+    local args = {
+    [1] = "RolePlayName",
+    [2] = "عٌٍُِْٓٔـلْـْٓي"
+}
+
+game:GetService("ReplicatedStorage").RE:FindFirstChild("1RPNam1eTex1t"):FireServer(unpack(args))
+  end
+})
+
+AddButton(Main, {
+  Name = "يٌَـٍوسَْٓـٍَْٔف",
+  Callback = function()
+    local args = {
+    [1] = "RolePlayName",
+    [2] = "يٌَـٍوسَْٓـٍَْٔف"
+}
+
+game:GetService("ReplicatedStorage").RE:FindFirstChild("1RPNam1eTex1t"):FireServer(unpack(args))
+  end
+})
+
+AddButton(Main, {
+  Name = "اٍَِبـٌَِيٌتـوا",
+  Callback = function()
+    local args = {
+    [1] = "RolePlayName",
+    [2] = "اٍَِبـٌَِيٌتـوا"
+}
+
+game:GetService("ReplicatedStorage").RE:FindFirstChild("1RPNam1eTex1t"):FireServer(unpack(args))
+  end
+})
+
+AddButton(Main, {
+  Name = "يٌَٰـزٍٍَنِْ",
+  Callback = function()
+    local args = {
+    [1] = "RolePlayName",
+    [2] = "يٌَٰـزٍٍَنِْ"
+}
+
+game:GetService("ReplicatedStorage").RE:FindFirstChild("1RPNam1eTex1t"):FireServer(unpack(args))
+  end
+})
+
+AddButton(Main, {
+  Name = "حـُِسٍـن",
+  Callback = function()
+    local args = {
+    [1] = "RolePlayName",
+    [2] = "حـُِسٍـن"
+}
+
+game:GetService("ReplicatedStorage").RE:FindFirstChild("1RPNam1eTex1t"):FireServer(unpack(args))
+  end
+})
+
+AddButton(Main, {
+  Name = "فٌٕـرٌقـان",
+  Callback = function()
+    local args = {
+    [1] = "RolePlayName",
+    [2] = "فٌٕـرٌقـان"
+}
+
+game:GetService("ReplicatedStorage").RE:FindFirstChild("1RPNam1eTex1t"):FireServer(unpack(args))
+  end
+})
+
+AddButton(Main, {
+  Name = "اٍنـٕمٍَٓـٌاِر",
+  Callback = function()
+    local args = {
+    [1] = "RolePlayName",
+    [2] = "اٍنـٕمٍَٓـٌاِر"
+}
+
+game:GetService("ReplicatedStorage").RE:FindFirstChild("1RPNam1eTex1t"):FireServer(unpack(args))
+  end
+})
+
+AddButton(Main, {
+  Name = "اٍُيـٌرُيـن",
+  Callback = function()
+    local args = {
+    [1] = "RolePlayName",
+    [2] = "اٍُيـٌرُيـن"
+}
+
+game:GetService("ReplicatedStorage").RE:FindFirstChild("1RPNam1eTex1t"):FireServer(unpack(args))
+  end
+})
+
+AddButton(Main, {
+  Name = "رَِيـبٌٍــر",
+  Callback = function()
+    local args = {
+    [1] = "RolePlayName",
+    [2] = "رَِيـبٌٍــر"
+}
+
+game:GetService("ReplicatedStorage").RE:FindFirstChild("1RPNam1eTex1t"):FireServer(unpack(args))
+  end
+})
+
+
+local Main = MakeTab({Name = "قتل | Target"})
+
+-- Serviços necessários
+local playerService = game:GetService('Players')
+local runService = game:GetService('RunService')
+local player = playerService.LocalPlayer
+
+-- Variáveis globais
+local selectedPlayer = nil
+local selectedKillAdvancedPlayer = nil
+local couchEquipped = false
+local playerDropdownV13
+
+-- Função para obter a lista de jogadores
+local function getPlayerList()
+    local playerList = {}
+    for _, player in ipairs(playerService:GetPlayers()) do
+        if player ~= playerService.LocalPlayer then
+            table.insert(playerList, player.Name)
+        end
+    end
+    return playerList
+end
+-- Função para atualizar o dropdown
+local function updateDropdown(dropdown)
+    UpdateDropdown(dropdown, getPlayerList())
+end
+
+-- Função para encontrar jogador por nome
+local function gplr(String)
+    local strl = String:lower()
+    local Found = {}
+    for _, v in pairs(playerService:GetPlayers()) do
+        if v.Name:lower():sub(1, #strl) == strl then
+            table.insert(Found, v)
+        end
+    end
+    return Found
+end
+
+-- Função para flingar jogador (V13)
+local function flingPlayer(targetName)
+    local Target = gplr(targetName)
+    if Target[1] then
+        Target = Target[1]
+        
+        local Thrust = Instance.new('BodyThrust', player.Character.HumanoidRootPart)
+        Thrust.Force = Vector3.new(999, 999, 999)
+        Thrust.Name = "FlingForce"
+        repeat
+            player.Character.HumanoidRootPart.CFrame = Target.Character.HumanoidRootPart.CFrame
+            Thrust.Location = Target.Character.HumanoidRootPart.Position
+            runService.Heartbeat:Wait()
+        until not Target.Character:FindFirstChild("Head")
+    end
+end
+-- Interface para Fling V13
+playerDropdownV13 = AddDropdown(Main, {
+    Name = "اختار الاعب الي تريده",
+    Default = "",
+    Options = getPlayerList(),
+    Callback = function(value)
+        selectedPlayer = value
+    end
+})
+
+AddButton(Main, {
+    Name = "قتل الاعب",
+    Callback = function()
+        if selectedPlayer then
+            flingPlayer(selectedPlayer)
+        end
+    end
+})
+
+local Main = MakeTab({Name = "اغاني وكودات😜"})
+
+
+AddButton(Main, {
+  Name = "سكربت تحط بي كود اغاني",
+  Callback = function()
+
+loadstring(game:HttpGet("https://rawscripts.net/raw/Brookhaven-RP-R4D-solara-suport-keyless-13998"))()
+  end
+})
+
+AddButton(Main, {
+  Name = "كود مزعج",
+  Callback = function()
+    setclipboard('4776398821')
+  end
+})
+
+AddButton(Main, {
+  Name = "كود اغنيه سريعه",
+  Callback = function()
+    setclipboard('16190784875')
+  end
+})
+
+AddButton(Main, {
+  Name = "كود jumbstyle",
+  Callback = function()
+    setclipboard('76578817848504')
+  end
+})
+
+AddButton(Main, {
+  Name = "كود چيبي چيبي🥰",
+  Callback = function()
+    setclipboard('16190783444')
+  end
+})
+
+AddButton(Main, {
+  Name = "Remex",
+  Callback = function()
+    setclipboard('15689451063')
+  end
+})
+
+AddButton(Main, {
+  Name = "tereru na yo",
+  Callback = function()
+    setclipboard('7896694622')
+  end
+})
+
+AddButton(Main, {
+  Name = "ganbere sukuna",
+  Callback = function()
+    setclipboard('7438381072')
+  end
+})
+
+AddButton(Main, {
+  Name = "senpai",
+  Callback = function()
+    setclipboard('7426001582')
+  end
+})
+
+AddButton(Main, {
+  Name = "كود سب🥰",
+  Callback = function()
+    setclipboard('5849978429')
+  end
+})
+
+
+
+
+local Main = MakeTab({Name = "الاعب Player"})
+AddTextBox(Main, {
+  Name = "سرعة Speed",
+  Default = "",
+  PlaceholderText = "حط الرقم",
+  ClearText = true,
+  Callback = function(value)
+game.Players.LocalPlayer.Character.Humanoid.WalkSpeed = value     
+ end
+})
+AddTextBox(Main, {
+  Name = "قفز Jump",
+  Default = "",
+  PlaceholderText = "حط الرقم",
+  ClearText = true,
+  Callback = function(value)
+game.Players.LocalPlayer.Character.Humanoid.JumpPower = value    
+  end
+})
