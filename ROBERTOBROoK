@@ -17,7 +17,7 @@ game:GetService("ReplicatedStorage"):WaitForChild("RE"):WaitForChild("1RPNam1eCo
 
 local args = {
     [1] = "RolePlayBio",
-    [2] = "[] ROBERTo HUB تم تفعيل "
+    [2] = " ROBERTo HUB تم تفعيل "
 }
 
 game:GetService("ReplicatedStorage"):WaitForChild("RE"):WaitForChild("1RPNam1eTex1t"):FireServer(unpack(args))
@@ -49,7 +49,7 @@ MakeWindow({
   }
 })
 MinimizeButton({
-  Image = "rbxassetid://12842237077",
+  Image = "rbxassetid://15535597832",
   Size = {50, 50},
   Color = Color3.fromRGB(10, 10, 10),
   Corner = true,
