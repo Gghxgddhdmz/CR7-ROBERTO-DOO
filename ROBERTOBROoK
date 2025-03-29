@@ -1,6 +1,6 @@
 wait(0.5)
 game.StarterGui:SetCore("SendNotification", {
-    Title = "افتح الطريق الصاروخ داخل☢️";
+    Title = افتح الطريقة يبني عشان مابشوفش ادامي☢️";
     Text = " تم تفعيل سكربت روبيرتو🈚️ "; -- ARAB TEAM
     Duration = 5;
 })
@@ -60,7 +60,7 @@ MinimizeButton({
 local Main = MakeTab({Name = "البدايه"})
 local Image = AddImageLabel(Main, {
   Name = "",
-  Image = "rbxassetid://12842237077"
+  Image = "rbxassetid://15876205400"
 })
 AddButton(Main, {
   Name = "انسخ حسابي تيك ",
@@ -843,4 +843,4 @@ game.Players.LocalPlayer.Character.Humanoid.JumpPower = value
   end
 })
 
-local Main = MakeTab({Name = "اشياء name"})
+local Main = MakeTab({Item = "اشياء قريبا ITEm"})
