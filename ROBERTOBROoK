@@ -670,177 +670,404 @@ game:GetService("ReplicatedStorage").RE:FindFirstChild("1RPNam1eTex1t"):FireServ
   end
 })
 
+local Paragraph = AddParagraph(Main, {"___ اجـسـام Boys ___"})
 
-local Main = MakeTab({Name = "قتل | Target"})
+AddButton(Main, {
+  Name = "جـسـم ولـد - S15 Skinned -",
+  Callback = function()
+print("Clicked")local args = {
+[1] = "CharacterChange",
+[2] = {
+[1] = 17754346388,
+[2] = 1,
+[3] = 1,
+[4] = 1,
+[5] = 1,
+[6] = 1
+},
+[3] = "YinHub"
+}
 
--- Serviços necessários
-local playerService = game:GetService('Players')
-local runService = game:GetService('RunService')
-local player = playerService.LocalPlayer
+game:GetService("ReplicatedStorage").RE:FindFirstChild("1Avata1rOrigina1l"):FireServer(unpack(args))
 
--- Variáveis globais
-local selectedPlayer = nil
-local selectedKillAdvancedPlayer = nil
-local couchEquipped = false
-local playerDropdownV13
+  end
+})
 
--- Função para obter a lista de jogadores
-local function getPlayerList()
-    local playerList = {}
-    for _, player in ipairs(playerService:GetPlayers()) do
-        if player ~= playerService.LocalPlayer then
-            table.insert(playerList, player.Name)
-        end
-    end
-    return playerList
+AddButton(Main, {
+  Name = "جـسـم ولـد - Thin -",
+  Callback = function()
+print("Clicked")local args = {
+[1] = "CharacterChange",
+[2] = {
+[1] = 92757812011061,
+[2] = 99519402284266,
+[3] = 115905570886697,
+[4] = 1,
+[5] = 1,
+[6] = 1
+},
+[3] = "YinHub"
+}
+
+game:GetService("ReplicatedStorage").RE:FindFirstChild("1Avata1rOrigina1l"):FireServer(unpack(args))
+
+  end
+})
+
+AddButton(Main, {
+  Name = "جـسـم ولـد - كـوبـي -",
+  Callback = function()
+print("Clicked")local args = {
+[1] = "CharacterChange",
+[2] = {
+[1] = 86499666,
+[2] = 27112039,
+[3] = 27112052,
+[4] = 27112068,
+[5] = 27112056,
+[6] = 1
+},
+[3] = "YinHub"
+}
+
+game:GetService("ReplicatedStorage").RE:FindFirstChild("1Avata1rOrigina1l"):FireServer(unpack(args))
+
+  end
+})
+
+
+AddButton(Main, {
+  Name = "جـسـم ولـد - رول -",
+  Callback = function()
+print("Clicked")local args = {
+[1] = "CharacterChange",
+[2] = {
+[1] = 27112025,
+[2] = 27112039,
+[3] = 27112052,
+[4] = 3230472745,
+[5] = 3230470862,
+[6] = 1
+},
+[3] = "YinHub"
+}
+
+game:GetService("ReplicatedStorage").RE:FindFirstChild("1Avata1rOrigina1l"):FireServer(unpack(args))
+
+  end
+})
+
+AddButton(Main, {
+  Name = "جـسـم ولـد - عـضـلات -",
+  Callback = function()
+print("Clicked")local args = {
+[1] = "CharacterChange",
+[2] = {
+[1] = 18178775358,
+[2] = 18178775182,
+[3] = 18178775725,
+[4] = 18178777453,
+[5] = 18178775695,
+[6] = 1
+},
+[3] = "YinHub"
+}
+
+game:GetService("ReplicatedStorage").RE:FindFirstChild("1Avata1rOrigina1l"):FireServer(unpack(args))
+
+  end
+})
+
+local Paragraph = AddParagraph(Main, {"___ اجـسـام Mini small ___"})
+
+AddButton(Main, {
+  Name = "جـسـم الـقـزم - Gril + Boy -",
+  Callback = function()
+print("Clicked")local args = {
+[1] = "CharacterChange",
+[2] = {
+[1] = 14579958702,
+[2] = 14579959062,
+[3] = 14579959191,
+[4] = 14579959249,
+[5] = 14579963667,
+[6] = 1
+},
+[3] = "YinHub"
+}
+
+game:GetService("ReplicatedStorage").RE:FindFirstChild("1Avata1rOrigina1l"):FireServer(unpack(args))
+
+end})
+
+AddButton(Main, {
+  Name = "جـسـم الـقـزم مـتـوسـط - Gril + Boy - ",
+  Callback = function()
+print("Clicked")local args = {
+[1] = "CharacterChange",
+[2] = {
+[1] = 77813057823038,
+[2] = 135110043370135,
+[3] = 116607813654019,
+[4] = 138966229804486,
+[5] = 128961183894053,
+[6] = 1
+},
+[3] = "YinHub"
+}
+
+game:GetService("ReplicatedStorage").RE:FindFirstChild("1Avata1rOrigina1l"):FireServer(unpack(args))
+
+  end
+})
+
+AddButton(Main, {
+  Name = "جـسـم الـقـزم الـقـصـيـر - Gril + Boy -",
+  Callback = function()
+print("Clicked")local args = {
+[1] = "CharacterChange",
+[2] = {
+[1] = 120973199097564,
+[2] = 118345433416023,
+[3] = 112849465115864,
+[4] = 78321005147549,
+[5] = 106586789635639,
+[6] = 1
+},
+[3] = "YinHub"
+}
+
+game:GetService("ReplicatedStorage").RE:FindFirstChild("1Avata1rOrigina1l"):FireServer(unpack(args))
+
+  end
+})
+AddButton(Main, {
+  Name = "جـسـم الـقـزم  - Mini S15 Boy -",
+  Callback = function()
+print("Clicked")local args = {
+[1] = "CharacterChange",
+[2] = {
+[1] = 126267841602936,
+[2] = 77530451194918,
+[3] = 123471958406889,
+[4] = 117042768644173,
+[5] = 131948590344338,
+[6] = 1
+},
+[3] = "YinHub"
+}
+
+game:GetService("ReplicatedStorage").RE:FindFirstChild("1Avata1rOrigina1l"):FireServer(unpack(args))
+
+  end
+})
+
+AddButton(Main, {
+  Name = "جـسـم قـزم تـنـسـيـقـي - Gril -",
+  Callback = function()
+print("Clicked")local args = {
+[1] = "CharacterChange",
+[2] = {
+[1] = 15282063616,
+[2] = 15282063632,
+[3] = 15282063615,
+[4] = 14538400463,
+[5] = 14538400387,
+[6] = 1
+},
+[3] = "YinHub"
+}
+
+game:GetService("ReplicatedStorage").RE:FindFirstChild("1Avata1rOrigina1l"):FireServer(unpack(args))
+
+  end
+})
+
+AddButton(Main, {
+  Name = "جـسـم الـهـامـسـتـر - Hamster -",
+  Callback = function()
+print("Clicked")local args = {
+[1] = "CharacterChange",
+[2] = {
+[1] = 14898536974,
+[2] = 14898536957,
+[3] = 14898537277,
+[4] = 14898537300,
+[5] = 14898537292,
+[6] = 14898536975,
+},
+[3] = "YinHub"
+}
+
+game:GetService("ReplicatedStorage").RE:FindFirstChild("1Avata1rOrigina1l"):FireServer(unpack(args))
+
+  end
+})
+
+local Main = MakeTab({Name = "قـائـمـة Heads 📌"})
+local Paragraph = AddParagraph(Main, {"قـائـمـة Heads 📌"})
+AddButton(Main, {
+  Name = "رأس- الـفـضـائـي -",
+  Callback = function()
+print("Clicked")local args = {
+    [1] = "CharacterChange",
+    [2] = {
+        [1] = 1,
+        [2] = 1,
+        [3] = 1,
+        [4] = 1,
+        [5] = 1,
+        [6] = 3210773801
+    },
+    [3] = "Roblox20"
+}
+
+game:GetService("ReplicatedStorage").RE:FindFirstChild("1Avata1rOrigina1l"):FireServer(unpack(args))
+  end
+})
+
+AddButton(Main, {
+  Name = "رأس - الـسـلـنـدر - ",
+  Callback = function()
+print("Clicked")local args = {
+    [1] = "CharacterChange",
+    [2] = {
+        [1] = 1,
+        [2] = 1,
+        [3] = 1,
+        [4] = 1,
+        [5] = 1,
+        [6] = 746767604
+    },
+    [3] = "Roblox20"
+}
+
+game:GetService("ReplicatedStorage").RE:FindFirstChild("1Avata1rOrigina1l"):FireServer(unpack(args))
 end
--- Função para atualizar o dropdown
-local function updateDropdown(dropdown)
-    UpdateDropdown(dropdown, getPlayerList())
+})
+
+AddButton(Main, {
+  Name = "رأس - الـمـخـفـي -",
+  Callback = function()
+print("Clicked")local args = {
+    [1] = "CharacterChange",
+    [2] = {
+        [1] = 1,
+        [2] = 1,
+        [3] = 1,
+        [4] = 1,
+        [5] = 1,
+        [6] = 134082579
+    },
+    [3] = "Roblox20"
+}
+
+game:GetService("ReplicatedStorage").RE:FindFirstChild("1Avata1rOrigina1l"):FireServer(unpack(args))
 end
+})
 
--- Função para encontrar jogador por nome
-local function gplr(String)
-    local strl = String:lower()
-    local Found = {}
-    for _, v in pairs(playerService:GetPlayers()) do
-        if v.Name:lower():sub(1, #strl) == strl then
-            table.insert(Found, v)
-        end
-    end
-    return Found
+AddButton(Main, {
+  Name = "رأس- عـيـون الزرگ -",
+  Callback = function()
+print("Clicked")local args = {
+    [1] = "CharacterChange",
+    [2] = {
+        [1] = 1,
+        [2] = 1,
+        [3] = 1,
+        [4] = 1,
+        [5] = 1,
+        [6] = 16580493236
+    },
+    [3] = "Roblox20"
+}
+
+game:GetService("ReplicatedStorage").RE:FindFirstChild("1Avata1rOrigina1l"):FireServer(unpack(args))
 end
-
--- Função para flingar jogador (V13)
-local function flingPlayer(targetName)
-    local Target = gplr(targetName)
-    if Target[1] then
-        Target = Target[1]
-        
-        local Thrust = Instance.new('BodyThrust', player.Character.HumanoidRootPart)
-        Thrust.Force = Vector3.new(999, 999, 999)
-        Thrust.Name = "FlingForce"
-        repeat
-            player.Character.HumanoidRootPart.CFrame = Target.Character.HumanoidRootPart.CFrame
-            Thrust.Location = Target.Character.HumanoidRootPart.Position
-            runService.Heartbeat:Wait()
-        until not Target.Character:FindFirstChild("Head")
-    end
-end
--- Interface para Fling V13
-playerDropdownV13 = AddDropdown(Main, {
-    Name = "اختار الاعب الي تريده",
-    Default = "",
-    Options = getPlayerList(),
-    Callback = function(value)
-        selectedPlayer = value
-    end
 })
 
+local Main = MakeTab({Name = "قـائـمـة Legs 📌"})
+local Paragraph = AddParagraph(Main, {"قـائـمـة Legs 📌"})
 AddButton(Main, {
-    Name = "قتل الاعب",
-    Callback = function()
-        if selectedPlayer then
-            flingPlayer(selectedPlayer)
-        end
-    end
-})
-
-local Main = MakeTab({Name = "اغاني وكودات😜"})
-
-
-AddButton(Main, {
-  Name = "سكربت تحط بي كود اغاني",
+  Name = "رجـل مـقـطـوعـة - Koroblx Right -",
   Callback = function()
+print("Clicked")local args = {
+[1] = "CharacterChange",
+[2] = {
+[1] = 1,
+[2] = 1,
+[3] = 1,
+[4] = 139607718,
+[5] = 1,
+[6] = 1
+},
+[3] = "YinHub"
+}
 
-loadstring(game:HttpGet("https://rawscripts.net/raw/Brookhaven-RP-R4D-solara-suport-keyless-13998"))()
+game:GetService("ReplicatedStorage").RE:FindFirstChild("1Avata1rOrigina1l"):FireServer(unpack(args))
+
   end
 })
 
 AddButton(Main, {
-  Name = "كود مزعج",
+  Name = "رجـل مـقـطـوعـة - Koroblx Left -",
   Callback = function()
-    setclipboard('4776398821')
+print("Clicked")local args = {
+[1] = "CharacterChange",
+[2] = {
+[1] = 1,
+[2] = 1,
+[3] = 1,
+[4] = 1,
+[5] = 139607673,
+[6] = 1
+},
+[3] = "YinHub"
+}
+
+game:GetService("ReplicatedStorage").RE:FindFirstChild("1Avata1rOrigina1l"):FireServer(unpack(args))
+
   end
 })
 
 AddButton(Main, {
-  Name = "كود اغنيه سريعه",
+  Name = "- Logs Blockey Gril -",
   Callback = function()
-    setclipboard('16190784875')
+print("Clicked")local args = {
+[1] = "CharacterChange",
+[2] = {
+[1] = 1,
+[2] = 1,
+[3] = 1,
+[4] = 14842193436,
+[5] = 14842193136,
+[6] = 1
+},
+[3] = "YinHub"
+}
+
+game:GetService("ReplicatedStorage").RE:FindFirstChild("1Avata1rOrigina1l"):FireServer(unpack(args))
+
   end
 })
 
 AddButton(Main, {
-  Name = "كود jumbstyle",
+  Name = "- Logs Roll boys -",
   Callback = function()
-    setclipboard('76578817848504')
+print("Clicked")local args = {
+[1] = "CharacterChange",
+[2] = {
+[1] = 1,
+[2] = 1,
+[3] = 1,
+[4] = 3230472745,
+[5] = 3230470862,
+[6] = 1
+},
+[3] = "YinHub"
+}
+
+game:GetService("ReplicatedStorage").RE:FindFirstChild("1Avata1rOrigina1l"):FireServer(unpack(args))
+
   end
 })
-
-AddButton(Main, {
-  Name = "كود چيبي چيبي🥰",
-  Callback = function()
-    setclipboard('16190783444')
-  end
-})
-
-AddButton(Main, {
-  Name = "Remex",
-  Callback = function()
-    setclipboard('15689451063')
-  end
-})
-
-AddButton(Main, {
-  Name = "tereru na yo",
-  Callback = function()
-    setclipboard('7896694622')
-  end
-})
-
-AddButton(Main, {
-  Name = "ganbere sukuna",
-  Callback = function()
-    setclipboard('7438381072')
-  end
-})
-
-AddButton(Main, {
-  Name = "senpai",
-  Callback = function()
-    setclipboard('7426001582')
-  end
-})
-
-AddButton(Main, {
-  Name = "كود سب🥰",
-  Callback = function()
-    setclipboard('5849978429')
-  end
-})
-
-
-
-
-local Main = MakeTab({Name = "الاعب Player"})
-AddTextBox(Main, {
-  Name = "سرعة Speed",
-  Default = "",
-  PlaceholderText = "حط الرقم",
-  ClearText = true,
-  Callback = function(value)
-game.Players.LocalPlayer.Character.Humanoid.WalkSpeed = value     
- end
-})
-AddTextBox(Main, {
-  Name = "قفز Jump",
-  Default = "",
-  PlaceholderText = "حط الرقم",
-  ClearText = true,
-  Callback = function(value)
-game.Players.LocalPlayer.Character.Humanoid.JumpPower = value    
-  end
-})
-
-local Main = MakeTab({Item = "اشياء قريبا ITEm"})
