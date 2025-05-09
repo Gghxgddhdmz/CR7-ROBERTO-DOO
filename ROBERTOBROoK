@@ -30,8 +30,8 @@ local args = {
 local redzlib = loadstring(game:HttpGet("https://raw.githubusercontent.com/tbao143/Library-ui/refs/heads/main/Redzhubui"))()
 
 local Window = redzlib:MakeWindow({
-  Title = "redz Hub : Blox Fruits",
-  SubTitle = "by redz9999",
+  Title = "Moonhub : V1.0",
+  SubTitle = "by TEMm Blooof",
   SaveFolder = "testando | redz lib v5.lua"
 })
 
