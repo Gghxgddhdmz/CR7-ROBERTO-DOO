@@ -1,4 +1,4 @@
--- Speedwave-Style GUI
+-- Speedwave-Style GUI with Buttons
 local Players = game:GetService("Players")
 local TweenService = game:GetService("TweenService")
 local UIS = game:GetService("UserInputService")
@@ -19,28 +19,45 @@ main.Parent = gui
 local corner = Instance.new("UICorner", main)
 corner.CornerRadius = UDim.new(0, 12)
 
-local button = Instance.new("TextButton")
-button.Size = UDim2.new(0, 100, 0, 30)
-button.Position = UDim2.new(0, 20, 0, 20)
-button.BackgroundColor3 = Color3.fromRGB(50, 50, 50)
-button.Text = "Speed"
-button.Font = Enum.Font.GothamBold
-button.TextColor3 = Color3.fromRGB(255, 255, 255)
-button.Parent = main
+local function createButton(text, yPosition, callback)
+    local button = Instance.new("TextButton")
+    button.Size = UDim2.new(0, 100, 0, 30)
+    button.Position = UDim2.new(0, 20, 0, yPosition)
+    button.BackgroundColor3 = Color3.fromRGB(50, 50, 50)
+    button.Text = text
+    button.Font = Enum.Font.GothamBold
+    button.TextColor3 = Color3.fromRGB(255, 255, 255)
+    button.Parent = main
 
-local buttonCorner = Instance.new("UICorner", button)
-buttonCorner.CornerRadius = UDim.new(1, 0)
+    local buttonCorner = Instance.new("UICorner", button)
+    buttonCorner.CornerRadius = UDim.new(1, 0)
 
-button.MouseEnter:Connect(function()
-    TweenService:Create(button, TweenInfo.new(0.25), {
-        BackgroundColor3 = Color3.fromRGB(80, 80, 80)
-    }):Play()
+    button.MouseEnter:Connect(function()
+        TweenService:Create(button, TweenInfo.new(0.25), {
+            BackgroundColor3 = Color3.fromRGB(80, 80, 80)
+        }):Play()
+    end)
+
+    button.MouseLeave:Connect(function()
+        TweenService:Create(button, TweenInfo.new(0.25), {
+            BackgroundColor3 = Color3.fromRGB(50, 50, 50)
+        }):Play()
+    end)
+
+    button.MouseButton1Click:Connect(callback)
+end
+
+-- إنشاء الأزرار
+createButton("Speed", 20, function()
+    print("Speed clicked")
 end)
 
-button.MouseLeave:Connect(function()
-    TweenService:Create(button, TweenInfo.new(0.25), {
-        BackgroundColor3 = Color3.fromRGB(50, 50, 50)
-    }):Play()
+createButton("Fly", 60, function()
+    print("Fly clicked")
+end)
+
+createButton("ESP", 100, function()
+    print("ESP clicked")
 end)
 
 -- Draggable
