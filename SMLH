@@ -546,3 +546,38 @@ Tab:AddButton({
 	end)	
   	end    
 })
+
+Tab:AddButton({
+	Name = "تحسين نت",
+	Callback = function()
+      	-- تحسين الأداء في روبلكس بدون التأثير على سرعة الإنترنت local function optimizeGame() -- تعطيل الظلال والتأثيرات لتحسين الأداء settings().Rendering.QualityLevel = Enum.QualityLevel.Level01
+
+-- تعطيل بعض التأثيرات الرسومية الثقيلة
+game:GetService("Lighting").GlobalShadows = false
+game:GetService("Lighting").FogEnd = 9e9
+game:GetService("Lighting").Brightness = 2
+
+-- تعطيل تأثيرات الجسيمات في اللعبة
+for _, v in pairs(game:GetDescendants()) do
+    if v:IsA("ParticleEmitter") or v:IsA("Trail") then
+        v.Enabled = false
+    end
+end
+
+-- تعطيل تأثيرات الإضاءة الديناميكية
+for _, v in pairs(workspace:GetDescendants()) do
+    if v:IsA("PointLight") or v:IsA("SpotLight") or v:IsA("SurfaceLight") then
+        v.Enabled = false
+    end
+end
+
+-- تحسين معدل الإطارات (FPS)
+setfpscap(60) -- يمكنك تغيير الرقم حسب رغبتك
+
+print("✅ تم تفعيل تحسين الأداء في روبلكس!")
+
+end
+
+-- تشغيل السكربت بعد التحميل optimizeGame()	
+  	end    
+})
