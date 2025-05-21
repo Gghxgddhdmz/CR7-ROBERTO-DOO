@@ -375,9 +375,13 @@ PremiumOnly = <bool> - Makes the tab accessible to Sirus Premium users only.
 ]]
 
 Tab:AddButton({
-	Name = "Button!",
+	Name = "امر ANTIAFK صنعي",
 	Callback = function()
-      		
+      	local vu = game:GetService("VirtualUser")
+game:GetService("Players").LocalPlayer.Idled:Connect(function()
+   vu:CaptureController()
+   vu:ClickButton2(Vector2.new())
+end)	
   	end    
 })
 
