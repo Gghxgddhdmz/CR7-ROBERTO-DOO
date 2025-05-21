@@ -1,5 +1,5 @@
 local OrionLib = loadstring(game:HttpGet(('https://raw.githubusercontent.com/Gghxgddhdmz/Orion/f00cada154844775d6c693917aa26f627b76bca0/source')))()
-local Window = OrionLib:MakeWindow({Name = "كل الي تحتاجه", HidePremium = false, SaveConfig = true, ConfigFolder = "OrionTest"})
+local Window = OrionLib:MakeWindow({Name = "LEGENDS", HidePremium = false, SaveConfig = true, ConfigFolder = "OrionTest"})
 
 --[[
 Name = <string> - The name of the UI.
@@ -375,9 +375,75 @@ PremiumOnly = <bool> - Makes the tab accessible to Sirus Premium users only.
 ]]
 
 Tab:AddButton({
-	Name = "Button!",
+	Name = "باتش",
 	Callback = function()
-      		
+      	--[[
+🛠️ سكربت تحسين أداء الجوال لأقصى درجة لمدة 8 ساعات
+✅ بواسطة Madara - مطور محترف
+🔐 مضاف له حماية sandbox لتقليل التداخلات
+--]]
+
+local function sandbox(func)
+local env = getfenv and setfenv and getfenv(func) or {}
+local safeEnv = setmetatable({}, {
+__index = function(_, k)
+if k == "script" then return nil end
+return env[k] or getfenv()[k]
+end,
+__newindex = function() end
+})
+if setfenv then setfenv(func, safeEnv) end
+return func
+end
+
+sandbox(function()
+
+local duration = 8 * 60 * 60 -- ⏳ 8 ساعات بالثواني  
+local startTime = tick()  
+
+-- 🚀 تحسين الشبكة  
+local networkClient = game:GetService("NetworkClient")  
+pcall(function() networkClient:SetOutgoingKBPSLimit(1000) end)  
+
+local userSettings = game:GetService("UserSettings")  
+local gameSettings = userSettings:GetService("GameSettings")  
+pcall(function() gameSettings.NetworkQuality = Enum.NetworkQuality.Low end)  
+
+-- 🔥 إلغاء الرسوميات الثقيلة  
+local lighting = game:GetService("Lighting")  
+lighting.GlobalShadows = false  
+lighting.Brightness = 1  
+lighting.FogEnd = 9e9  
+lighting.ClockTime = 12  
+
+-- 📉 تقليل استهلاك الذاكرة (RAM)  
+for _, v in pairs(game:GetDescendants()) do  
+    if v:IsA("BasePart") then  
+        v.Material = Enum.Material.SmoothPlastic  
+    end  
+end  
+
+-- 💤 تعطيل العرض الثلاثي الأبعاد  
+game:GetService("RunService"):Set3dRenderingEnabled(false)  
+
+-- ⏳ منع الطرد بسبب الخمول  
+local virtualUser = game:GetService("VirtualUser")  
+game:GetService("Players").LocalPlayer.Idled:Connect(function()  
+    virtualUser:ClickButton2(Vector2.new(0, 0))  
+end)  
+
+-- ⏱️ مراقبة الوقت وإعادة الإعدادات بعد 8 ساعات  
+while tick() - startTime < duration do  
+    task.wait(60) -- فحص كل دقيقة  
+end  
+
+-- ⛔ إعادة الإعدادات لحالتها الطبيعية  
+game:GetService("RunService"):Set3dRenderingEnabled(true)  
+lighting.GlobalShadows = true  
+lighting.FogEnd = 1000  
+pcall(function() networkClient:SetOutgoingKBPSLimit(3000) end)
+
+end)()	
   	end    
 })
 
@@ -385,3 +451,98 @@ Tab:AddButton({
 Name = <string> - The name of the button.
 Callback = <function> - The function of the button.
 ]]
+
+Tab:AddButton({
+	Name = "طريقه صمله شاتاي!",
+	Callback = function()
+      	wait(0.5)local ba=Instance.new("ScreenGui")
+local ca=Instance.new("TextLabel")local da=Instance.new("Frame")
+local _b=Instance.new("TextLabel")local ab=Instance.new("TextLabel")ba.Parent=game.CoreGui
+ba.ZIndexBehavior=Enum.ZIndexBehavior.Sibling;ca.Parent=ba;ca.Active=true
+ca.BackgroundColor3=Color3.new(0.176471,0.176471,0.176471)ca.Draggable=true
+ca.Position=UDim2.new(0.698610067,0,0.098096624,0)ca.Size=UDim2.new(0,370,0,52)
+ca.Font=Enum.Font.SourceSansSemibold;ca.Text=" AFK MR1CLANS"ca.TextColor3=Color3.new(0,1,1)
+ca.TextSize=22;da.Parent=ca
+da.BackgroundColor3=Color3.new(0.196078,0.196078,0.196078)da.Position=UDim2.new(0,0,1.0192306,0)
+da.Size=UDim2.new(0,370,0,107)_b.Parent=da
+_b.BackgroundColor3=Color3.new(0.176471,0.176471,0.176471)_b.Position=UDim2.new(0,0,0.800455689,0)
+_b.Size=UDim2.new(0,370,0,21)_b.Font=Enum.Font.Arial;_b.Text= "CREATE SCRIPT BY CATAY!!!"
+_b.TextColor3=Color3.new(0,1,1)_b.TextSize=20;ab.Parent=da
+ab.BackgroundColor3=Color3.new(0.176471,0.176471,0.176471)ab.Position=UDim2.new(0,0,0.158377,0)
+ab.Size=UDim2.new(0,370,0,44)ab.Font=Enum.Font.ArialBold;ab.Text="شاتاي صانع السكربت اسم حساب روب haremmzire12"
+ab.TextColor3=Color3.new(0,1,1)ab.TextSize=20;local bb=game:service'VirtualUser'
+game:service'Players'.LocalPlayer.Idled:connect(function()
+bb:CaptureController()bb:ClickButton2(Vector2.new())
+ab.Text="Roblox tried to kick u but i kicked him instead"wait(2)ab.Text="Status : Active"end)	
+  	end    
+})
+
+Tab:AddButton({
+	Name = "طريقه روبيرتو",
+	Callback = function()
+      	local function showNotification()
+    game.StarterGui:SetCore("SendNotification", {
+        Title = "roberto"; -- عنوان الإشعار
+        Text = "تم فتح طرق الاساطير!"; -- نص الإشعار
+        Duration = 5; -- مدة الإشعار (بالثواني)
+    })
+end
+local ScreenGui = Instance.new("ScreenGui", game.Players.LocalPlayer.PlayerGui)
+local InfoLabel = Instance.new("TextLabel", ScreenGui)
+
+InfoLabel.Size = UDim2.new(0, 200, 0, 50)
+InfoLabel.Position = UDim2.new(0.5, -100, 0, 10)
+InfoLabel.Text = "ROBERtoxCatayxM3vbhmxMadara  - AFK System Active"
+InfoLabel.TextColor3 = Color3.new(1, 1, 1)
+InfoLabel.BackgroundColor3 = Color3.new(0, 0, 0)
+
+if game.Players.LocalPlayer.Character.Humanoid.Health == 100 then
+game.Players.LocalPlayer.Character.Humanoid.Health = 0
+else
+print("اقوى طرق")
+end	
+  	end    
+})
+
+Tab:AddButton({
+	Name = "ANTI BAN",
+	Callback = function()
+      	for _, v in pairs(getconnections(plr.Idled)) do
+			v:Disable()
+		end
+
+		-- تعطيل kick / Ban / Shutdown
+		for _, v in pairs(getgc(true)) do
+			if typeof(v) == "function" and islclosure(v) then
+				local info = debug.getinfo(v)
+				if info.name == "kick" or info.name == "Ban" or info.name == "Shutdown" then
+					hookfunction(v, function() return end)
+				end
+			end
+		end
+
+		-- تعطيل الريموتات المشبوهة
+		for _, obj in pairs(game:GetDescendants()) do
+			if obj:IsA("RemoteEvent") or obj:IsA("RemoteFunction") then
+				local name = obj.Name:lower()
+				if name:find("ban") or name:find("report") or name:find("cheat") then
+					obj:Destroy()
+				end
+			end
+		end
+
+		-- منع destroy لـ LocalPlayer أو CoreGui
+		local mt = getrawmetatable(game)
+		setreadonly(mt, false)
+		local old = mt.__namecall
+
+		mt.__namecall = newcclosure(function(self, ...)
+			local method = getnamecallmethod()
+			if (method == "Kick" or method == "Destroy") and (self == plr or tostring(self):lower():find("coregui")) then
+				return nil
+			end
+			return old(self, ...)
+		end)
+	end)	
+  	end    
+})
