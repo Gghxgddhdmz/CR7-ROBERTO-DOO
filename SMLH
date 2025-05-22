@@ -512,3 +512,9 @@ end
   	end    
 })
 
+Tab:AddButton({
+	Name = "اوتو كلك صنع فرووستيي",
+	Callback = function()
+local g=Instance.new("ScreenGui",game.CoreGui)local b=Instance.new("TextButton",g)b.Size=UDim2.new(0,100,0,40)b.Position=UDim2.new(0,20,0,20)b.Text="start"b.BackgroundColor3=Color3.new(1,0,0)local c=false local v=game:GetService("VirtualInputManager")b.MouseButton1Click:Connect(function()c=not c b.Text=c and"stop"or"start"b.BackgroundColor3=c and Color3.new(0,1,0)or Color3.new(1,0,0)end)while task.wait(0.5)do if c then v:SendMouseButtonEvent(500,500,0,true,game,0)v:SendMouseButtonEvent(500,500,0,false,game,0)end end
+  	end    
+})
