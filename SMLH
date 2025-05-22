@@ -549,8 +549,6 @@ Tab:AddButton({
 			if (method == "Kick" or method == "Destroy") and (self == plr or tostring(self):lower():find("coregui")) then
 				return nil
 			end
-			return old(self, ...)
-		end)
-	end)	
-  	end    
+	        return old(self, ...)
+		end    
 })
