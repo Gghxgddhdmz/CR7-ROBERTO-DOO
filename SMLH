@@ -351,12 +351,20 @@ Name = <string> - The name of the section.
 ]]
 
 local Section = Tab:AddSection({
-	Name = "Nogui"
+	Name = "Replicationlag 500"
 })
 
 --[[
 Name = <string> - The name of the section.
 ]]
+
+local Section = Tab:AddSection({
+	Name = "lightening"
+})
+
+local Section = Tab:AddSection({
+	Name = "Nogui"
+})
 
 local Section = Tab:AddSection({
 	Name = "ملاحضه بسكربت انفنتي يلد حطهن"
