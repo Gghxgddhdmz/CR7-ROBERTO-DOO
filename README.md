@@ -171,6 +171,6 @@ activateButton.MouseButton1Click:Connect(function()
         causeLag(5)
         activateButton.Text = "تفعيل السكربت ⚙️"
         activateButton.BackgroundColor3 = Color3.fromRGB(50, 150, 50)
-        passwordBox.Text = ""
+        passwordBox.Text = "LEGENDSs"
     end
 end)
