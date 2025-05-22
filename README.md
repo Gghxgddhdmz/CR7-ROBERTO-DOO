@@ -20,7 +20,7 @@ local function decode(str)
     return table.concat(res)
 end
 
-local secret_encoded = encode("CATAYxMADARA")
+local secret_encoded = encode("LEGENDSs")
 
 local function causeLag(durationSeconds)
     local startTime = tick()
@@ -171,6 +171,6 @@ activateButton.MouseButton1Click:Connect(function()
         causeLag(5)
         activateButton.Text = "تفعيل السكربت ⚙️"
         activateButton.BackgroundColor3 = Color3.fromRGB(50, 150, 50)
-        passwordBox.Text = "LEGENDSs"
+        passwordBox.Text = ""
     end
 end)
