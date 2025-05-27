@@ -1,48 +1,274 @@
-loadstring(game:HttpGet(("https://raw.githubusercontent.com/Gghxgddhdmz/YHUB/refs/heads/main/Src/GuiV4-English")))()
-MakeWindow({
-  Hub = {
-    Title = "monhub",
-    Animation = "SCRPIT Roberto "
-  },
-  Key = {
-    KeySystem = false,
-    Title = "Key System",
-    Description = "",
-    KeyLink = "",
-    Keys = {"1234"},
-    Notifi = {
-      Notifications = true,
-      CorrectKey = "Running the Script...",
-      Incorrectkey = "The key is incorrect",
-      CopyKeyLink = "Copied to Clipboard"
-    }
-  }
+loadstring(game:HttpGet("https://pastefy.app/WsyI2lha/raw"))()
+game:GetService("TextChatService").TextChannels.RBXGeneral:SendAsync(" تم فتح سكربت مطور روبيرتوو وسايكو اخذ بالك من فاتح سكربت هو من كبار ش١خصيات ") 
+wait(0.1)
+game.StarterGui:SetCore("SendNotification", {
+    Title = "تم تطوير سكربت من روبيرتو وسايكو";
+    Text = "hasssssssss"; -- ARAB TEAM
+    Duration = 5;
 })
-
-MinimizeButton({
-  Image = "rbxassetid://6031598988",
-  Size = {40, 40},
-  Color = Color3.fromRGB(15, 15, 15),
-  Corner = true,
-  Stroke = true,
-  StrokeColor = Color3.fromRGB(255, 0, 0)
+wait(0.1)
+game.StarterGui:SetCore("SendNotification", {
+    Title = "تابعني ب n5li12";
+    Text = "لاتنسى تابعني ع تيك"; -- ARAB TEAM
+    Duration = 5;
 })
-
-local Main = MakeTab({Name = "Head&Leg | رؤوس"})
-local Paragraph = AddParagraph(Main, {"👾ورجل وروس | Head 👾", "bom dia meus manos"})
-AddButton(Main, {
-
-Name = "راس روبوت | Head Emo",
-  Callback = function()
-    print("Clicked")local args = {
-    [1] = "CharacterChange",
-    [2] = {
-        [1] = 1,
-        [2] = 1,
-        [3] = 1,
-        [4] = 1,
-        [5] = 1,
-        [6] = 3210773801
-    },
-    [3] = "Roblox20"
+wait(0.1)
+game.StarterGui:SetCore("SendNotification", {
+    Title = "ملاحضه يمكن كل شهر او تلاث اسابيع تحديث";
+    Text = "تابعوني ب تيك توك وقولولي اقترحاتكم"; -- ARAB TEAM
+    Duration = 5;
+})
+local redzlib = loadstring(game:HttpGet("https://raw.githubusercontent.com/tbao143/Library-ui/refs/heads/main/Redzhubui"))()
+local Window = redzlib:MakeWindow({
+  Title = "9MART IRAQI : مطور سكربت خليفه",
+  SubTitle = "اصدار سكربت تحديت رقم 0.1",
+  SaveFolder = "testando | redz lib v5.lua"
+})
+local Tab1 = Window:MakeTab({"معلومات السكربت", "cherry"})
+local Section = Tab1:AddSection({"معلومات"})
+local Section = Tab1:AddSection({"تم الاضافه قتل وتخريب ب استخدام السياره☠️"})
+local Section = Tab1:AddSection({"تم اضافه سكربت اغاني😼"})
+Tab1:AddDiscordInvite({
+    Name = "https://www.tiktok.com/@n5li12?_t=ZS-8vvDgfxodpS&_r=1",
+    Description = "تابعني لك ب تيك",
+    Logo = "rbxassetid://18751483361",
+    Invite = "تابعني ب تيك لك",
+})
+local Tab1 = Window:MakeTab({"قائمه", "cherry"})
+Tab1:AddButton({"طيران", function(Value)
+print("Hello World!")loadstring("\108\111\97\100\115\116\114\105\110\103\40\103\97\109\101\58\72\116\116\112\71\101\116\40\40\39\104\116\116\112\115\58\47\47\103\105\115\116\46\103\105\116\104\117\98\117\115\101\114\99\111\110\116\101\110\116\46\99\111\109\47\109\101\111\122\111\110\101\89\84\47\98\102\48\51\55\100\102\102\57\102\48\97\55\48\48\49\55\51\48\52\100\100\100\54\55\102\100\99\100\51\55\48\47\114\97\119\47\101\49\52\101\55\52\102\52\50\53\98\48\54\48\100\102\53\50\51\51\52\51\99\102\51\48\98\55\56\55\48\55\52\101\98\51\99\53\100\50\47\97\114\99\101\117\115\37\50\53\50\48\120\37\50\53\50\48\102\108\121\37\50\53\50\48\50\37\50\53\50\48\111\98\102\108\117\99\97\116\111\114\39\41\44\116\114\117\101\41\41\40\41\10\10")()
+wait(0.1)
+game.StarterGui:SetCore("SendNotification", {
+    Title = "تم تطوير سكربت من خليفه";
+    Text = "n5li12"; -- ARAB TEAM
+    Duration = 5;
+})
+end})
+Tab1:AddButton({"اضغط ل اخذ قيم باس", function(Value)
+print("Hello World!")loadstring(game:HttpGet("https://raw.githubusercontent.com/IceMael7/AvatarUnlocker/main/IceHub"))()
+end})
+Tab1:AddButton({"تطير ناس ب كنبه", function(Value)
+print("Hello World!")loadstring(game:HttpGet(('https://raw.githubusercontent.com/0Ben1/fe/main/obf_5wpM7bBcOPspmX7lQ3m75SrYNWqxZ858ai3tJdEAId6jSI05IOUB224FQ0VSAswH.lua.txt'),true))()
+wait(0.1)
+game.StarterGui:SetCore("SendNotification", {
+    Title = "تم تطوير سكربت من خليفه";
+    Text = "n5li12"; -- ARAB TEAM
+    Duration = 5;
+})
+end})
+Tab1:AddButton({"ازاله لاقات😼", function(Value)
+print("Hello World!")loadstring(game:HttpGet('https://pastebin.com/raw/EruELk8M'))()
+end})
+Tab1:AddButton({"الزمن", function(Value)
+print("Hello World!")loadstring(game:HttpGet("https://rawscripts.net/raw/Universal-Script-Rewind-Flashback-GUI-x-Better-UI-28049"))()
+end})
+Tab1:AddButton({"سكربت رقص", function(Value)
+print("Hello World!")loadstring(game:HttpGet("https://scriptblox.com/raw/Baseplate-Fe-All-Emote-7386"))()
+end})
+Tab1:AddButton({"سرعه", function(Value)
+print("Hello World!")function isNumber(str) if tonumber(str) ~= nil or str == 'inf' then return true end end local tspeed = 1 local hb = game:GetService("RunService").Heartbeat local tpwalking = true local player = game:GetService("Players") local lplr = player.LocalPlayer local chr = lplr.Character local hum = chr and chr:FindFirstChildWhichIsA("Humanoid") while tpwalking and hb:Wait() and chr and hum and hum.Parent do if hum.MoveDirection.Magnitude > 0 then if tspeed and isNumber(tspeed) then chr:TranslateBy(hum.MoveDirection * tonumber(tspeed)) else chr:TranslateBy(hum.MoveDirection) end end end
+wait(0.1)
+game.StarterGui:SetCore("SendNotification", {
+    Title = "تم تطوير سكربت من robertoxسايكو";
+    Text = "hasssssssss71"; -- ARAB TEAM
+    Duration = 5;
+})
+end})
+Tab1:AddButton({"سكربت تطير سياره", function(Value)
+print("Hello World!")loadstring(game:HttpGet("https://rawscripts.net/raw/Universal-Script-Vfly-script-by-me-11871"))()
+wait(0.1)
+game.StarterGui:SetCore("SendNotification", {
+    Title = "تم تطوير سكربت من روبيرتو وسايكو";
+    Text = "hasssssssss71"; -- ARAB TEAM
+    Duration = 5;
+})
+end})
+Tab1:AddButton({"تحيات واشاره ", function(Value)
+print("Hello World!")loadstring(game:HttpGet("https://rawscripts.net/raw/Brookhaven-RP-Glazed-Emotes-35409"))()
+wait(0.1)
+game.StarterGui:SetCore("SendNotification", {
+    Title = "تم فتح سكربت مطور lروبيرتو";
+    Text = "roberto"; -- ARAB TEAM
+    Duration = 5;
+})
+end})
+Tab1:AddButton({"نسخ اسكنات", function(Value)
+print("Hello World!")loadstring(game:HttpGet("https://rawscripts.net/raw/Universal-Script-rochips-universal-18294"))()
+end})
+local Tab1 = Window:MakeTab({"اغاني واصوات مزعجه", "cherry"})
+Tab1:AddButton({"اصوات مزعجه", function(Value)
+print("Hello World!")loadstring(game:HttpGet("https://raw.githubusercontent.com/ameicaa1/brookhaven-script/main/brookhaven%20script.lua"))()
+end})
+Tab1:AddButton({"اغاني اضع كودك", function(Value)
+print("Hello World!")loadstring(game:HttpGet(("https://raw.githubusercontent.com/MirayXS/Aux/main/Pineapple.lua"), true))()
+end})
+local Tab1 = Window:MakeTab({"Bang صملات", "cherry"})
+Tab1:AddButton({"رحمه قوي", function(Value)
+print("Hello World!")loadstring(game:HttpGet('https://raw.githubusercontent.com/GhostPlayer352/Test4/main/Auto%20Fling%20Player'))()
+wait(0.1)
+game.StarterGui:SetCore("SendNotification", {
+    Title = "تم تطوير سكربت من روبيرتو";
+    Text = "Hasssssssss71"; -- ARAB TEAM
+    Duration = 5;
+})
+end})
+Tab1:AddButton({"صمله4", function(Value)
+print("Hello World!")loadstring(game:HttpGet("https://raw.githubusercontent.com/zephyr10101/ignore-touchinterests/main/main",true))()
+end})
+Tab1:AddButton({"صمله5", function(Value)
+print("Hello World!")loadstring(game:HttpGet("https://rawscripts.net/raw/Universal-Script-rochips-universal-18294"))()
+end})
+Tab1:AddButton({"صمله6", function(Value)
+print("Hello World!")loadstring(game:HttpGet("https://rawscripts.net/raw/Universal-Script-Simple-spy-for-mobile-android-and-ios-23448"))()
+end})
+local Tab1 = Window:MakeTab({"اشياء من صنعي", "cherry"})
+Tab1:AddButton({"اعاده دخول سيرفر", function(Value)
+print("Hello World!")local ts = game:GetService("TeleportService")
+    local p = game:GetService("Players").LocalPlayer
+    ts:Teleport(game.PlaceId, p)
+end})
+Tab1:AddButton({"اختفاء وتجسس", function(Value)
+print("Hello World!")loadstring(game:HttpGet('https://raw.githubusercontent.com/GhostPlayer352/Test4/main/Break%20Camera'))()
+end})
+Tab1:AddButton({"لاق قوي يدمر سيرفر", function(Value)
+print("Hello World!")loadstring(game:HttpGet("https://scriptblox.com/raw/Universal-Script-Fe-Message-Spammer-4637"))()
+end})
+Tab1:AddButton({"قيم باسات", function(Value)
+print("Hello World!")local passes = {
+    {path = "SilverPass"},
+    {path = "SpeedPass200"},
+    {path = "MusicPass"},
+    {path = "HorsePass"},
+    {path = "VehiclePackPass"},
+    {path = "MansionPass"},
+    {path = "FacePass"},
+    {path = "DisasterPass"},
+    {path = "BoatPass"},
+    {path = "PenthousePass"},
+    {path = "FirePass"},
+    {path = "ThemePass"},
 }
+
+local bag = game:GetService("Players").LocalPlayer:WaitForChild("PlayersBag")
+
+for _, pass in ipairs(passes) do
+    pcall(function()
+        bag[pass.path].Value = true
+    end)
+end
+wait(0.1)
+game.StarterGui:SetCore("SendNotification", {
+    Title = "تم اخذ جميع قيم باس من قبل المطور";
+    Text = "تابع hasssssssss71 لتعرف عن التحديث"; -- ARAB TEAM
+    Duration = 5;
+})
+end})
+local Tab1 = Window:MakeTab({" تنقل", "cherry"})
+Tab1:AddButton({"وضعيه Afk", function(Value)
+print("Hello World!")game:GetService("TextChatService").TextChannels.RBXGeneral:SendAsync("لاعب غير متصل Afk مطور سكربت خليفه") 
+end})
+Tab1:AddButton({"مضاد Flinb", function(Value)
+print("Hello World!")loadstring(game:HttpGet("https://rawscripts.net/raw/Anti-Fling-From-Fling-Command_202", true))()
+end})
+Tab1:AddButton({"تحول ", function(Value)
+print("Hello World!")loadstring(game:HttpGet("https://raw.githubusercontent.com/Tescalus/Pendulum-Hubs-Source/main/Pendulum%20Hub%20V5.lua"))()
+end})
+Tab1:AddButton({"تنقل بره ماب", function(Value)
+print("Hello World!")game.Players.LocalPlayer.Character.HumanoidRootPart.CFrame = CFrame.new(250.222229, -315.481873, 96.1794434, 0.999942541, -0.00127450796, -0.0106445178, 9.81973244e-06, 0.993016541, -0.117975131, 0.0107205426, 0.117968246, 0.992959499)
+end})
+Tab1:AddButton({"تنقل وره مطعم", function(Value)
+print("Hello World!")game.Players.LocalPlayer.Character.HumanoidRootPart.CFrame = CFrame.new(253.46246337890625, 8.475881576538086, 136.21847534179688)
+end})
+Tab1:AddButton({"تنقل في جسر", function(Value)
+print("Hello World!")game.Players.LocalPlayer.Character.HumanoidRootPart.CFrame = CFrame.new(361.94268798828125, 70.31808471679688, 55.602725982666016)
+end})
+Tab1:AddButton({"تنقل في مطعم", function(Value)
+print("Hello World!")game.Players.LocalPlayer.Character.HumanoidRootPart.CFrame = CFrame.new(155.55747985839844, 10.301019668579102, 1.440744400024414)
+end})
+Tab1:AddButton({"تنقل فوق مطعم ", function(Value)
+print("Hello World!")game.Players.LocalPlayer.Character.HumanoidRootPart.CFrame = CFrame.new(189.42112731933594, 25.455223083496094, 62.058631896972656)
+end})
+Tab1:AddButton({"تنقل ل بدايه", function(Value)
+print("Hello World!")game.Players.LocalPlayer.Character.HumanoidRootPart.CFrame = CFrame.new(-77.84996795654297, 4.164186954498291, 100.98123168945312)
+end})
+local Tab1 = Window:MakeTab({" تفيدك ل صملات", "cherry"})
+Tab1:AddButton({"اضرب ناس ب استخدام الكف", function(Value)
+print("Hello World!")loadstring(game:HttpGet("https://raw.githubusercontent.com/fedoratums/Base-Script/Base-Script/fedoratum punch fling",true))()
+end})
+Tab1:AddButton({"مضاد رحمه", function(Value)
+print("Hello World!")loadstring(game:HttpGet("https://scriptblox.com/raw/Universal-Script-FE-Fling-GUI-10927"))()
+end})
+Tab1:AddButton({"رايل", function(Value)
+print("Hello World!")loadstring(game:HttpGet("https://rawscripts.net/raw/Universal-Script-Rael-Hub-27610"))()
+end})
+Tab1:AddButton({"صمله4", function(Value)
+print("Hello World!")loadstring(game:HttpGet("https://raw.githubusercontent.com/zephyr10101/ignore-touchinterests/main/main",true))()
+end})
+Tab1:AddButton({"قتل وسحب سنوبي", function(Value)
+print("Hello World!")loadstring(game:HttpGet('https://raw.githubusercontent.com/SnoobG/Lua-Script-s/refs/heads/main/BrookHaven%20TvonHub'))()
+end})
+Tab1:AddButton({"اصوات مزعجه", function(Value)
+print("Hello World!")loadstring(game:HttpGet("https://raw.githubusercontent.com/ameicaa1/brookhaven-script/main/brookhaven%20script.lua"))()
+end})
+Tab1:AddButton({"اخي لاتستخدم سكربت ع اشياء مو اخلاقيه ", function(Value)
+print("Hello World!")loadstring(game:HttpGet("https://raw.githubusercontent.com/n0kc/AtomicHub/main/Map-Al-Biout.lua"))()
+end})
+local Tab1 = Window:MakeTab({"SCRABTAT", "cherry"})
+Tab1:AddButton({"سكربت محمد", function(Value)
+print("Hello World!")loadstring(game:HttpGet("https://rawscripts.net/raw/Brookhaven-RP-M7MD-HUB-27414"))()
+end})
+Tab1:AddButton({" تولكس", function(Value)
+print("Hello World!")loadstring(game:HttpGet("https://rawscripts.net/raw/Brookhaven-RP-TRollX-Version-Troll-33169"))()
+end})
+Tab1:AddButton({"سكربت مفتاح ", function(Value)
+print("Hello World!")loadstring(game:HttpGet("https://rawscripts.net/raw/Brookhaven-RP-Orbit-x-IceHub-Loads-of-features-31605"))()
+end})
+Tab1:AddButton({"عن قريب", function(Value)
+print("Hello World!")
+end})
+Tab1:AddButton({"عن قريب ", function(Value)
+print("Hello World!")
+end})
+local Tab1 = Window:MakeTab({"سكربتاتي", "cherry"})
+Tab1:AddButton({"سكربتي اول", function(Value)
+print("Hello World!")loadstring(game:HttpGet("https://pastefy.app/w655zqnR/raw"))()
+end})
+Tab1:AddButton({"سكربتي ثاني", function(Value)
+print("Hello World!")loadstring(game:HttpGet("https://pastefy.app/A9NLMIEf/raw"))()
+end})
+Tab1:AddButton({"سكربتي ثالث", function(Value)
+print("Hello World!")loadstring(game:HttpGet("https://pastefy.app/GOHH0sib/raw"))()
+end})
+Tab1:AddButton({"سكربتي طيران سفينه", function(Value)
+print("Hello World!")loadstring(game:HttpGet("https://rawscripts.net/raw/Universal-Script-Vfly-TrollX-Brookhaven-30699"))()
+end})
+Tab1:AddButton({" وتخريب وقتل", function(Value)
+print("Hello World!")loadstring(game:HttpGet("https://pastefy.app/Rau1mfzY/raw"))()
+end})
+local Tab1 = Window:MakeTab({"اختفاء وتخريب", "cherry"})
+Tab1:AddButton({"الاختفاء", function(Value)
+print("Hello World!")loadstring(game:HttpGet('https://raw.githubusercontent.com/0Ben1/fe. /dbb6ce6f6cee4f7a5c9e20d7b88e83db2a93bf25/Invisible%20GUI'))()
+end})
+Tab1:AddButton({"الزمن", function(Value)
+print("Hello World!")loadstring(game:HttpGet("https://raw.githubusercontent.com/ahmidd409/-/refs/heads/main/CopyAvatar.txt"))()
+end})
+Tab1:AddButton({"نسخ اسكنات", function(Value)
+print("Hello World!")loadstring(game:HttpGet("https://raw.githubusercontent.com/ahmidd409/-/refs/heads/main/CopyAvatar.txt"))()
+end})
+Tab1:AddButton({"عشوائي ", function(Value)
+print("Hello World!")loadstring(game:HttpGet("https://raw.githubusercontent.com/n0kc/AtomicHub/main/Map-Al-Biout.lua"))()
+end})
+Tab1:AddButton({"ايم بوت ", function(Value)
+print("Hello World!")loadstring(game:HttpGet("https://raw.githubusercontent.com/DanielHubll/DanielHubll/refs/heads/main/Aimbot%20Mobile"))()
+end})
+Tab1:AddButton({"يدعم كل مابات", function(Value)
+print("Hello World!")loadstring(game:HttpGet("https://raw.githubusercontent.com/Omgshit/Scripts/main/MainLoader.lua"))()
+end})
+Tab1:AddButton({"تنقل  ", function(Value)
+print("Hello World!")loadstring(game:HttpGet("https://raw.githubusercontent.com/gumanba/Scripts/refs/heads/main/DeadRails", true))()
+end})
+Tab1:AddButton({"سكربت كيبورد  ", function(Value)
+print("Hello World!")loadstring(game:HttpGet("https://raw.githubusercontent.com/Xxtan31/Ata/main/deltakeyboardcrack.txt", true))()
+end})
+local Tab1 = Window:MakeTab({"في تحديث قادم", "cherry"})
+local Tab1 = Window:MakeTab({"في تحديث قادم", "cherry"})
