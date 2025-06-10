@@ -1505,3 +1505,708 @@ AddButton(Main, {
 game:GetService("ReplicatedStorage").RE:FindFirstChild("1Playe1rTrigge1rEven1t"):FireServer(unpack(args))	
   end
 })
+
+local Main = MakeTab({Name = "اجسام"})
+
+AddButton(Main, {
+  Name = "رأس بـنـت كـيـوت",
+  Callback = function()
+  wait(0.1)
+  local args = {
+    [1] = 140991;
+}
+
+game:GetService("ReplicatedStorage"):WaitForChild("Remotes", 9e9):WaitForChild("Wear", 9e9):InvokeServer(unpack(args))
+end
+})
+
+AddButton(Main, {
+  Name = "رأس مـخـفـي",
+  Callback = function()
+  wait(0.1)
+  local args = {
+    [1] = 134082579;
+}
+
+game:GetService("ReplicatedStorage"):WaitForChild("Remotes", 9e9):WaitForChild("Wear", 9e9):InvokeServer(unpack(args))
+end
+})
+
+AddButton(Main, {
+  Name = "رأس كـوبـي | رول",
+  Callback = function()
+  wait(0.1)
+  local args = {
+    [1] = 746767604;
+}
+
+game:GetService("ReplicatedStorage"):WaitForChild("Remotes", 9e9):WaitForChild("Wear", 9e9):InvokeServer(unpack(args))
+end
+})
+
+AddButton(Main, {
+  Name = "رأس عـيـون زرقـاء",
+  Callback = function()
+  wait(0.1)
+  local args = {
+    [1] = 16580493236;
+}
+
+game:GetService("ReplicatedStorage"):WaitForChild("Remotes", 9e9):WaitForChild("Wear", 9e9):InvokeServer(unpack(args))
+end
+})
+
+AddSection(Main, {"الارجـل"})
+
+
+AddButton(Main, {
+    Name = "رجـل مـقـطـوعـة لـلـبـنـات",
+    Callback = function()
+        local args = {
+            [1] = {
+                [1] = 96491916349570;
+                [2] = 76683091425509;
+                [3] = 75159926897589;
+                [4] = 139607718;
+                [5] = 1;
+                [6] = 1;
+            };
+        }
+        game:GetService("ReplicatedStorage"):WaitForChild("Remotes", 9e9):WaitForChild("ChangeCharacterBody", 9e9):InvokeServer(unpack(args))
+    end
+})
+
+
+
+AddButton(Main, {
+  Name = "رجـل مـقـطـوعـة لـلـولـد",
+  Callback = function()
+print("Clicked")local args = {
+    [1] = {
+        [1] = 1;
+        [2] = 1;
+        [3] = 1;
+        [4] = 139607718;
+        [5] = 1;
+        [6] = 1;
+    };
+}
+
+game:GetService("ReplicatedStorage"):WaitForChild("Remotes", 9e9):WaitForChild("ChangeCharacterBody", 9e9):InvokeServer(unpack(args))
+
+end
+})
+
+AddButton(Main, {
+  Name = "رجـل حـديـديـة",
+  Callback = function()
+print("Clicked")local args = {
+    [1] = {
+        [1] = 1;
+        [2] = 1;
+        [3] = 1;
+        [4] = 17500249989;
+        [5] = 1;
+        [6] = 1;
+    };
+}
+
+game:GetService("ReplicatedStorage"):WaitForChild("Remotes", 9e9):WaitForChild("ChangeCharacterBody", 9e9):InvokeServer(unpack(args))
+
+end
+})
+
+AddButton(Main, {
+  Name = "رجـل الـعـضـم الـرصـاصـي",
+  Callback = function()
+print("Clicked")local args = {
+    [1] = {
+        [1] = 1;
+        [2] = 1;
+        [3] = 1;
+        [4] = 14547162578;
+        [5] = 1;
+        [6] = 1;
+    };
+}
+
+game:GetService("ReplicatedStorage"):WaitForChild("Remotes", 9e9):WaitForChild("ChangeCharacterBody", 9e9):InvokeServer(unpack(args))
+
+end
+})
+
+AddButton(Main, {
+  Name = "رجـل رول",
+  Callback = function()
+print("Clicked")local args = {
+    [1] = {
+        [1] = 1;
+        [2] = 1;
+        [3] = 1;
+        [4] = 3230472745;
+        [5] = 3230470862;
+        [6] = 1;
+    };
+}
+
+game:GetService("ReplicatedStorage"):WaitForChild("Remotes", 9e9):WaitForChild("ChangeCharacterBody", 9e9):InvokeServer(unpack(args))
+
+end
+})
+local Main = MakeTab({Name = "الاجـسـام"})
+
+
+AddSection(Main, {"اجـسـام الـبـنـات"})
+
+
+AddButton(Main, {
+  Name = "جـسـم بـنـت 1",
+  Callback = function()
+print("Clicked")local args = {
+    [1] = {
+        [1] = 96491916349570;
+        [2] = 76683091425509;
+        [3] = 75159926897589;
+        [4] = 1;
+        [5] = 1;
+        [6] = 1;
+    };
+}
+
+game:GetService("ReplicatedStorage"):WaitForChild("Remotes", 9e9):WaitForChild("ChangeCharacterBody", 9e9):InvokeServer(unpack(args))
+
+end
+})
+
+
+AddButton(Main, {
+  Name = "جـسـم بـنـت 2",
+  Callback = function()
+print("Clicked")local args = {
+    [1] = {
+        [1] = 74302534603111;
+        [2] = 76683091425509;
+        [3] = 75159926897589;
+        [4] = 1;
+        [5] = 1;
+        [6] = 1;
+    };
+}
+
+game:GetService("ReplicatedStorage"):WaitForChild("Remotes", 9e9):WaitForChild("ChangeCharacterBody", 9e9):InvokeServer(unpack(args))
+
+end
+})
+
+AddButton(Main, {
+  Name = "جـسـم بـنـت 3",
+  Callback = function()
+print("Clicked")local args = {
+    [1] = {
+        [1] = 124754866635882;
+        [2] = 76683091425509;
+        [3] = 75159926897589;
+        [4] = 1;
+        [5] = 1;
+        [6] = 1;
+    };
+}
+
+game:GetService("ReplicatedStorage"):WaitForChild("Remotes", 9e9):WaitForChild("ChangeCharacterBody", 9e9):InvokeServer(unpack(args))
+
+end
+})
+
+AddButton(Main, {
+  Name = "جـسـم بـنـت 4",
+  Callback = function()
+print("Clicked")local args = {
+    [1] = {
+        [1] = 96491916349570;
+        [2] = 14854350570;
+        [3] = 14854350451;
+        [4] = 1;
+        [5] = 1;
+        [6] = 1;
+    };
+}
+
+game:GetService("ReplicatedStorage"):WaitForChild("Remotes", 9e9):WaitForChild("ChangeCharacterBody", 9e9):InvokeServer(unpack(args))
+
+end
+})
+
+AddButton(Main, {
+  Name = "جـسـم بـنـت 5",
+  Callback = function()
+print("Clicked")local args = {
+    [1] = {
+        [1] = 101577365085156;
+        [2] = 121017849910260;
+        [3] = 111571034664628;
+        [4] = 1;
+        [5] = 1;
+        [6] = 1;
+    };
+}
+
+game:GetService("ReplicatedStorage"):WaitForChild("Remotes", 9e9):WaitForChild("ChangeCharacterBody", 9e9):InvokeServer(unpack(args))
+
+end
+})
+
+AddButton(Main, {
+  Name = "جـسـم بـنـت 6",
+  Callback = function()
+print("Clicked")local args = {
+    [1] = {
+        [1] = 18839824113;
+        [2] = 18839824209;
+        [3] = 18839824132;
+        [4] = 1;
+        [5] = 1;
+        [6] = 1;
+    };
+}
+
+game:GetService("ReplicatedStorage"):WaitForChild("Remotes", 9e9):WaitForChild("ChangeCharacterBody", 9e9):InvokeServer(unpack(args))
+
+end
+})
+
+AddButton(Main, {
+  Name = "جـسـم بـنـت 7",
+  Callback = function()
+print("Clicked")local args = {
+    [1] = {
+        [1] = 16214246112;
+        [2] = 76683091425509;
+        [3] = 16214251181;
+        [4] = 1;
+        [5] = 1;
+        [6] = 1;
+    };
+}
+
+game:GetService("ReplicatedStorage"):WaitForChild("Remotes", 9e9):WaitForChild("ChangeCharacterBody", 9e9):InvokeServer(unpack(args))
+
+end
+})
+
+AddButton(Main, {
+  Name = "جـسـم بـنـت 8",
+  Callback = function()
+print("Clicked")local args = {
+    [1] = {
+        [1] = 15539008532;
+        [2] = 15539008875;
+        [3] = 15539008680;
+        [4] = 15539008795;
+        [5] = 15539011945;
+        [6] = 1;
+    };
+}
+
+game:GetService("ReplicatedStorage"):WaitForChild("Remotes", 9e9):WaitForChild("ChangeCharacterBody", 9e9):InvokeServer(unpack(args))
+
+end
+})
+
+AddButton(Main, {
+  Name = "جـسـم بـنـت 9",
+  Callback = function()
+print("Clicked")local args = {
+    [1] = {
+        [1] = 14861800638;
+        [2] = 14861800626;
+        [3] = 14861801452;
+        [4] = 14861800627;
+        [5] = 14861801454;
+        [6] = 1;
+    };
+}
+
+game:GetService("ReplicatedStorage"):WaitForChild("Remotes", 9e9):WaitForChild("ChangeCharacterBody", 9e9):InvokeServer(unpack(args))
+
+end
+})
+
+
+AddSection(Main, {"اجـسـام الـولـد"})
+
+AddButton(Main, {
+  Name = "جـسـم ولـد 1",
+  Callback = function()
+print("Clicked")local args = {
+    [1] = {
+        [1] = 17754346388;
+        [2] = 1;
+        [3] = 1;
+        [4] = 1;
+        [5] = 1;
+        [6] = 1;
+    };
+}
+
+game:GetService("ReplicatedStorage"):WaitForChild("Remotes", 9e9):WaitForChild("ChangeCharacterBody", 9e9):InvokeServer(unpack(args))
+
+end
+})
+
+
+AddButton(Main, {
+  Name = "جـسـم ولـد 2",
+  Callback = function()
+print("Clicked")local args = {
+    [1] = {
+        [1] = 92757812011061;
+        [2] = 99519402284266;
+        [3] = 115905570886697;
+        [4] = 1;
+        [5] = 1;
+        [6] = 1;
+    };
+}
+
+game:GetService("ReplicatedStorage"):WaitForChild("Remotes", 9e9):WaitForChild("ChangeCharacterBody", 9e9):InvokeServer(unpack(args))
+
+end
+})
+
+
+AddButton(Main, {
+  Name = "جـسـم ولـد كـوبـي",
+  Callback = function()
+print("Clicked")local args = {
+    [1] = {
+        [1] = 86499666;
+        [2] = 27112039;
+        [3] = 27112052;
+        [4] = 27112068;
+        [5] = 27112056;
+        [6] = 1;
+    };
+}
+
+game:GetService("ReplicatedStorage"):WaitForChild("Remotes", 9e9):WaitForChild("ChangeCharacterBody", 9e9):InvokeServer(unpack(args))
+
+end
+})
+
+
+AddButton(Main, {
+  Name = "جـسـم ولـد رول",
+  Callback = function()
+print("Clicked")local args = {
+    [1] = {
+        [1] = 27112025;
+        [2] = 27112039;
+        [3] = 27112052;
+        [4] = 3230472745;
+        [5] = 3230470862;
+        [6] = 1;
+    };
+}
+
+game:GetService("ReplicatedStorage"):WaitForChild("Remotes", 9e9):WaitForChild("ChangeCharacterBody", 9e9):InvokeServer(unpack(args))
+
+end
+})
+
+
+AddButton(Main, {
+  Name = "جـسـم ولـد مـعـضـل",
+  Callback = function()
+print("Clicked")local args = {
+    [1] = {
+        [1] = 18178775358;
+        [2] = 18178775182;
+        [3] = 18178775725;
+        [4] = 18178777453;
+        [5] = 18178775695;
+        [6] = 1;
+    };
+}
+
+game:GetService("ReplicatedStorage"):WaitForChild("Remotes", 9e9):WaitForChild("ChangeCharacterBody", 9e9):InvokeServer(unpack(args))
+
+end
+})
+
+
+
+AddSection(Main, {"اجـسـام الـقـزم"})
+
+
+AddButton(Main, {
+  Name = "جـسـم قـزم",
+  Callback = function()
+print("Clicked")local args = {
+    [1] = {
+        [1] = 14579958702;
+        [2] = 14579959062;
+        [3] = 14579959191;
+        [4] = 14579959249;
+        [5] = 14579963667;
+        [6] = 1;
+    };
+}
+
+game:GetService("ReplicatedStorage"):WaitForChild("Remotes", 9e9):WaitForChild("ChangeCharacterBody", 9e9):InvokeServer(unpack(args))
+
+end
+})
+
+
+AddButton(Main, {
+  Name = "جـسـم قـزم مـتـوسـط",
+  Callback = function()
+print("Clicked")local args = {
+    [1] = {
+        [1] = 77813057823038;
+        [2] = 135110043370135;
+        [3] = 116607813654019;
+        [4] = 138966229804486;
+        [5] = 128961183894053;
+        [6] = 1;
+    };
+}
+
+game:GetService("ReplicatedStorage"):WaitForChild("Remotes", 9e9):WaitForChild("ChangeCharacterBody", 9e9):InvokeServer(unpack(args))
+
+end
+})
+
+
+AddButton(Main, {
+  Name = "جـسـم قـزم صـغـيـر",
+  Callback = function()
+print("Clicked")local args = {
+    [1] = {
+        [1] = 120973199097564;
+        [2] = 118345433416023;
+        [3] = 112849465115864;
+        [4] = 78321005147549;
+        [5] = 106586789635639;
+        [6] = 1;
+    };
+}
+
+game:GetService("ReplicatedStorage"):WaitForChild("Remotes", 9e9):WaitForChild("ChangeCharacterBody", 9e9):InvokeServer(unpack(args))
+
+end
+})
+
+
+AddButton(Main, {
+  Name = "جـسـم قـزم الـمـربـع",
+  Callback = function()
+print("Clicked")local args = {
+    [1] = {
+        [1] = 126267841602936;
+        [2] = 77530451194918;
+        [3] = 123471958406889;
+        [4] = 117042768644173;
+        [5] = 131948590344338;
+        [6] = 1;
+    };
+}
+
+game:GetService("ReplicatedStorage"):WaitForChild("Remotes", 9e9):WaitForChild("ChangeCharacterBody", 9e9):InvokeServer(unpack(args))
+
+end
+})
+
+
+AddButton(Main, {
+  Name = "جـسـم قـزم بـنـت",
+  Callback = function()
+print("Clicked")local args = {
+    [1] = {
+        [1] = 15282063616;
+        [2] = 15282063632;
+        [3] = 15282063615;
+        [4] = 14538400463;
+        [5] = 14538400387;
+        [6] = 1;
+    };
+}
+
+game:GetService("ReplicatedStorage"):WaitForChild("Remotes", 9e9):WaitForChild("ChangeCharacterBody", 9e9):InvokeServer(unpack(args))
+
+end
+})
+
+local Main = MakeTab({Name ="الاوامر"})
+
+AddTextBox(Main, {
+  Name = "الـسـرعـة",
+  Default = "",
+  PlaceholderText = "ادخـل الـرقـم",
+  ClearText = true,
+  Callback = function(value)
+game.Players.LocalPlayer.Character.Humanoid.WalkSpeed = value     
+ end
+})
+AddTextBox(Main, {
+  Name = "الـقـفـز",
+  Default = "",
+  PlaceholderText = "ادخـل الـرقـم",
+  ClearText = true,
+  Callback = function(value)
+game.Players.LocalPlayer.Character.Humanoid.JumpPower = value    
+  end
+})
+AddTextBox(Main, {
+  Name = "الـشـاشـة Fov",
+  Default = "",
+  PlaceholderText = "ادخـل الـرقـم",
+  ClearText = true,
+  Callback = function(value)
+local FovNumber = value
+local Camera = workspace.CurrentCamera
+Camera.FieldOfView = FovNumber  
+  end
+})
+AddTextBox(Main, {
+  Name = "الـدوران spin",
+  Default = "",
+  PlaceholderText = "ادخـل الـرقـم",
+  ClearText = true,
+  Callback = function(Value)
+    getgenv().Spinspeed = Value
+
+local Spin = Instance.new'BodyAngularVelocity'
+Spin.Parent = game:GetService'Players'.LocalPlayer.Character:FindFirstChild'HumanoidRootPart'
+Spin.MaxTorque = Vector3.new(0, math.huge, 100)
+wait(0.1)
+Spin.AngularVelocity = Vector3.new(100,Spinspeed,0)
+  end
+})
+
+function MakeNotifi(notification)
+    game.StarterGui:SetCore("SendNotification", {
+        Title = notification.Title;
+        Text = notification.Text;
+        Duration = notification.Time;
+    })
+end
+
+-- Variáveis e funções para a visualização dos jogadores
+local viewEnabled = false
+local selectedViewPlayer = nil
+local characterAddedConnection = nil
+
+local function toggleView(enabled)
+    if enabled then
+        if selectedViewPlayer then
+            local player = selectedViewPlayer
+            if player then
+                game.Workspace.CurrentCamera.CameraSubject = player.Character
+                if characterAddedConnection then
+                    characterAddedConnection:Disconnect()
+                end
+                characterAddedConnection = player.CharacterAdded:Connect(function(character)
+                    game.Workspace.CurrentCamera.CameraSubject = character
+                end)
+                MakeNotifi({
+                    Title = "Visualizando " .. player.Name,
+                    Text = "Você está visualizando o jogador: " .. player.Name,
+                    Time = 6
+                })
+            else
+                print("Jogador não encontrado.")
+                viewEnabled = false
+            end
+        else
+            print("Nenhum jogador selecionado para a visualização.")
+            viewEnabled = false
+        end
+    else
+        if characterAddedConnection then
+            characterAddedConnection:Disconnect()
+            characterAddedConnection = nil
+        end
+        game.Workspace.CurrentCamera.CameraSubject = game.Players.LocalPlayer.Character
+    end
+end
+
+local value = "" -- Variável para armazenar o nome digitado
+
+local function findPlayerByPartialNameOrNickname(partialName)
+    value = partialName -- Atualiza a variável com o nome digitado completo
+    for _, player in ipairs(game.Players:GetPlayers()) do
+        if player.Name:lower():find(partialName:lower(), 1, true) or (player.DisplayName and player.DisplayName:lower():find(partialName:lower(), 1, true)) then
+            return player
+        end
+    end
+    return nil
+end
+
+
+-- Conectando eventos de jogador removido
+game.Players.PlayerRemoving:Connect(function(player)
+    if selectedViewPlayer == player then
+        selectedViewPlayer = nil
+        if viewEnabled then
+            toggleView(false)
+            MakeNotifi({
+                Title = "Jogador Saiu",
+                Text = player.Name .. " saiu do jogo. Visualização desativada.",
+                Time = 5
+            })
+        end
+    end
+end)
+
+-- Função para manter a câmera no jogador selecionado
+local function maintainView()
+    while wait() do
+        if viewEnabled and selectedViewPlayer then
+            local player = selectedViewPlayer
+            if player and game.Workspace.CurrentCamera.CameraSubject ~= player.Character then
+                game.Workspace.CurrentCamera.CameraSubject = player.Character
+            end
+        end
+    end
+end
+
+
+-- Variável para controlar o estado do Noclip
+local noclipEnabled = false
+local runService = game:GetService("RunService")
+
+-- Função para definir CanCollide para todas as partes do personagem
+local function setCharacterCanCollide(character, canCollide)
+    for _, part in ipairs(character:GetDescendants()) do
+        if part:IsA("BasePart") then
+            part.CanCollide = canCollide
+        end
+    end
+end
+
+-- Função de callback para o botão de alternância de Noclip
+local function onNoclipToggle(value)
+    noclipEnabled = value
+    print("Noclip Enabled:", noclipEnabled)
+    
+    local player = game.Players.LocalPlayer
+    local character = player.Character
+
+    if noclipEnabled then
+        -- Inicia um loop para continuamente definir CanCollide
+        noclipLoop = runService.Stepped:Connect(function()
+            if character then
+                setCharacterCanCollide(character, false)
+            end
+        end)
+    else
+        -- Desativa o loop e restaura CanCollide
+        if noclipLoop then
+            noclipLoop:Disconnect()
+        end
+        if character then
+            setCharacterCanCollide(character, true)
+        end
+    end
+end
