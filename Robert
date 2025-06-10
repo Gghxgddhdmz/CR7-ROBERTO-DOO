@@ -2210,3 +2210,544 @@ local function onNoclipToggle(value)
         end
     end
 end
+
+local Main = MakeTab({Name = "قفاز واشياء اخرى"})
+
+AddButton(Main, {
+  Name = "قـفازات يد زهري",
+  Callback = function()
+  wait(0.1)
+  local args = {
+    [1] = 10789939838;
+}
+
+game:GetService("ReplicatedStorage"):WaitForChild("Remotes", 9e9):WaitForChild("Wear", 9e9):InvokeServer(unpack(args))
+end
+})
+
+AddButton(Main, {
+  Name = "قـفازات يد احـمـر",
+  Callback = function()
+  wait(0.1)
+  local args = {
+    [1] = 12379676852;
+}
+
+game:GetService("ReplicatedStorage"):WaitForChild("Remotes", 9e9):WaitForChild("Wear", 9e9):InvokeServer(unpack(args))
+end
+})
+
+AddButton(Main, {
+  Name = "اضـافـر اسـود",
+  Callback = function()
+  wait(0.1)
+  local args = {
+    [1] = 12825022709;
+}
+
+game:GetService("ReplicatedStorage"):WaitForChild("Remotes", 9e9):WaitForChild("Wear", 9e9):InvokeServer(unpack(args))
+end
+})
+
+
+AddButton(Main, {
+  Name = "قـفازات يد قـصـير 1",
+  Callback = function()
+  wait(0.1)
+  local args = {
+    [1] = 12483105503;
+}
+
+game:GetService("ReplicatedStorage"):WaitForChild("Remotes", 9e9):WaitForChild("Wear", 9e9):InvokeServer(unpack(args))
+end
+})
+
+AddButton(Main, {
+  Name = "قـفازات يد قـصـير 2",
+  Callback = function()
+  wait(0.1)
+  local args = {
+    [1] = 12483109504;
+}
+
+game:GetService("ReplicatedStorage"):WaitForChild("Remotes", 9e9):WaitForChild("Wear", 9e9):InvokeServer(unpack(args))
+end
+})
+
+
+AddButton(Main, {
+  Name = "قـفازات يد قـصـير 3",
+  Callback = function()
+  wait(0.1)
+  local args = {
+    [1] = 11613796964;
+}
+
+game:GetService("ReplicatedStorage"):WaitForChild("Remotes", 9e9):WaitForChild("Wear", 9e9):InvokeServer(unpack(args))
+end
+})
+
+AddButton(Main, {
+  Name = "قـفازات يد قـصـير 4",
+  Callback = function()
+  wait(0.1)
+  local args = {
+    [1] = 10954568687;
+}
+
+game:GetService("ReplicatedStorage"):WaitForChild("Remotes", 9e9):WaitForChild("Wear", 9e9):InvokeServer(unpack(args))
+end
+})
+
+AddButton(Main, {
+  Name = "قـفازات يد قـصـير 5",
+  Callback = function()
+  wait(0.1)
+  local args = {
+    [1] = 11679250718;
+}
+
+game:GetService("ReplicatedStorage"):WaitForChild("Remotes", 9e9):WaitForChild("Wear", 9e9):InvokeServer(unpack(args))
+end
+})
+
+AddButton(Main, {
+  Name = "قـفازات يد قـصـير 6",
+  Callback = function()
+  wait(0.1)
+  local args = {
+    [1] = 11182924874;
+}
+
+game:GetService("ReplicatedStorage"):WaitForChild("Remotes", 9e9):WaitForChild("Wear", 9e9):InvokeServer(unpack(args))
+end
+})
+
+AddSection(Main, {"اكـمام الرجـل"})
+
+AddButton(Main, {
+  Name = "حـذاء الـشيطـان زهري",
+  Callback = function()
+  wait(0.1)
+  local args = {
+    [1] = 14388006902;
+}
+
+game:GetService("ReplicatedStorage"):WaitForChild("Remotes", 9e9):WaitForChild("Wear", 9e9):InvokeServer(unpack(args))
+end
+})
+
+AddButton(Main, {
+  Name = "حـذاء الـشيطـان احـمـر",
+  Callback = function()
+  wait(0.1)
+  local args = {
+    [1] = 14388019333;
+}
+
+game:GetService("ReplicatedStorage"):WaitForChild("Remotes", 9e9):WaitForChild("Wear", 9e9):InvokeServer(unpack(args))
+end
+})
+
+AddButton(Main, {
+  Name = "حـذاء الـشيطـان ابـيض",
+  Callback = function()
+  wait(0.1)
+  local args = {
+    [1] = 14387999337;
+}
+
+game:GetService("ReplicatedStorage"):WaitForChild("Remotes", 9e9):WaitForChild("Wear", 9e9):InvokeServer(unpack(args))
+end
+})
+
+AddButton(Main, {
+  Name = "حـذاء الـشيطـان اسـود",
+  Callback = function()
+  wait(0.1)
+  local args = {
+    [1] = 14388004031;
+}
+
+game:GetService("ReplicatedStorage"):WaitForChild("Remotes", 9e9):WaitForChild("Wear", 9e9):InvokeServer(unpack(args))
+end
+})
+
+AddButton(Main, {
+  Name = "حـذاء طـويل اسـود",
+  Callback = function()
+  wait(0.1)
+  local args = {
+    [1] = 11433864064;
+}
+
+game:GetService("ReplicatedStorage"):WaitForChild("Remotes", 9e9):WaitForChild("Wear", 9e9):InvokeServer(unpack(args))
+end
+})
+
+AddButton(Main, {
+  Name = "حـذاء طـويل ابـيض",
+  Callback = function()
+  wait(0.1)
+  local args = {
+    [1] = 11111279400;
+}
+
+game:GetService("ReplicatedStorage"):WaitForChild("Remotes", 9e9):WaitForChild("Wear", 9e9):InvokeServer(unpack(args))
+end
+})
+
+AddButton(Main, {
+  Name = "حـذاء طـويل ابـيض و احـمر",
+  Callback = function()
+  wait(0.1)
+  local args = {
+    [1] = 11708887517;
+}
+
+game:GetService("ReplicatedStorage"):WaitForChild("Remotes", 9e9):WaitForChild("Wear", 9e9):InvokeServer(unpack(args))
+end
+})
+
+AddButton(Main, {
+  Name = "حـذاء الـقـرش الاسـود",
+  Callback = function()
+  wait(0.1)
+  local args = {
+    [1] = 13463375063;
+}
+
+game:GetService("ReplicatedStorage"):WaitForChild("Remotes", 9e9):WaitForChild("Wear", 9e9):InvokeServer(unpack(args))
+end
+})
+
+AddButton(Main, {
+  Name = "حـذاء قـصـير 1",
+  Callback = function()
+  wait(0.1)
+  local args = {
+    [1] = 11856087406;
+}
+
+game:GetService("ReplicatedStorage"):WaitForChild("Remotes", 9e9):WaitForChild("Wear", 9e9):InvokeServer(unpack(args))
+end
+})
+
+AddButton(Main, {
+  Name = "حـذاء قـصـير 2",
+  Callback = function()
+  wait(0.1)
+  local args = {
+    [1] = 14388001192;
+}
+
+game:GetService("ReplicatedStorage"):WaitForChild("Remotes", 9e9):WaitForChild("Wear", 9e9):InvokeServer(unpack(args))
+end
+})
+
+AddButton(Main, {
+  Name = "حـذاء قـصـير 3",
+  Callback = function()
+  wait(0.1)
+  local args = {
+    [1] = 12453321203;
+}
+
+game:GetService("ReplicatedStorage"):WaitForChild("Remotes", 9e9):WaitForChild("Wear", 9e9):InvokeServer(unpack(args))
+end
+})
+
+AddButton(Main, {
+  Name = "حـذاء قـصـير 4",
+  Callback = function()
+  wait(0.1)
+  local args = {
+    [1] = 14338742287;
+}
+
+game:GetService("ReplicatedStorage"):WaitForChild("Remotes", 9e9):WaitForChild("Wear", 9e9):InvokeServer(unpack(args))
+end
+})
+
+AddButton(Main, {
+  Name = "حـذاء قـصـير 5",
+  Callback = function()
+  wait(0.1)
+  local args = {
+    [1] = 14338742287;
+}
+
+game:GetService("ReplicatedStorage"):WaitForChild("Remotes", 9e9):WaitForChild("Wear", 9e9):InvokeServer(unpack(args))
+end
+})
+
+AddButton(Main, {
+  Name = "حـذاء قـصـير 6",
+  Callback = function()
+  wait(0.1)
+  local args = {
+    [1] = 12296189693;
+}
+
+game:GetService("ReplicatedStorage"):WaitForChild("Remotes", 9e9):WaitForChild("Wear", 9e9):InvokeServer(unpack(args))
+end
+})
+
+AddButton(Main, {
+  Name = "حـذاء قـصـير 7",
+  Callback = function()
+  wait(0.1)
+  local args = {
+    [1] = 14338732820;
+}
+
+game:GetService("ReplicatedStorage"):WaitForChild("Remotes", 9e9):WaitForChild("Wear", 9e9):InvokeServer(unpack(args))
+end
+})
+
+AddButton(Main, {
+  Name = "حـذاء قـصـير 8",
+  Callback = function()
+  wait(0.1)
+  local args = {
+    [1] = 14338735628;
+}
+
+game:GetService("ReplicatedStorage"):WaitForChild("Remotes", 9e9):WaitForChild("Wear", 9e9):InvokeServer(unpack(args))
+end
+})
+
+AddButton(Main, {
+  Name = "حـذاء قـصـير 9",
+  Callback = function()
+  wait(0.1)
+  local args = {
+    [1] = 14338738380;
+}
+
+game:GetService("ReplicatedStorage"):WaitForChild("Remotes", 9e9):WaitForChild("Wear", 9e9):InvokeServer(unpack(args))
+end
+})
+
+AddButton(Main, {
+  Name = "حـذاء قـصـير 10",
+  Callback = function()
+  wait(0.1)
+  local args = {
+    [1] = 14338744418;
+}
+
+game:GetService("ReplicatedStorage"):WaitForChild("Remotes", 9e9):WaitForChild("Wear", 9e9):InvokeServer(unpack(args))
+end
+})
+
+
+AddSection(Main, {"اشـياء للـيـد"})
+
+AddButton(Main, {
+  Name = "ورد اسـود",
+  Callback = function()
+  wait(0.1)
+  local args = {
+    [1] = 12465465333;
+}
+
+game:GetService("ReplicatedStorage"):WaitForChild("Remotes", 9e9):WaitForChild("Wear", 9e9):InvokeServer(unpack(args))
+end
+})
+
+AddButton(Main, {
+  Name = "ورد ابـيض",
+  Callback = function()
+  wait(0.1)
+  local args = {
+    [1] = 12465472210;
+}
+
+game:GetService("ReplicatedStorage"):WaitForChild("Remotes", 9e9):WaitForChild("Wear", 9e9):InvokeServer(unpack(args))
+end
+})
+
+AddButton(Main, {
+  Name = "ورد احـمـر",
+  Callback = function()
+  wait(0.1)
+  local args = {
+    [1] = 12465376206;
+}
+
+game:GetService("ReplicatedStorage"):WaitForChild("Remotes", 9e9):WaitForChild("Wear", 9e9):InvokeServer(unpack(args))
+end
+})
+
+AddButton(Main, {
+  Name = "ورد احـمـر و ابـيض",
+  Callback = function()
+  wait(0.1)
+  local args = {
+    [1] = 1246535644;
+}
+
+game:GetService("ReplicatedStorage"):WaitForChild("Remotes", 9e9):WaitForChild("Wear", 9e9):InvokeServer(unpack(args))
+end
+})
+
+AddButton(Main, {
+  Name = "ورد زهـري",
+  Callback = function()
+  wait(0.1)
+  local args = {
+    [1] = 1246547853;
+}
+
+game:GetService("ReplicatedStorage"):WaitForChild("Remotes", 9e9):WaitForChild("Wear", 9e9):InvokeServer(unpack(args))
+end
+})
+
+AddButton(Main, {
+  Name = "ورد سـمـائـي",
+  Callback = function()
+  wait(0.1)
+  local args = {
+    [1] = 12465483807;
+}
+
+game:GetService("ReplicatedStorage"):WaitForChild("Remotes", 9e9):WaitForChild("Wear", 9e9):InvokeServer(unpack(args))
+end
+})
+
+AddButton(Main, {
+  Name = "دب ابـيض",
+  Callback = function()
+  wait(0.1)
+  local args = {
+    [1] = 12156704614;
+}
+
+game:GetService("ReplicatedStorage"):WaitForChild("Remotes", 9e9):WaitForChild("Wear", 9e9):InvokeServer(unpack(args))
+end
+})
+
+AddButton(Main, {
+  Name = "دب ابـيض و اسـود",
+  Callback = function()
+  wait(0.1)
+  local args = {
+    [1] = 12157590166;
+}
+
+game:GetService("ReplicatedStorage"):WaitForChild("Remotes", 9e9):WaitForChild("Wear", 9e9):InvokeServer(unpack(args))
+end
+})
+
+AddButton(Main, {
+  Name = "مسـدس مـاء لعـبة",
+  Callback = function()
+  wait(0.1)
+  local args = {
+    [1] = 13135818072;
+}
+
+game:GetService("ReplicatedStorage"):WaitForChild("Remotes", 9e9):WaitForChild("Wear", 9e9):InvokeServer(unpack(args))
+end
+})
+
+AddSection(Main, {"الاشـواك"})
+
+AddButton(Main, {
+  Name = "شـوك 1",
+  Callback = function()
+  wait(0.1)
+  local args = {
+    [1] = 13463287248;
+}
+
+game:GetService("ReplicatedStorage"):WaitForChild("Remotes", 9e9):WaitForChild("Wear", 9e9):InvokeServer(unpack(args))
+end
+})
+
+local Paragraph = AddParagraph(Main, {" يمكنك التحكم بالاعب الخاص بك"})
+local Main = MakeTab({Name = "🦅بـانـق🦅"})
+
+local Players = game:GetService("Players")
+local RunService = game:GetService("RunService")
+
+local function fetchPlayerNames()
+    local namesList = {}
+    for _, plr in ipairs(Players:GetPlayers()) do
+        if plr ~= Players.LocalPlayer then 
+            table.insert(namesList, plr.Name)
+        end
+    end
+    return namesList
+end
+
+AddDropdown(Main, {
+    Name = "اخـتـار الـلاعـب",
+    Default = "...",
+    Options = fetchPlayerNames(),
+    Callback = function(Value)
+        if Value ~= "" then
+            getgenv().selectedPlayer = Value
+        end
+    end
+})
+
+local function createBangToggle(name, yOffset, faceBang)
+    local bangActive = false
+    local connection
+    local togglePosition = false
+
+    AddToggle(Main, {
+        Name = name,
+        Default = false,
+        Callback = function(Value)
+            bangActive = Value
+
+            local player = Players.LocalPlayer
+            local char = player.Character
+            if not char then return end
+
+            local humanoid = char:FindFirstChildOfClass("Humanoid")
+            if not humanoid then return end
+
+            if Value then
+                humanoid.PlatformStand = true
+
+                if connection then connection:Disconnect() end
+
+                connection = RunService.Heartbeat:Connect(function()
+                    if bangActive and getgenv().selectedPlayer then
+                        local targetPlayer = Players:FindFirstChild(getgenv().selectedPlayer)
+                        if targetPlayer and targetPlayer.Character and targetPlayer.Character.PrimaryPart then
+                            local targetHead = targetPlayer.Character:FindFirstChild("Head")
+                            if targetHead and char.PrimaryPart then
+                                local offset = togglePosition and 1 or 4
+                                if faceBang then
+                                    char:SetPrimaryPartCFrame(targetHead.CFrame * CFrame.new(0, 1, -offset) * CFrame.Angles(0, math.rad(180), 0))
+                                else
+                                    char:SetPrimaryPartCFrame(targetHead.CFrame * CFrame.new(0, yOffset, offset) * CFrame.Angles(0, 0, 0))
+                                end
+                                togglePosition = not togglePosition
+                                wait(1)
+                            end
+                        end
+                    end
+                end)
+            else
+                humanoid.PlatformStand = false
+                if connection then
+                    connection:Disconnect()
+                    connection = nil
+                end
+            end
+        end    
+    })
+end
+
+createBangToggle("بـانـق 1", -1, false)
+createBangToggle("بـانـق 2", -1.5, false)
+createBangToggle("بـانـق الـوجـه 1", 1, true)
+createBangToggle("بـانـق الـوجـه 2", 1, true)
+local Main = MakeTab({Name = "احـمـي نـفـسـك"})
+
