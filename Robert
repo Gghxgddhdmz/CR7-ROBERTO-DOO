@@ -74,7 +74,7 @@ MinimizeButton({
   Color = Color3.fromRGB(10, 10, 10),
   Corner = true,
   Stroke = false,
-  StrokeColor = Color3.fromRGB(128, 0, 128)
+  StrokeColor = Color3.fromRGB(255, 10, 10)
 })
 
 local Main = MakeTab({Name = "مـعـلـومـات الـمـطـور"})
