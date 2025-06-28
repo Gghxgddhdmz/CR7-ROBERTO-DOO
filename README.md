@@ -1,77 +1,103 @@
--- GUI مخصص باسمك
-local player = game.Players.LocalPlayer
-local gui = Instance.new("ScreenGui", player:WaitForChild("PlayerGui"))
-gui.Name = "HassanCustomGUI"
-gui.ResetOnSpawn = false
+local GUI = {}
 
--- إطار رئيسي
-local Main = Instance.new("Frame", gui)
-Main.Size = UDim2.new(0, 500, 0, 350)
-Main.Position = UDim2.new(0.3, 0, 0.3, 0)
-Main.BackgroundColor3 = Color3.fromRGB(25, 25, 25)
-Main.BorderSizePixel = 0
-Main.Active = true
-Main.Draggable = true
-Instance.new("UICorner", Main).CornerRadius = UDim.new(0, 12)
+local Player = game.Players.LocalPlayer
+local ScreenGui = Instance.new("ScreenGui", Player:WaitForChild("PlayerGui"))
+ScreenGui.Name = "TabbedHubGUI"
+ScreenGui.ResetOnSpawn = false
 
--- عنوان علوي
-local title = Instance.new("TextLabel", Main)
-title.Size = UDim2.new(1, 0, 0, 40)
-title.BackgroundColor3 = Color3.fromRGB(35, 35, 35)
-title.Text = "📘 قائمة سكربتات حسن"
-title.Font = Enum.Font.GothamBold
-title.TextSize = 18
-title.TextColor3 = Color3.fromRGB(0, 255, 127)
-title.BorderSizePixel = 0
-Instance.new("UICorner", title).CornerRadius = UDim.new(0, 12)
+local Main, TabHolder, ContentHolder
+local Tabs = {}
 
--- إطار الأزرار
-local content = Instance.new("Frame", Main)
-content.Size = UDim2.new(1, -20, 1, -60)
-content.Position = UDim2.new(0, 10, 0, 50)
-content.BackgroundColor3 = Color3.fromRGB(15, 15, 15)
-content.BorderSizePixel = 0
-Instance.new("UICorner", content).CornerRadius = UDim.new(0, 8)
+function GUI.MakeWindow(settings)
+	local hub = settings.Hub or {}
 
--- 🧠 نظام AddButton مثل Orion
-local yOffset = 10
+	-- Main Frame
+	Main = Instance.new("Frame", ScreenGui)
+	Main.Size = UDim2.new(0, 600, 0, 400)
+	Main.Position = UDim2.new(0.3, 0, 0.3, 0)
+	Main.BackgroundColor3 = Color3.fromRGB(25, 25, 25)
+	Main.BorderSizePixel = 0
+	Main.Active = true
+	Main.Draggable = true
+	Instance.new("UICorner", Main).CornerRadius = UDim.new(0, 12)
 
-function AddButton(parentFrame, info)
-	local button = Instance.new("TextButton", content)
-	button.Size = UDim2.new(0, 460, 0, 40)
-	button.Position = UDim2.new(0, 10, 0, yOffset)
-	button.Text = info.Name or "زر"
-	button.Font = Enum.Font.Gotham
-	button.TextSize = 14
-	button.TextColor3 = Color3.new(1, 1, 1)
-	button.BackgroundColor3 = Color3.fromRGB(0, 120, 255)
-	Instance.new("UICorner", button).CornerRadius = UDim.new(0, 8)
+	-- Title
+	local Title = Instance.new("TextLabel", Main)
+	Title.Size = UDim2.new(1, 0, 0, 40)
+	Title.BackgroundColor3 = Color3.fromRGB(35, 35, 35)
+	Title.Text = "🌐 " .. (hub.Title or "My Hub")
+	Title.Font = Enum.Font.GothamBold
+	Title.TextSize = 18
+	Title.TextColor3 = Color3.fromRGB(0, 255, 127)
+	Instance.new("UICorner", Title).CornerRadius = UDim.new(0, 12)
 
-	button.MouseButton1Click:Connect(function()
-		pcall(info.Callback)
-	end)
+	-- Tab Buttons Holder (Left)
+	TabHolder = Instance.new("Frame", Main)
+	TabHolder.Size = UDim2.new(0, 150, 1, -40)
+	TabHolder.Position = UDim2.new(0, 0, 0, 40)
+	TabHolder.BackgroundColor3 = Color3.fromRGB(20, 20, 20)
+	Instance.new("UICorner", TabHolder).CornerRadius = UDim.new(0, 12)
 
-	yOffset = yOffset + 50
+	-- Tab Content Holder (Right)
+	ContentHolder = Instance.new("Frame", Main)
+	ContentHolder.Size = UDim2.new(1, -160, 1, -50)
+	ContentHolder.Position = UDim2.new(0, 160, 0, 50)
+	ContentHolder.BackgroundColor3 = Color3.fromRGB(15, 15, 15)
+	Instance.new("UICorner", ContentHolder).CornerRadius = UDim.new(0, 12)
 end
 
--- ✅ استخدام AddButton بالطريقة المطلوبة
-AddButton(Main, {
-	Name = "🧪 زر تجريبي",
-	Callback = function()
-		print("✅ تم الضغط على الزر!")
-	end
-})
+-- ✅ إنشاء تبويب جديد
+function GUI.NewTab(tabName)
+	local Tab = {}
+	local y = 10
 
-AddButton(Main, {
-	Name = "🚀 تحميل سكربت",
-	Callback = function()
-		loadstring(game:HttpGet("https://raw.githubusercontent.com/YourUser/YourRepo/main/script.lua"))()
-	end
-})
+	-- زر في القائمة الجانبية
+	local button = Instance.new("TextButton", TabHolder)
+	button.Size = UDim2.new(1, -20, 0, 40)
+	button.Position = UDim2.new(0, 10, 0, 10 + #Tabs * 45)
+	button.Text = tabName
+	button.BackgroundColor3 = Color3.fromRGB(0, 120, 255)
+	button.TextColor3 = Color3.new(1, 1, 1)
+	button.Font = Enum.Font.Gotham
+	button.TextSize = 14
+	Instance.new("UICorner", button).CornerRadius = UDim.new(0, 8)
 
-AddButton(Main, {
-	Name = "❌ إغلاق الواجهة",
-	Callback = function()
-		gui:Destroy()
+	-- إطار لمحتوى هذا التبويب
+	local frame = Instance.new("Frame", ContentHolder)
+	frame.Name = tabName
+	frame.Size = UDim2.new(1, 0, 1, 0)
+	frame.BackgroundTransparency = 1
+	frame.Visible = (#Tabs == 0)
+
+	-- عند الضغط على الزر، نعرض هذا التبويب فقط
+	button.MouseButton1Click:Connect(function()
+		for _, t in pairs(ContentHolder:GetChildren()) do
+			if t:IsA("Frame") then t.Visible = false end
+		end
+		frame.Visible = true
+	end)
+
+	-- دالة لإضافة أزرار في التبويب
+	function Tab:AddButton(info)
+		local btn = Instance.new("TextButton", frame)
+		btn.Size = UDim2.new(0, 400, 0, 40)
+		btn.Position = UDim2.new(0, 20, 0, y)
+		btn.Text = info.Name or "زر"
+		btn.BackgroundColor3 = Color3.fromRGB(0, 120, 255)
+		btn.TextColor3 = Color3.new(1, 1, 1)
+		btn.Font = Enum.Font.Gotham
+		btn.TextSize = 14
+		Instance.new("UICorner", btn).CornerRadius = UDim.new(0, 8)
+
+		btn.MouseButton1Click:Connect(function()
+			pcall(info.Callback)
+		end)
+
+		y = y + 50
 	end
-})
+
+	table.insert(Tabs, Tab)
+	return Tab
+end
+
+return GUI
