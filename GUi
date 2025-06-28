@@ -217,4 +217,84 @@ function GuiLib.AddDropdown(tab, settings)
 end
 
 ----------------------------------------------------------------
+-- ✅ Drag system (تحريك الواجهة)
+local function MakeDraggable(frame)
+	local dragging, dragInput, dragStart, startPos
+
+	frame.InputBegan:Connect(function(input)
+		if input.UserInputType == Enum.UserInputType.MouseButton1 then
+			dragging = true
+			dragStart = input.Position
+			startPos = frame.Position
+
+			input.Changed:Connect(function()
+				if input.UserInputState == Enum.UserInputState.End then
+					dragging = false
+				end
+			end)
+		end
+	end)
+
+	frame.InputChanged:Connect(function(input)
+		if input.UserInputType == Enum.UserInputType.MouseMovement then
+			dragInput = input
+		end
+	end)
+
+	UIS.InputChanged:Connect(function(input)
+		if input == dragInput and dragging then
+			local delta = input.Position - dragStart
+			frame.Position = UDim2.new(startPos.X.Scale, startPos.X.Offset + delta.X, startPos.Y.Scale, startPos.Y.Offset + delta.Y)
+		end
+	end)
+end
+
+-- [ زر Minimize (تصغير) ]
+local MinimizeButton = Instance.new("TextButton", MainFrame)
+MinimizeButton.Size = UDim2.new(0, 30, 0, 30)
+MinimizeButton.Position = UDim2.new(1, -40, 0, 5)
+MinimizeButton.BackgroundColor3 = Color3.fromRGB(50, 50, 50)
+MinimizeButton.Text = "_"
+MinimizeButton.TextColor3 = Color3.fromRGB(255, 255, 255)
+MinimizeButton.TextScaled = true
+MinimizeButton.Font = Enum.Font.GothamBold
+Instance.new("UICorner", MinimizeButton).CornerRadius = UDim.new(0, 6)
+
+local isMinimized = false
+
+MinimizeButton.MouseButton1Click:Connect(function()
+	if isMinimized then
+		MainFrame.Size = UDim2.new(0, 600, 0, 400)
+		isMinimized = false
+	else
+		MainFrame.Size = UDim2.new(0, 600, 0, 40)
+		isMinimized = true
+	end
+end)
+
+-- [ إضافة صورة لإخفاء وإظهار الواجهة عند الضغط عليها]
+local HideButton = Instance.new("ImageButton", MainFrame)
+HideButton.Size = UDim2.new(0, 30, 0, 30)
+HideButton.Position = UDim2.new(1, -70, 0, 5)
+HideButton.BackgroundTransparency = 1
+HideButton.Image = "rbxassetid://15507434243" -- استبدل برابط الصورة التي تريدها
+
+local isHidden = false
+
+HideButton.MouseButton1Click:Connect(function()
+	if isHidden then
+		-- إظهار الواجهة
+		MainFrame.Visible = true
+		isHidden = false
+	else
+		-- إخفاء الواجهة
+		MainFrame.Visible = false
+		isHidden = true
+	end
+end)
+
+-- جعل الواجهة قابلة للتحريك
+MakeDraggable(MainFrame)
+
+----------------------------------------------------------------
 return GuiLib
