@@ -1,176 +1,274 @@
-local GUI = {}
+local GuiLib = {}
+local UIS = game:GetService("UserInputService")
 
-local Player = game.Players.LocalPlayer
-local ScreenGui = Instance.new("ScreenGui", Player:WaitForChild("PlayerGui"))
-ScreenGui.Name = "TabbedHubGUI"
-ScreenGui.ResetOnSpawn = false
+local screenGui = Instance.new("ScreenGui", game.CoreGui)
+screenGui.Name = "CustomOrionGUI"
 
-local Main, TabHolder, ContentHolder
-local Tabs = {}
+local MainFrame = Instance.new("Frame", screenGui)
+MainFrame.Size = UDim2.new(0, 600, 0, 400)
+MainFrame.Position = UDim2.new(0.3, 0, 0.3, 0)
+MainFrame.BackgroundColor3 = Color3.fromRGB(0, 0, 0)
+Instance.new("UICorner", MainFrame).CornerRadius = UDim.new(0, 10)
+MainFrame.ClipsDescendants = true
 
-function GUI.MakeWindow(settings)
-	local hub = settings.Hub or {}
+local Title = Instance.new("TextLabel", MainFrame)
+Title.Size = UDim2.new(1, 0, 0, 40)
+Title.Text = "🎮 GUI HUB"
+Title.TextColor3 = Color3.fromRGB(255, 0, 0)
+Title.BackgroundTransparency = 1
+Title.TextScaled = true
+Title.Font = Enum.Font.GothamBold
 
-	-- Main Frame
-	Main = Instance.new("Frame", ScreenGui)
-	Main.Size = UDim2.new(0, 600, 0, 400)
-	Main.Position = UDim2.new(0.3, 0, 0.3, 0)
-	Main.BackgroundColor3 = Color3.fromRGB(0, 0, 0)  -- واجهة باللون الأسود
-	Main.BackgroundTransparency = 0  -- جعلها غير شفافة
-	Main.BorderSizePixel = 0
-	Main.Active = true
-	Main.Draggable = true
-	Instance.new("UICorner", Main).CornerRadius = UDim.new(0, 12)
+local TabsHolder = Instance.new("Frame", MainFrame)
+TabsHolder.Size = UDim2.new(0, 140, 1, -40)
+TabsHolder.Position = UDim2.new(0, 0, 0, 40)
+TabsHolder.BackgroundColor3 = Color3.fromRGB(0, 0, 0)
+Instance.new("UICorner", TabsHolder).CornerRadius = UDim.new(0, 6)
 
-	-- Title
-	local Title = Instance.new("TextLabel", Main)
-	Title.Size = UDim2.new(1, 0, 0, 40)
-	Title.BackgroundColor3 = Color3.fromRGB(0, 0, 0) -- خلفية سوداء
-	Title.BackgroundTransparency = 1
-	Title.Text = "🌐 " .. (hub.Title or "My Hub")
-	Title.Font = Enum.Font.GothamBold
-	Title.TextSize = 18
-	Title.TextColor3 = Color3.fromRGB(255, 0, 0) -- نص باللون الأحمر
-	Title.TextXAlignment = Enum.TextXAlignment.Left
-	Instance.new("UICorner", Title).CornerRadius = UDim.new(0, 12)
+local UIListTabs = Instance.new("UIListLayout", TabsHolder)
+UIListTabs.SortOrder = Enum.SortOrder.LayoutOrder
+UIListTabs.Padding = UDim.new(0, 6)
 
-	-- زر تصغير التبويبات والمحتوى
-	local collapseBtn = Instance.new("ImageButton", Title)
-	collapseBtn.Size = UDim2.new(0, 24, 0, 24)
-	collapseBtn.Position = UDim2.new(1, -30, 0.5, -12)
-	collapseBtn.Image = "rbxassetid://15507434243"
-	collapseBtn.BackgroundColor3 = Color3.fromRGB(0, 0, 0)
-	collapseBtn.BackgroundTransparency = 1
-	Instance.new("UICorner", collapseBtn).CornerRadius = UDim.new(1, 0)
+local Pages = Instance.new("Folder", MainFrame)
 
-	local collapsed = false
-	collapseBtn.MouseButton1Click:Connect(function()
-		collapsed = not collapsed
-		if TabHolder then TabHolder.Visible = not collapsed end
-		if ContentHolder then ContentHolder.Visible = not collapsed end
-	end)
-
-	-- Tab Buttons Holder (Left)
-	TabHolder = Instance.new("Frame", Main)
-	TabHolder.Size = UDim2.new(0, 150, 1, -40)
-	TabHolder.Position = UDim2.new(0, 0, 0, 40)
-	TabHolder.BackgroundColor3 = Color3.fromRGB(0, 0, 0) -- خلفية سوداء
-	TabHolder.BackgroundTransparency = 1
-	Instance.new("UICorner", TabHolder).CornerRadius = UDim.new(0, 12)
-
-	-- Tab Content Holder (Right)
-	ContentHolder = Instance.new("Frame", Main)
-	ContentHolder.Size = UDim2.new(1, -160, 1, -50)
-	ContentHolder.Position = UDim2.new(0, 160, 0, 50)
-	ContentHolder.BackgroundColor3 = Color3.fromRGB(0, 0, 0) -- خلفية سوداء
-	ContentHolder.BackgroundTransparency = 1
-	Instance.new("UICorner", ContentHolder).CornerRadius = UDim.new(0, 12)
+function GuiLib.MakeWindow(settings)
+    Title.Text = settings.Hub.Title or "GUI Hub"
 end
 
-function GUI.NewTab(tabName)
-	local Tab = {}
-	local y = 10
+function GuiLib.NewTab(name)
+    local button = Instance.new("TextButton", TabsHolder)
+    button.Size = UDim2.new(1, -10, 0, 30)
+    button.Text = name
+    button.BackgroundColor3 = Color3.fromRGB(50, 50, 50)
+    button.TextColor3 = Color3.fromRGB(255, 0, 0)
+    button.Font = Enum.Font.Gotham
+    button.TextScaled = true
+    Instance.new("UICorner", button).CornerRadius = UDim.new(0, 6)
 
-	local button = Instance.new("TextButton", TabHolder)
-	button.Size = UDim2.new(1, -20, 0, 40)
-	button.Position = UDim2.new(0, 10, 0, 10 + #Tabs * 45)
-	button.Text = tabName
-	button.BackgroundColor3 = Color3.fromRGB(50, 50, 50) -- تغيير اللون الخلفي
-	button.BackgroundTransparency = 0.5
-	button.TextColor3 = Color3.fromRGB(255, 0, 0)  -- النص باللون الأحمر
-	button.Font = Enum.Font.Gotham
-	button.TextSize = 14
-	Instance.new("UICorner", button).CornerRadius = UDim.new(0, 8)
+    local tabPage = Instance.new("ScrollingFrame", Pages)
+    tabPage.Size = UDim2.new(1, -150, 1, -50)
+    tabPage.Position = UDim2.new(0, 150, 0, 40)
+    tabPage.Visible = false
+    tabPage.CanvasSize = UDim2.new(0, 0, 0, 0)
+    tabPage.ScrollBarThickness = 4
+    tabPage.BackgroundTransparency = 1
+    local layout = Instance.new("UIListLayout", tabPage)
+    layout.SortOrder = Enum.SortOrder.LayoutOrder
+    layout.Padding = UDim.new(0, 6)
 
-	local frame = Instance.new("Frame", ContentHolder)
-	frame.Name = tabName
-	frame.Size = UDim2.new(1, 0, 1, 0)
-	frame.BackgroundTransparency = 1
-	frame.Visible = (#Tabs == 0)
+    button.MouseButton1Click:Connect(function()
+        for _, child in pairs(Pages:GetChildren()) do
+            child.Visible = false
+        end
+        tabPage.Visible = true
+    end)
 
-	button.MouseButton1Click:Connect(function()
-		for _, t in pairs(ContentHolder:GetChildren()) do
-			if t:IsA("Frame") then t.Visible = false end
-		end
-		frame.Visible = true
-	end)
-
-	-- إضافة الأزرار
-	function Tab:AddButton(info)
-		local btn = Instance.new("TextButton", frame)
-		btn.Size = UDim2.new(0, 400, 0, 40)
-		btn.Position = UDim2.new(0, 20, 0, y)
-		btn.Text = info.Name or "زر"
-		btn.BackgroundColor3 = Color3.fromRGB(50, 50, 50) -- تغيير اللون الخلفي
-		btn.BackgroundTransparency = 0.5
-		btn.TextColor3 = Color3.fromRGB(255, 0, 0)  -- النص باللون الأحمر
-		btn.Font = Enum.Font.Gotham
-		btn.TextSize = 14
-		Instance.new("UICorner", btn).CornerRadius = UDim.new(0, 8)
-
-		btn.MouseButton1Click:Connect(function()
-			pcall(info.Callback)
-		end)
-
-		y = y + 50
-	end
-
-	-- إضافة الأدوات الأخرى مثل Textbox و Slider
-	function Tab:AddTextbox(info)
-		local box = Instance.new("TextBox", frame)
-		box.Size = UDim2.new(0, 400, 0, 40)
-		box.Position = UDim2.new(0, 20, 0, y)
-		box.PlaceholderText = info.Name or "Textbox"
-		box.Text = info.Default or ""
-		box.BackgroundColor3 = Color3.fromRGB(50, 50, 50) -- تغيير اللون الخلفي
-		box.BackgroundTransparency = 0.5
-		box.TextColor3 = Color3.fromRGB(255, 0, 0)  -- النص باللون الأحمر
-		box.Font = Enum.Font.Gotham
-		box.TextSize = 14
-		Instance.new("UICorner", box).CornerRadius = UDim.new(0, 8)
-
-		box.FocusLost:Connect(function(enter)
-			if enter and info.Callback then
-				pcall(info.Callback, box.Text)
-				if info.TextDisappear then
-					box.Text = ""
-				end
-			end
-		end)
-
-		y = y + 50
-	end
-
-	-- تابع إضافة أدوات إضافية (Slider, Toggle, Section...)
-	-- يمكنك تطبيق التعديلات المشابهة هنا لأدوات أخرى
-
-	table.insert(Tabs, Tab)
-	return Tab
+    return tabPage
 end
 
-function GUI.MinimizeButton(config)
-	local btn = Instance.new("ImageButton")
-	btn.Size = UDim2.new(0, config.Size[1], 0, config.Size[2])
-	btn.Position = UDim2.new(0, 10, 0, 10)
-	btn.Image = config.Image
-	btn.BackgroundColor3 = config.Color or Color3.fromRGB(50, 50, 50) -- خلفية اللون الأسود
-	btn.BackgroundTransparency = 1
-	btn.Parent = ScreenGui
-
-	if config.Corner then
-		Instance.new("UICorner", btn).CornerRadius = UDim.new(1, 0)
-	end
-
-	if config.Stroke then
-		local stroke = Instance.new("UIStroke", btn)
-		stroke.Color = config.StrokeColor or Color3.fromRGB(255, 0, 0) -- تغيير اللون الأحمر للتحديد
-	end
-
-	local hidden = false
-	btn.MouseButton1Click:Connect(function()
-		hidden = not hidden
-		Main.Visible = not hidden
-	end)
+function GuiLib.AddSection(tab, text)
+    local label = Instance.new("TextLabel", tab)
+    label.Size = UDim2.new(1, -20, 0, 25)
+    label.Text = "🔹 " .. text
+    label.TextColor3 = Color3.fromRGB(160, 160, 255)
+    label.BackgroundTransparency = 1
+    label.TextScaled = true
+    label.Font = Enum.Font.GothamMedium
 end
 
-return GUI
+function GuiLib.AddButton(tab, settings)
+    local btn = Instance.new("TextButton", tab)
+    btn.Size = UDim2.new(1, -20, 0, 35)
+    btn.BackgroundColor3 = Color3.fromRGB(40, 40, 40)
+    btn.Text = settings.Name or "Button"
+    btn.TextColor3 = Color3.fromRGB(255, 0, 0)
+    btn.Font = Enum.Font.Gotham
+    btn.TextScaled = true
+    Instance.new("UICorner", btn).CornerRadius = UDim.new(0, 6)
+
+    btn.MouseButton1Click:Connect(function()
+        pcall(settings.Callback)
+    end)
+end
+
+function GuiLib.AddSlider(tab, settings)
+    local slider = Instance.new("TextButton", tab)
+    slider.Size = UDim2.new(1, -20, 0, 35)
+    slider.BackgroundColor3 = Color3.fromRGB(45, 45, 45)
+    slider.Text = settings.Name .. ": " .. settings.Default
+    slider.TextColor3 = Color3.fromRGB(255, 0, 0)
+    slider.TextScaled = true
+    slider.Font = Enum.Font.Gotham
+    Instance.new("UICorner", slider).CornerRadius = UDim.new(0, 6)
+
+    local value = settings.Default
+
+    slider.MouseButton1Click:Connect(function()
+        value = (value + settings.Increment)
+        if value > settings.Max then value = settings.Min end
+        slider.Text = settings.Name .. ": " .. value
+        pcall(settings.Callback, value)
+    end)
+end
+
+function GuiLib.AddKeybind(tab, settings)
+    local keybind = Instance.new("TextButton", tab)
+    keybind.Size = UDim2.new(1, -20, 0, 35)
+    keybind.BackgroundColor3 = Color3.fromRGB(40, 40, 60)
+    keybind.Text = "🔑 " .. (settings.Name or "Keybind") .. ": [" .. tostring(settings.Default) .. "]"
+    keybind.TextColor3 = Color3.fromRGB(255, 0, 0)
+    keybind.Font = Enum.Font.Gotham
+    keybind.TextScaled = true
+    Instance.new("UICorner", keybind).CornerRadius = UDim.new(0, 6)
+
+    local currentKey = settings.Default
+
+    keybind.MouseButton1Click:Connect(function()
+        keybind.Text = "Press any key..."
+        local conn
+        conn = UIS.InputBegan:Connect(function(input, gameProcessed)
+            if not gameProcessed and input.UserInputType == Enum.UserInputType.Keyboard then
+                currentKey = input.KeyCode
+                keybind.Text = "🔑 " .. settings.Name .. ": [" .. tostring(currentKey) .. "]"
+                conn:Disconnect()
+            end
+        end)
+    end)
+
+    UIS.InputBegan:Connect(function(input, gameProcessed)
+        if input.KeyCode == currentKey then
+            pcall(settings.Callback)
+        end
+    end)
+end
+
+function GuiLib.AddTextBox(tab, settings)
+    local box = Instance.new("TextBox", tab)
+    box.Size = UDim2.new(1, -20, 0, 35)
+    box.BackgroundColor3 = Color3.fromRGB(50, 50, 50)
+    box.Text = settings.PlaceholderText or ""
+    box.TextColor3 = Color3.fromRGB(255, 0, 0)
+    box.PlaceholderText = settings.PlaceholderText or "اكتب هنا"
+    box.Font = Enum.Font.Gotham
+    box.TextScaled = true
+    Instance.new("UICorner", box).CornerRadius = UDim.new(0, 6)
+
+    box.FocusLost:Connect(function(enterPressed)
+        if enterPressed then
+            pcall(settings.Callback, box.Text)
+        end
+    end)
+end
+
+function GuiLib.AddDropdown(tab, settings)
+    local dropdown = Instance.new("TextButton", tab)
+    dropdown.Size = UDim2.new(1, -20, 0, 35)
+    dropdown.BackgroundColor3 = Color3.fromRGB(40, 40, 40)
+    dropdown.Text = "▼ " .. (settings.Name or "اختيار")
+    dropdown.TextColor3 = Color3.fromRGB(255, 0, 0)
+    dropdown.TextScaled = true
+    dropdown.Font = Enum.Font.Gotham
+    Instance.new("UICorner", dropdown).CornerRadius = UDim.new(0, 6)
+
+    local open = false
+    local buttons = {}
+
+    dropdown.MouseButton1Click:Connect(function()
+        open = not open
+        for _, b in pairs(buttons) do b.Visible = open end
+    end)
+
+    for _, item in pairs(settings.Options) do
+        local opt = Instance.new("TextButton", tab)
+        opt.Size = UDim2.new(1, -40, 0, 30)
+        opt.BackgroundColor3 = Color3.fromRGB(30, 30, 30)
+        opt.Text = "• " .. item
+        opt.TextColor3 = Color3.fromRGB(255, 255, 255)
+        opt.Font = Enum.Font.Gotham
+        opt.TextScaled = true
+        opt.Visible = false
+        Instance.new("UICorner", opt).CornerRadius = UDim.new(0, 5)
+
+        opt.MouseButton1Click:Connect(function()
+            dropdown.Text = "✔ " .. item
+            pcall(settings.Callback, item)
+            for _, b in pairs(buttons) do b.Visible = false end
+            open = false
+        end)
+
+        table.insert(buttons, opt)
+    end
+end
+
+local function MakeDraggable(frame)
+    local dragging, dragInput, dragStart, startPos
+
+    frame.InputBegan:Connect(function(input)
+        if input.UserInputType == Enum.UserInputType.MouseButton1 then
+            dragging = true
+            dragStart = input.Position
+            startPos = frame.Position
+
+            input.Changed:Connect(function()
+                if input.UserInputState == Enum.UserInputState.End then
+                    dragging = false
+                end
+            end)
+        end
+    end)
+
+    frame.InputChanged:Connect(function(input)
+        if input.UserInputType == Enum.UserInputType.MouseMovement then
+            dragInput = input
+        end
+    end)
+
+    UIS.InputChanged:Connect(function(input)
+        if input == dragInput and dragging then
+            local delta = input.Position - dragStart
+            frame.Position = UDim2.new(startPos.X.Scale, startPos.X.Offset + delta.X, startPos.Y.Scale, startPos.Y.Offset + delta.Y)
+        end
+    end)
+end
+
+local MinimizeButton = Instance.new("TextButton", MainFrame)
+MinimizeButton.Size = UDim2.new(0, 30, 0, 30)
+MinimizeButton.Position = UDim2.new(1, -40, 0, 5)
+MinimizeButton.BackgroundColor3 = Color3.fromRGB(50, 50, 50)
+MinimizeButton.Text = "_"
+MinimizeButton.TextColor3 = Color3.fromRGB(255, 0, 0)
+MinimizeButton.TextScaled = true
+MinimizeButton.Font = Enum.Font.GothamBold
+Instance.new("UICorner", MinimizeButton).CornerRadius = UDim.new(0, 6)
+
+local isMinimized = false
+MinimizeButton.MouseButton1Click:Connect(function()
+    if isMinimized then
+        MainFrame.Size = UDim2.new(0, 600, 0, 400)
+        isMinimized = false
+    else
+        MainFrame.Size = UDim2.new(0, 600, 0, 40)
+        isMinimized = true
+    end
+end)
+
+local HideButton = Instance.new("ImageButton", MainFrame)
+HideButton.Size = UDim2.new(0, 30, 0, 30)
+HideButton.Position = UDim2.new(1, -70, 0, 5)
+HideButton.BackgroundTransparency = 1
+HideButton.Image = "rbxassetid://15507434243"
+
+local isHidden = false
+HideButton.MouseButton1Click:Connect(function()
+    if isHidden then
+        MainFrame.Visible = true
+        isHidden = false
+    else
+        MainFrame.Visible = false
+        isHidden = true
+    end
+end)
+
+MakeDraggable(MainFrame)
+
+return GuiLib
