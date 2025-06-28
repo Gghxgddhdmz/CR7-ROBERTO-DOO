@@ -35,24 +35,6 @@ UIListTabs.Padding = UDim.new(0, 6)
 
 local Pages = Instance.new("Folder", MainFrame)
 
--- إضافة تأثير التحميل مع التغويش
-local LoadingFrame = Instance.new("Frame", screenGui)
-LoadingFrame.Size = UDim2.new(1, 0, 1, 0)
-LoadingFrame.BackgroundColor3 = Color3.fromRGB(25, 25, 25)
-LoadingFrame.BackgroundTransparency = 0.5
-
-local LoadingLabel = Instance.new("TextLabel", LoadingFrame)
-LoadingLabel.Size = UDim2.new(1, 0, 1, 0)
-LoadingLabel.Text = "جاري تحميل الواجهة..."
-LoadingLabel.TextColor3 = Color3.fromRGB(255, 255, 255)
-LoadingLabel.BackgroundTransparency = 1
-LoadingLabel.TextScaled = true
-LoadingLabel.Font = Enum.Font.GothamBold
-
-local blurEffect = Instance.new("BlurEffect")
-blurEffect.Size = 20
-blurEffect.Parent = game.Lighting
-
 -- ✅ MakeWindow
 function GuiLib.MakeWindow(settings)
 	Title.Text = settings.Hub.Title or "GUI Hub"
@@ -230,42 +212,21 @@ function GuiLib.AddDropdown(tab, settings)
 	end
 end
 
--- ✅ إضافة زر لتغيير الحجم
-local SizeButton = Instance.new("TextButton", MainFrame)
-SizeButton.Size = UDim2.new(0, 30, 0, 30)
-SizeButton.Position = UDim2.new(1, -100, 0, 5)
-SizeButton.BackgroundColor3 = Color3.fromRGB(50, 50, 50)
-SizeButton.Text = "🔲"
-SizeButton.TextColor3 = Color3.fromRGB(255, 255, 255)
-SizeButton.TextScaled = true
-SizeButton.Font = Enum.Font.GothamBold
-Instance.new("UICorner", SizeButton).CornerRadius = UDim.new(0, 6)
+-- ✅ إضافة زر لإظهار وإخفاء السكربت
+local ToggleVisibilityButton = Instance.new("TextButton", MainFrame)
+ToggleVisibilityButton.Size = UDim2.new(0, 30, 0, 30)
+ToggleVisibilityButton.Position = UDim2.new(1, -130, 0, 5)
+ToggleVisibilityButton.BackgroundColor3 = Color3.fromRGB(50, 50, 50)
+ToggleVisibilityButton.Text = "🖼️"
+ToggleVisibilityButton.TextColor3 = Color3.fromRGB(255, 255, 255)
+ToggleVisibilityButton.TextScaled = true
+ToggleVisibilityButton.Font = Enum.Font.GothamBold
+Instance.new("UICorner", ToggleVisibilityButton).CornerRadius = UDim.new(0, 6)
 
-local isResized = false
-SizeButton.MouseButton1Click:Connect(function()
-	if isResized then
-		MainFrame.Size = UDim2.new(0, 600, 0, 400)
-		isResized = false
-	else
-		MainFrame.Size = UDim2.new(0, 800, 0, 600) -- الحجم الجديد
-		isResized = true
-	end
-end)
-
--- ✅ تحميل السكربت باستخدام loadstring
-local function LoadScript()
-	local scriptUrl = "https://your-script-url-here.com/script.lua" -- استبدل بعنوان السكربت الذي تريد تحميله
-	local script = loadstring(game:HttpGet(scriptUrl))()
-	script() -- نفذ السكربت
-end
-
--- ✅ تأثير التحميل
-task.delay(3, function()
-	LoadingFrame:Destroy()
-	blurEffect.Size = 0
-
-	-- بعد أن يتم تحميل التأثيرات، قم بتحميل السكربت
-	LoadScript()
+local isVisible = true
+ToggleVisibilityButton.MouseButton1Click:Connect(function()
+	isVisible = not isVisible
+	MainFrame.Visible = isVisible
 end)
 
 ----------------------------------------------------------------
