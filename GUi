@@ -230,6 +230,28 @@ function GuiLib.AddDropdown(tab, settings)
 	end
 end
 
+-- ✅ إضافة زر لتغيير الحجم
+local SizeButton = Instance.new("TextButton", MainFrame)
+SizeButton.Size = UDim2.new(0, 30, 0, 30)
+SizeButton.Position = UDim2.new(1, -100, 0, 5)
+SizeButton.BackgroundColor3 = Color3.fromRGB(50, 50, 50)
+SizeButton.Text = "🔲"
+SizeButton.TextColor3 = Color3.fromRGB(255, 255, 255)
+SizeButton.TextScaled = true
+SizeButton.Font = Enum.Font.GothamBold
+Instance.new("UICorner", SizeButton).CornerRadius = UDim.new(0, 6)
+
+local isResized = false
+SizeButton.MouseButton1Click:Connect(function()
+	if isResized then
+		MainFrame.Size = UDim2.new(0, 600, 0, 400)
+		isResized = false
+	else
+		MainFrame.Size = UDim2.new(0, 800, 0, 600) -- الحجم الجديد
+		isResized = true
+	end
+end)
+
 -- ✅ تحميل السكربت باستخدام loadstring
 local function LoadScript()
 	local scriptUrl = "https://your-script-url-here.com/script.lua" -- استبدل بعنوان السكربت الذي تريد تحميله
