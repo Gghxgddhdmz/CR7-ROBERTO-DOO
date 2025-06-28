@@ -5,7 +5,8 @@ local ScreenGui = Instance.new("ScreenGui", Player:WaitForChild("PlayerGui"))
 ScreenGui.Name = "TabbedHubGUI"
 ScreenGui.ResetOnSpawn = false
 
-local Main, TabHolder, ContentHolder, Title
+local Main, TabHolder, ContentHolder
+
 local Tabs = {}
 
 function GUI.MakeWindow(settings)
@@ -22,7 +23,7 @@ function GUI.MakeWindow(settings)
 	Instance.new("UICorner", Main).CornerRadius = UDim.new(0, 12)
 
 	-- Title
-	Title = Instance.new("TextLabel", Main)
+	local Title = Instance.new("TextLabel", Main)
 	Title.Size = UDim2.new(1, 0, 0, 40)
 	Title.BackgroundColor3 = Color3.fromRGB(35, 35, 35)
 	Title.Text = "🌐 " .. (hub.Title or "My Hub")
@@ -31,6 +32,8 @@ function GUI.MakeWindow(settings)
 	Title.TextColor3 = Color3.fromRGB(0, 255, 127)
 	Title.TextXAlignment = Enum.TextXAlignment.Left
 	Instance.new("UICorner", Title).CornerRadius = UDim.new(0, 12)
+	
+	GUI._Title = Title -- نحتفظ به لاستخدام زر التصغير لاحقًا
 
 	-- Tab Buttons Holder (Left)
 	TabHolder = Instance.new("Frame", Main)
@@ -52,6 +55,7 @@ function GUI.NewTab(tabName)
 	local Tab = {}
 	local y = 10
 
+	-- زر في القائمة الجانبية
 	local button = Instance.new("TextButton", TabHolder)
 	button.Size = UDim2.new(1, -20, 0, 40)
 	button.Position = UDim2.new(0, 10, 0, 10 + #Tabs * 45)
@@ -62,12 +66,14 @@ function GUI.NewTab(tabName)
 	button.TextSize = 14
 	Instance.new("UICorner", button).CornerRadius = UDim.new(0, 8)
 
+	-- إطار لمحتوى هذا التبويب
 	local frame = Instance.new("Frame", ContentHolder)
 	frame.Name = tabName
 	frame.Size = UDim2.new(1, 0, 1, 0)
 	frame.BackgroundTransparency = 1
 	frame.Visible = (#Tabs == 0)
 
+	-- عند الضغط على الزر، نعرض هذا التبويب فقط
 	button.MouseButton1Click:Connect(function()
 		for _, t in pairs(ContentHolder:GetChildren()) do
 			if t:IsA("Frame") then t.Visible = false end
@@ -75,6 +81,7 @@ function GUI.NewTab(tabName)
 		frame.Visible = true
 	end)
 
+	-- دالة لإضافة أزرار في التبويب
 	function Tab:AddButton(info)
 		local btn = Instance.new("TextButton", frame)
 		btn.Size = UDim2.new(0, 400, 0, 40)
@@ -97,17 +104,15 @@ function GUI.NewTab(tabName)
 	return Tab
 end
 
--- ✅ زر الإغلاق/الفتح داخل العنوان
+-- ✅ زر تصغير وإظهار الواجهة (ويبقى ظاهر دائمًا)
 function GUI.MinimizeButton(config)
-	if not Main or not Title then return end
-
 	local btn = Instance.new("ImageButton")
 	btn.Size = UDim2.new(0, config.Size[1], 0, config.Size[2])
-	btn.Position = UDim2.new(1, -config.Size[1] - 10, 0, (40 - config.Size[2]) / 2)
+	btn.Position = UDim2.new(0, 10, 0, 10)
 	btn.Image = config.Image
 	btn.BackgroundColor3 = config.Color or Color3.fromRGB(30, 30, 30)
-	btn.BackgroundTransparency = 0.1
-	btn.Parent = Title
+	btn.BackgroundTransparency = 0.05
+	btn.Parent = ScreenGui -- خارج Main حتى يبقى ظاهر دائمًا
 
 	if config.Corner then
 		Instance.new("UICorner", btn).CornerRadius = UDim.new(1, 0)
@@ -121,8 +126,7 @@ function GUI.MinimizeButton(config)
 	local hidden = false
 	btn.MouseButton1Click:Connect(function()
 		hidden = not hidden
-		TabHolder.Visible = not hidden
-		ContentHolder.Visible = not hidden
+		Main.Visible = not hidden
 	end)
 end
 
