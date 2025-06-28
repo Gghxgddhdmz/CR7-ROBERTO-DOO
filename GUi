@@ -1,9 +1,11 @@
 local GuiLib = {}
 local UIS = game:GetService("UserInputService")
 
+-- واجهة الشاشة
 local screenGui = Instance.new("ScreenGui", game.CoreGui)
 screenGui.Name = "CustomOrionGUI"
 
+-- الإطار الرئيسي
 local MainFrame = Instance.new("Frame", screenGui)
 MainFrame.Size = UDim2.new(0, 600, 0, 400)
 MainFrame.Position = UDim2.new(0.3, 0, 0.3, 0)
@@ -11,6 +13,7 @@ MainFrame.BackgroundColor3 = Color3.fromRGB(25, 25, 25)
 Instance.new("UICorner", MainFrame).CornerRadius = UDim.new(0, 10)
 MainFrame.ClipsDescendants = true
 
+-- العنوان
 local Title = Instance.new("TextLabel", MainFrame)
 Title.Size = UDim2.new(1, 0, 0, 40)
 Title.Text = "🎮 GUI HUB"
@@ -19,6 +22,7 @@ Title.BackgroundTransparency = 1
 Title.TextScaled = true
 Title.Font = Enum.Font.GothamBold
 
+-- قائمة التبويبات
 local TabsHolder = Instance.new("Frame", MainFrame)
 TabsHolder.Size = UDim2.new(0, 140, 1, -40)
 TabsHolder.Position = UDim2.new(0, 0, 0, 40)
@@ -31,13 +35,29 @@ UIListTabs.Padding = UDim.new(0, 6)
 
 local Pages = Instance.new("Folder", MainFrame)
 
-----------------------------------------------------------------
+-- إضافة تأثير التحميل مع التغويش
+local LoadingFrame = Instance.new("Frame", screenGui)
+LoadingFrame.Size = UDim2.new(1, 0, 1, 0)
+LoadingFrame.BackgroundColor3 = Color3.fromRGB(25, 25, 25)
+LoadingFrame.BackgroundTransparency = 0.5
+
+local LoadingLabel = Instance.new("TextLabel", LoadingFrame)
+LoadingLabel.Size = UDim2.new(1, 0, 1, 0)
+LoadingLabel.Text = "جاري تحميل الواجهة..."
+LoadingLabel.TextColor3 = Color3.fromRGB(255, 255, 255)
+LoadingLabel.BackgroundTransparency = 1
+LoadingLabel.TextScaled = true
+LoadingLabel.Font = Enum.Font.GothamBold
+
+local blurEffect = Instance.new("BlurEffect")
+blurEffect.Size = 20
+blurEffect.Parent = game.Lighting
+
 -- ✅ MakeWindow
 function GuiLib.MakeWindow(settings)
 	Title.Text = settings.Hub.Title or "GUI Hub"
 end
 
-----------------------------------------------------------------
 -- ✅ NewTab
 function GuiLib.NewTab(name)
 	local button = Instance.new("TextButton", TabsHolder)
@@ -70,7 +90,6 @@ function GuiLib.NewTab(name)
 	return tabPage
 end
 
-----------------------------------------------------------------
 -- ✅ AddSection
 function GuiLib.AddSection(tab, text)
 	local label = Instance.new("TextLabel", tab)
@@ -82,7 +101,6 @@ function GuiLib.AddSection(tab, text)
 	label.Font = Enum.Font.GothamMedium
 end
 
-----------------------------------------------------------------
 -- ✅ AddButton
 function GuiLib.AddButton(tab, settings)
 	local btn = Instance.new("TextButton", tab)
@@ -99,7 +117,6 @@ function GuiLib.AddButton(tab, settings)
 	end)
 end
 
-----------------------------------------------------------------
 -- ✅ AddSlider
 function GuiLib.AddSlider(tab, settings)
 	local slider = Instance.new("TextButton", tab)
@@ -121,7 +138,6 @@ function GuiLib.AddSlider(tab, settings)
 	end)
 end
 
-----------------------------------------------------------------
 -- ✅ AddKeybind
 function GuiLib.AddKeybind(tab, settings)
 	local keybind = Instance.new("TextButton", tab)
@@ -154,7 +170,6 @@ function GuiLib.AddKeybind(tab, settings)
 	end)
 end
 
-----------------------------------------------------------------
 -- ✅ AddTextBox
 function GuiLib.AddTextBox(tab, settings)
 	local box = Instance.new("TextBox", tab)
@@ -174,7 +189,6 @@ function GuiLib.AddTextBox(tab, settings)
 	end)
 end
 
-----------------------------------------------------------------
 -- ✅ AddDropdown
 function GuiLib.AddDropdown(tab, settings)
 	local dropdown = Instance.new("TextButton", tab)
@@ -216,85 +230,21 @@ function GuiLib.AddDropdown(tab, settings)
 	end
 end
 
-----------------------------------------------------------------
--- ✅ Drag system (تحريك الواجهة)
-local function MakeDraggable(frame)
-	local dragging, dragInput, dragStart, startPos
-
-	frame.InputBegan:Connect(function(input)
-		if input.UserInputType == Enum.UserInputType.MouseButton1 then
-			dragging = true
-			dragStart = input.Position
-			startPos = frame.Position
-
-			input.Changed:Connect(function()
-				if input.UserInputState == Enum.UserInputState.End then
-					dragging = false
-				end
-			end)
-		end
-	end)
-
-	frame.InputChanged:Connect(function(input)
-		if input.UserInputType == Enum.UserInputType.MouseMovement then
-			dragInput = input
-		end
-	end)
-
-	UIS.InputChanged:Connect(function(input)
-		if input == dragInput and dragging then
-			local delta = input.Position - dragStart
-			frame.Position = UDim2.new(startPos.X.Scale, startPos.X.Offset + delta.X, startPos.Y.Scale, startPos.Y.Offset + delta.Y)
-		end
-	end)
+-- ✅ تحميل السكربت باستخدام loadstring
+local function LoadScript()
+	local scriptUrl = "https://your-script-url-here.com/script.lua" -- استبدل بعنوان السكربت الذي تريد تحميله
+	local script = loadstring(game:HttpGet(scriptUrl))()
+	script() -- نفذ السكربت
 end
 
--- [ زر Minimize (تصغير) ]
-local MinimizeButton = Instance.new("TextButton", MainFrame)
-MinimizeButton.Size = UDim2.new(0, 30, 0, 30)
-MinimizeButton.Position = UDim2.new(1, -40, 0, 5)
-MinimizeButton.BackgroundColor3 = Color3.fromRGB(50, 50, 50)
-MinimizeButton.Text = "_"
-MinimizeButton.TextColor3 = Color3.fromRGB(255, 255, 255)
-MinimizeButton.TextScaled = true
-MinimizeButton.Font = Enum.Font.GothamBold
-Instance.new("UICorner", MinimizeButton).CornerRadius = UDim.new(0, 6)
+-- ✅ تأثير التحميل
+task.delay(3, function()
+	LoadingFrame:Destroy()
+	blurEffect.Size = 0
 
-local isMinimized = false
-
-MinimizeButton.MouseButton1Click:Connect(function()
-	if isMinimized then
-		MainFrame.Size = UDim2.new(0, 600, 0, 400)
-		isMinimized = false
-	else
-		MainFrame.Size = UDim2.new(0, 600, 0, 40)
-		isMinimized = true
-	end
+	-- بعد أن يتم تحميل التأثيرات، قم بتحميل السكربت
+	LoadScript()
 end)
-
--- [ إضافة صورة لإخفاء وإظهار الواجهة عند الضغط عليها]
-local HideButton = Instance.new("ImageButton", MainFrame)
-HideButton.Size = UDim2.new(0, 30, 0, 30)
-HideButton.Position = UDim2.new(1, -70, 0, 5)
-HideButton.BackgroundTransparency = 1
-HideButton.Image = "rbxassetid://15507434243" -- استبدل برابط الصورة التي تريدها
-
-local isHidden = false
-
-HideButton.MouseButton1Click:Connect(function()
-	if isHidden then
-		-- إظهار الواجهة
-		MainFrame.Visible = true
-		isHidden = false
-	else
-		-- إخفاء الواجهة
-		MainFrame.Visible = false
-		isHidden = true
-	end
-end)
-
--- جعل الواجهة قابلة للتحريك
-MakeDraggable(MainFrame)
 
 ----------------------------------------------------------------
 return GuiLib
