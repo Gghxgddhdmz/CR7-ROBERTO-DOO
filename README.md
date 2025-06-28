@@ -1,87 +1,77 @@
-local OrionLib = ...
-local Window = OrionLib:MakeWindow({Name = "اسم سكربتك", ...})
+-- GUI مخصص باسمك
+local player = game.Players.LocalPlayer
+local gui = Instance.new("ScreenGui", player:WaitForChild("PlayerGui"))
+gui.Name = "HassanCustomGUI"
+gui.ResetOnSpawn = false
 
--- OrionLib مخصص ومحلي
-local OrionLib = {}
+-- إطار رئيسي
+local Main = Instance.new("Frame", gui)
+Main.Size = UDim2.new(0, 500, 0, 350)
+Main.Position = UDim2.new(0.3, 0, 0.3, 0)
+Main.BackgroundColor3 = Color3.fromRGB(25, 25, 25)
+Main.BorderSizePixel = 0
+Main.Active = true
+Main.Draggable = true
+Instance.new("UICorner", Main).CornerRadius = UDim.new(0, 12)
 
-    function OrionLib:MakeWindow(settings)
-    local gui = Instance.new("ScreenGui", game.Players.LocalPlayer:WaitForChild("PlayerGui"))
-    gui.Name = settings.Name or "OrionCustom"
-    gui.ResetOnSpawn = false
+-- عنوان علوي
+local title = Instance.new("TextLabel", Main)
+title.Size = UDim2.new(1, 0, 0, 40)
+title.BackgroundColor3 = Color3.fromRGB(35, 35, 35)
+title.Text = "📘 قائمة سكربتات حسن"
+title.Font = Enum.Font.GothamBold
+title.TextSize = 18
+title.TextColor3 = Color3.fromRGB(0, 255, 127)
+title.BorderSizePixel = 0
+Instance.new("UICorner", title).CornerRadius = UDim.new(0, 12)
 
-    -- الإطار الرئيسي
-    local mainFrame = Instance.new("Frame", gui)
-    mainFrame.Size = UDim2.new(0, 500, 0, 350)
-    mainFrame.Position = UDim2.new(0.3, 0, 0.3, 0)
-    mainFrame.BackgroundColor3 = Color3.fromRGB(20, 20, 20)
-    mainFrame.BorderSizePixel = 0
-    Instance.new("UICorner", mainFrame).CornerRadius = UDim.new(0, 12)
+-- إطار الأزرار
+local content = Instance.new("Frame", Main)
+content.Size = UDim2.new(1, -20, 1, -60)
+content.Position = UDim2.new(0, 10, 0, 50)
+content.BackgroundColor3 = Color3.fromRGB(15, 15, 15)
+content.BorderSizePixel = 0
+Instance.new("UICorner", content).CornerRadius = UDim.new(0, 8)
 
-    -- العنوان
-    local titleBar = Instance.new("TextLabel", mainFrame)
-    titleBar.Size = UDim2.new(1, 0, 0, 40)
-    titleBar.BackgroundColor3 = Color3.fromRGB(25, 25, 25)
-    titleBar.Text = "🌟 " .. (settings.Name or "Window")
-    titleBar.Font = Enum.Font.GothamBold
-    titleBar.TextColor3 = Color3.fromRGB(0, 255, 127)
-    titleBar.TextSize = 16
-    titleBar.BorderSizePixel = 0
-    titleBar.TextXAlignment = Enum.TextXAlignment.Center
-    Instance.new("UICorner", titleBar).CornerRadius = UDim.new(0, 12)
+-- 🧠 نظام AddButton مثل Orion
+local yOffset = 10
 
-    -- محتوى رئيسي
-    local content = Instance.new("Frame", mainFrame)
-    content.Position = UDim2.new(0, 0, 0, 40)
-    content.Size = UDim2.new(1, 0, 1, -40)
-    content.BackgroundColor3 = Color3.fromRGB(15, 15, 15)
-    content.BorderSizePixel = 0
-    Instance.new("UICorner", content).CornerRadius = UDim.new(0, 12)
+function AddButton(parentFrame, info)
+	local button = Instance.new("TextButton", content)
+	button.Size = UDim2.new(0, 460, 0, 40)
+	button.Position = UDim2.new(0, 10, 0, yOffset)
+	button.Text = info.Name or "زر"
+	button.Font = Enum.Font.Gotham
+	button.TextSize = 14
+	button.TextColor3 = Color3.new(1, 1, 1)
+	button.BackgroundColor3 = Color3.fromRGB(0, 120, 255)
+	Instance.new("UICorner", button).CornerRadius = UDim.new(0, 8)
 
-    local y = 10
+	button.MouseButton1Click:Connect(function()
+		pcall(info.Callback)
+	end)
 
-    -- دالة لإضافة زر
-    function OrionLib:AddButton(text, callback)
-        local button = Instance.new("TextButton", content)
-        button.Size = UDim2.new(0, 460, 0, 40)
-        button.Position = UDim2.new(0, 20, 0, y)
-        button.Text = text
-        button.BackgroundColor3 = Color3.fromRGB(0, 120, 255)
-        button.TextColor3 = Color3.new(1, 1, 1)
-        button.Font = Enum.Font.Gotham
-        button.TextSize = 14
-        Instance.new("UICorner", button).CornerRadius = UDim.new(0, 8)
-
-        button.MouseButton1Click:Connect(function()
-            pcall(callback)
-        end)
-
-        y = y + 50
-    end
-
-    return OrionLib
+	yOffset = yOffset + 50
 end
 
--- ✅ استخدام المكتبة:
-local Window = OrionLib:MakeWindow({
-    Name = "🔧 سكربت ألفا",
-    SaveConfig = false
+-- ✅ استخدام AddButton بالطريقة المطلوبة
+AddButton(Main, {
+	Name = "🧪 زر تجريبي",
+	Callback = function()
+		print("✅ تم الضغط على الزر!")
+	end
 })
 
-Window:AddButton("🧪 تجربة زر", function()
-    print("تم الضغط على الزر!")
-end)
+AddButton(Main, {
+	Name = "🚀 تحميل سكربت",
+	Callback = function()
+		loadstring(game:HttpGet("https://raw.githubusercontent.com/YourUser/YourRepo/main/script.lua"))()
+	end
+})
 
-Window:AddButton("🚀 تحميل سكربت", function()
-    loadstring(game:HttpGet("https://raw.githubusercontent.com/yourname/project/main/script.lua"))()
-end)
-
-
----
-
-📦 ماذا يقدم هذا السكربت:
-
-الميزة	وصف
-
-MakeWindow()	ينشئ واجهة تشبه Orion GUI
-AddButton(text, callback)	تضيف زر مع حدث عند الضغط
-تصميم احترافي	ألوان + حدود دائرية + تنظيم
+AddButton(Main, {
+	Name = "❌ إغلاق الواجهة",
+	Callback = function()
+		gui:Destroy()
+	end
+})
