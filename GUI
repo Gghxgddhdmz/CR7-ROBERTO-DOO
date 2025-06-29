@@ -1,46 +1,111 @@
--- Rayfield-style GUI Library local GUI = {} local UIS = game:GetService("UserInputService")
+local GUI = {}
+local UIS = game:GetService("UserInputService")
 
-local ScreenGui = Instance.new("ScreenGui", game.CoreGui) ScreenGui.Name = "RayfieldCustomGUI"
+local ScreenGui = Instance.new("ScreenGui", game.CoreGui)
+ScreenGui.Name = "CustomRayfieldGUI"
+ScreenGui.ResetOnSpawn = false
 
-local MainFrame = Instance.new("Frame", ScreenGui) MainFrame.Size = UDim2.new(0, 600, 0, 400) MainFrame.Position = UDim2.new(0.25, 0, 0.2, 0) MainFrame.BackgroundColor3 = Color3.fromRGB(25, 25, 25) MainFrame.BorderSizePixel = 0 MainFrame.Active = true MainFrame.Draggable = true
+local Main = Instance.new("Frame", ScreenGui)
+Main.Size = UDim2.new(0, 600, 0, 400)
+Main.Position = UDim2.new(0.3, 0, 0.2, 0)
+Main.BackgroundColor3 = Color3.fromRGB(15, 15, 15)
+Main.Active = true
+Main.Draggable = true
+Instance.new("UICorner", Main).CornerRadius = UDim.new(0, 12)
 
-local Title = Instance.new("TextLabel", MainFrame) Title.Size = UDim2.new(1, 0, 0, 40) Title.BackgroundTransparency = 1 Title.Text = "GUI Title" Title.Font = Enum.Font.GothamBold Title.TextSize = 18 Title.TextColor3 = Color3.fromRGB(255, 255, 255)
+local Title = Instance.new("TextLabel", Main)
+Title.Size = UDim2.new(1, 0, 0, 40)
+Title.BackgroundTransparency = 1
+Title.Text = "🎮 GUI HUB"
+Title.Font = Enum.Font.GothamBold
+Title.TextSize = 18
+Title.TextColor3 = Color3.fromRGB(255, 0, 0)
 
-local TabBar = Instance.new("Frame", MainFrame) TabBar.Size = UDim2.new(0, 150, 1, -40) TabBar.Position = UDim2.new(0, 0, 0, 40) TabBar.BackgroundColor3 = Color3.fromRGB(30, 30, 30) TabBar.BorderSizePixel = 0
+local TabBar = Instance.new("Frame", Main)
+TabBar.Size = UDim2.new(0, 140, 1, -40)
+TabBar.Position = UDim2.new(0, 0, 0, 40)
+TabBar.BackgroundColor3 = Color3.fromRGB(30, 30, 30)
+Instance.new("UICorner", TabBar).CornerRadius = UDim.new(0, 6)
 
-local ContentArea = Instance.new("Frame", MainFrame) ContentArea.Size = UDim2.new(1, -150, 1, -40) ContentArea.Position = UDim2.new(0, 150, 0, 40) ContentArea.BackgroundColor3 = Color3.fromRGB(35, 35, 35) ContentArea.BorderSizePixel = 0
+local UIList = Instance.new("UIListLayout", TabBar)
+UIList.SortOrder = Enum.SortOrder.LayoutOrder
+UIList.Padding = UDim.new(0, 6)
 
-local Tabs = {} local Sections = {}
+local Content = Instance.new("Frame", Main)
+Content.Size = UDim2.new(1, -150, 1, -50)
+Content.Position = UDim2.new(0, 150, 0, 50)
+Content.BackgroundColor3 = Color3.fromRGB(20, 20, 20)
+Instance.new("UICorner", Content).CornerRadius = UDim.new(0, 6)
 
-function GUI.MakeWindow(data) Title.Text = data.Hub and data.Hub.Title or "GUI" end
+local Pages = Instance.new("Folder", Content)
+local Tabs = {}
 
-function GUI.NewTab(name) local tabButton = Instance.new("TextButton", TabBar) tabButton.Size = UDim2.new(1, 0, 0, 40) tabButton.Text = name tabButton.Font = Enum.Font.GothamBold tabButton.TextColor3 = Color3.fromRGB(255, 255, 255) tabButton.TextSize = 14 tabButton.BackgroundColor3 = Color3.fromRGB(40, 40, 40) tabButton.BorderSizePixel = 0
-
-local tabFrame = Instance.new("ScrollingFrame", ContentArea)
-tabFrame.Size = UDim2.new(1, 0, 1, 0)
-tabFrame.CanvasSize = UDim2.new(0, 0, 0, 0)
-tabFrame.ScrollBarThickness = 6
-tabFrame.Visible = false
-tabFrame.AutomaticCanvasSize = Enum.AutomaticSize.Y
-tabFrame.BackgroundTransparency = 1
-
-local layout = Instance.new("UIListLayout", tabFrame)
-layout.Padding = UDim.new(0, 8)
-layout.SortOrder = Enum.SortOrder.LayoutOrder
-
-tabButton.MouseButton1Click:Connect(function()
-	for _, t in pairs(ContentArea:GetChildren()) do
-		if t:IsA("ScrollingFrame") then t.Visible = false end
-	end
-	tabFrame.Visible = true
-end)
-
-Tabs[name] = tabFrame
-return tabFrame
-
+-- ✅ نافذة
+function GUI.MakeWindow(settings)
+	Title.Text = "🎮 " .. (settings.Hub and settings.Hub.Title or "My GUI")
 end
 
-function GUI.AddSection(tab, sectionName) local label = Instance.new("TextLabel", tab) label.Size = UDim2.new(1, -10, 0, 30) label.BackgroundTransparency = 1 label.Text = sectionName label.Font = Enum.Font.GothamBold label.TextSize = 16 label.TextColor3 = Color3.fromRGB(255, 255, 255) Sections[sectionName] = tab end
+-- ✅ تبويبة
+function GUI.NewTab(name)
+	local button = Instance.new("TextButton", TabBar)
+	button.Size = UDim2.new(1, -10, 0, 35)
+	button.Text = name
+	button.TextColor3 = Color3.fromRGB(255, 0, 0)
+	button.BackgroundColor3 = Color3.fromRGB(50, 50, 50)
+	button.Font = Enum.Font.Gotham
+	button.TextScaled = true
+	Instance.new("UICorner", button).CornerRadius = UDim.new(0, 6)
 
-function GUI.AddButton(tab, data) local button = Instance.new("TextButton", tab) button.Size = UDim2.new(0, 200, 0, 35) button.BackgroundColor3 = Color3.fromRGB(50, 50, 50) button.Text = data.Name button.Font = Enum.Font.Gotham button.TextSize = 14 button.TextColor3 = Color3.fromRGB(255, 255, 255) button.BorderSizePixel = 0 button.MouseButton1Click:Connect(data.Callback
+	local tab = Instance.new("ScrollingFrame", Pages)
+	tab.Size = UDim2.new(1, 0, 1, 0)
+	tab.CanvasSize = UDim2.new(0, 0, 0, 0)
+	tab.AutomaticCanvasSize = Enum.AutomaticSize.Y
+	tab.ScrollBarThickness = 4
+	tab.BackgroundTransparency = 1
 
+	local layout = Instance.new("UIListLayout", tab)
+	layout.Padding = UDim.new(0, 6)
+	layout.SortOrder = Enum.SortOrder.LayoutOrder
+
+	button.MouseButton1Click:Connect(function()
+		for _, page in pairs(Pages:GetChildren()) do
+			page.Visible = false
+		end
+		tab.Visible = true
+	end)
+
+	tab.Visible = (#Pages:GetChildren() == 0)
+	Tabs[name] = tab
+	return tab
+end
+
+-- ✅ زر
+function GUI.AddButton(tab, settings)
+	local btn = Instance.new("TextButton", tab)
+	btn.Size = UDim2.new(1, -20, 0, 35)
+	btn.Text = settings.Name or "Button"
+	btn.TextColor3 = Color3.fromRGB(255, 0, 0)
+	btn.BackgroundColor3 = Color3.fromRGB(40, 40, 40)
+	btn.Font = Enum.Font.Gotham
+	btn.TextScaled = true
+	Instance.new("UICorner", btn).CornerRadius = UDim.new(0, 6)
+
+	btn.MouseButton1Click:Connect(function()
+		pcall(settings.Callback)
+	end)
+end
+
+-- ✅ زر إخفاء/إظهار
+local toggleBtn = Instance.new("ImageButton", ScreenGui)
+toggleBtn.Size = UDim2.new(0, 30, 0, 30)
+toggleBtn.Position = UDim2.new(0, 10, 0, 10)
+toggleBtn.Image = "rbxassetid://15507434243"
+toggleBtn.BackgroundTransparency = 1
+
+local hidden = false
+toggleBtn.MouseButton1Click:Connect(function()
+	hidden = not hidden
+	Main.Visible = not hidden
+end)
+
+return GUI
